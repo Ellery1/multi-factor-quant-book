@@ -1,0 +1,454 @@
+/*
+ * PyCharm Markdown Preview 专用样式
+ * 配合 PyCharm → Settings → Languages & Frameworks → Markdown → Custom CSS 使用
+ * 无需修改任何 .md 源码文件
+ *
+ * 配色说明：
+ *   h1 章标题  → 深蓝   #1a3a5c
+ *   h2 大节    → 深青   #1b6d6d
+ *   h3 小节    → 暗金   #8b6914
+ *   h4 细节    → 炭灰   #5a5a5a
+ *   strong     → 深红   #b22222
+ *   blockquote → 灰蓝底 + 蓝左边框
+ *   code       → 粉底橙字
+ *   pre        → 暗底亮字
+ *   table      → 蓝表头 + 交替行色
+ */
+
+/* ============================================================
+   1. 基础排版
+   ============================================================ */
+
+html, body {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    color: #1e1e1e;
+    background-color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 16px;
+    line-height: 1.75;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 20px 32px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+a {
+    color: #0969da;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+b, strong {
+    font-weight: 700;
+    color: #b22222;
+}
+
+em, i {
+    font-style: italic;
+    color: #6e4a7a;
+}
+
+mark {
+    background-color: #fff3b0;
+    color: #1e1e1e;
+}
+
+small {
+    font-size: 90%;
+}
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub { bottom: -0.25em; }
+sup { top: -0.5em; }
+
+img {
+    border-style: none;
+    max-width: 100%;
+    box-sizing: content-box;
+}
+
+hr {
+    box-sizing: content-box;
+    overflow: hidden;
+    background: none;
+    border: 0;
+    height: 4px;
+    padding: 0;
+    margin: 32px 0;
+    background: linear-gradient(to right, #96c4e8, #d1e0e8, #ffffff);
+    border-radius: 2px;
+}
+
+/* ============================================================
+   2. 标题层级（核心颜色区分）
+   ============================================================ */
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 32px;
+    margin-bottom: 16px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 2em;
+    color: #1a3a5c;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #3b82c4;
+}
+
+h2 {
+    font-size: 1.6em;
+    color: #1b6d6d;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #5fb0b0;
+}
+
+h3 {
+    font-size: 1.3em;
+    color: #8b6914;
+}
+
+h4 {
+    font-size: 1.1em;
+    color: #5a5a5a;
+}
+
+h5 {
+    font-size: 1em;
+    color: #787878;
+}
+
+h6 {
+    font-size: 0.9em;
+    color: #999999;
+}
+
+/* ============================================================
+   3. 引用块（前置知识 / 学习目标）
+   ============================================================ */
+
+blockquote {
+    margin: 0 0 16px 0;
+    padding: 12px 20px;
+    color: #446688;
+    background-color: #f0f5fb;
+    border-left: 5px solid #5b9bd5;
+    border-radius: 4px;
+}
+
+blockquote p {
+    margin-bottom: 8px;
+}
+
+blockquote > :first-child {
+    margin-top: 0;
+}
+
+blockquote > :last-child {
+    margin-bottom: 0;
+}
+
+blockquote strong {
+    color: #1a3a5c;
+}
+
+/* ============================================================
+   4. 列表
+   ============================================================ */
+
+ul, ol {
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding-left: 2em;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+li + li {
+    margin-top: 4px;
+}
+
+li > p {
+    margin-top: 16px;
+}
+
+dl {
+    padding: 0;
+    margin-bottom: 16px;
+}
+
+dl dt {
+    padding: 0;
+    margin-top: 16px;
+    font-size: 1em;
+    font-style: italic;
+    font-weight: 700;
+    color: #1a3a5c;
+}
+
+dl dd {
+    padding: 0 16px;
+    margin-bottom: 16px;
+}
+
+/* ============================================================
+   5. 行内代码
+   ============================================================ */
+
+code, tt {
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+    font-size: 85%;
+    padding: 2px 6px;
+    margin: 0;
+    color: #c7254e;
+    background-color: #fff0f3;
+    border-radius: 4px;
+    white-space: break-spaces;
+}
+
+/* ============================================================
+   6. 代码块
+   ============================================================ */
+
+pre {
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0 0 16px 0;
+    padding: 16px 20px;
+    overflow: auto;
+    color: #e6edf3;
+    background-color: #1e1e2e;
+    border-radius: 8px;
+    word-wrap: normal;
+}
+
+pre code {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    color: inherit;
+    background: none;
+    border: 0;
+    white-space: pre;
+    word-break: normal;
+}
+
+/* ============================================================
+   7. 表格
+   ============================================================ */
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    display: block;
+    width: max-content;
+    max-width: 100%;
+    overflow: auto;
+    margin-bottom: 16px;
+    font-variant-numeric: tabular-nums;
+}
+
+table th {
+    font-weight: 700;
+    padding: 10px 16px;
+    color: #ffffff;
+    background-color: #3b82c4;
+    border: 1px solid #2b6aa8;
+    text-align: left;
+}
+
+table td {
+    padding: 8px 16px;
+    border: 1px solid #d1d9e0;
+    color: #1e1e1e;
+}
+
+table tr {
+    background-color: #ffffff;
+    border-top: 1px solid #d1d9e0;
+}
+
+table tr:nth-child(even) {
+    background-color: #f6f8fa;
+}
+
+table tr:hover {
+    background-color: #e8f0fe;
+}
+
+/* ============================================================
+   8. 分隔线（章节内使用 --- 的地方）
+   ============================================================ */
+
+/* hr 已在基础排版中定义 */
+
+/* ============================================================
+   9. 数学公式（行内和块级）
+   ============================================================ */
+
+/* 有些渲染器把行内公式放到 .katex 或 .MathJax 里，这里给个温和底色 */
+.katex, .MathJax {
+    font-size: 1.05em;
+}
+
+/* ============================================================
+   10. 任务列表
+   ============================================================ */
+
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item + .task-list-item {
+    margin-top: 4px;
+}
+
+.task-list-item-checkbox {
+    margin: 0 4px 4px -24px;
+    vertical-align: middle;
+}
+
+/* ============================================================
+   11. 脚注
+   ============================================================ */
+
+.footnotes {
+    font-size: 13px;
+    color: #666666;
+    border-top: 1px solid #d1d9e0;
+    padding-top: 8px;
+}
+
+.footnotes ol {
+    padding-left: 16px;
+}
+
+/* ============================================================
+   12. 暗色主题（跟随系统设置自动切换）
+   ============================================================ */
+
+@media (prefers-color-scheme: dark) {
+
+    html, body {
+        color: #e6edf3;
+        background-color: #0d1117;
+    }
+
+    h1 {
+        color: #79c0ff;
+        border-bottom-color: #1f6feb;
+    }
+
+    h2 {
+        color: #7ee787;
+        border-bottom-color: #3fb950;
+    }
+
+    h3 {
+        color: #f2cc60;
+    }
+
+    h4 {
+        color: #b0b8c4;
+    }
+
+    h5 {
+        color: #9198a1;
+    }
+
+    h6 {
+        color: #7d8590;
+    }
+
+    b, strong {
+        color: #ff7b72;
+    }
+
+    em, i {
+        color: #d2a8ff;
+    }
+
+    a {
+        color: #58a6ff;
+    }
+
+    mark {
+        background-color: #3d2e00;
+        color: #f2cc60;
+    }
+
+    blockquote {
+        color: #a5c8e8;
+        background-color: #161b22;
+        border-left-color: #3b82c4;
+    }
+
+    blockquote strong {
+        color: #79c0ff;
+    }
+
+    code {
+        color: #ff7b72;
+        background-color: #2d1b22;
+    }
+
+    pre {
+        color: #e6edf3;
+        background-color: #161b22;
+    }
+
+    table th {
+        background-color: #1f3d6b;
+        border-color: #1f6feb;
+    }
+
+    table td {
+        border-color: #30363d;
+        color: #e6edf3;
+    }
+
+    table tr {
+        background-color: transparent;
+        border-top-color: #30363d;
+    }
+
+    table tr:nth-child(even) {
+        background-color: #161b22;
+    }
+
+    table tr:hover {
+        background-color: #1c2433;
+    }
+
+    hr {
+        background: linear-gradient(to right, #3b82c4, #1f3d6b, #0d1117);
+    }
+
+    .footnotes {
+        color: #9198a1;
+        border-top-color: #30363d;
+    }
+
+    dl dt {
+        color: #79c0ff;
+    }
+}
