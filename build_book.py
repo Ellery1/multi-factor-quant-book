@@ -19,8 +19,8 @@ import markdown
 from html import escape
 from datetime import datetime
 
-BOOK_DIR = r"D:\project\gao7gao8\多因子量化的方法论简述\book"
-OUTPUT_FILE = r"D:\project\gao7gao8\多因子量化的方法论简述\multi-factor-quant-book.html"
+BOOK_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "book")
+OUTPUT_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "multi-factor-quant-book.html")
 BOOK_TITLE = "多因子量化投资：从理论到实践"
 
 # ============================================================
@@ -131,6 +131,50 @@ def extract_headings(md_text):
             title = m.group(2).strip()
             headings.append((level, title))
     return headings
+
+
+def fix_markdown_lists(md_text):
+    lines = md_text.split('\n')
+    new_lines = []
+    in_code_block = False
+
+    for i, line in enumerate(lines):
+        stripped = line.strip()
+        if stripped.startswith('```'):
+            in_code_block = not in_code_block
+            new_lines.append(line)
+            continue
+        if in_code_block:
+            new_lines.append(line)
+            continue
+
+        list_match = re.match(r'^(\s*)(- |\d+\.\s)', line)
+        is_list_line = list_match is not None
+
+        # Fix 1: add blank line before list following non-list line
+        if is_list_line and i > 0:
+            prev = lines[i - 1]
+            prev_s = prev.strip()
+            prev_is_list = bool(re.match(r'^(\s*)(- |\d+\.\s)', prev))
+            if (prev_s and not prev_is_list
+                    and not prev_s.startswith('>')
+                    and not prev_s.startswith('#')
+                    and not prev_s.startswith('|')
+                    and not prev_s.startswith('$$')):
+                new_lines.append('')
+
+        # Fix 2: ensure sub-list has >= 4 spaces indent
+        if list_match and i > 0:
+            indent = len(list_match.group(1))
+            if 0 < indent < 4:
+                prev_match = re.match(r'^(\s*)(- |\d+\.\s)', lines[i - 1])
+                if prev_match:
+                    missing = 4 - indent
+                    line = ' ' * missing + line
+
+        new_lines.append(line)
+
+    return '\n'.join(new_lines)
 
 
 def process_markdown(md_text, chapter_idx, heading_ids):
@@ -276,6 +320,9 @@ def build_content_v2(chapter_data):
 
             with open(filepath, 'r', encoding='utf-8') as f:
                 md_text = f.read()
+
+            # 预处理：修复列表格式，确保 markdown 转换器能正确渲染
+            md_text = fix_markdown_lists(md_text)
 
             content_stripped = md_text.strip()
             if not content_stripped or content_stripped == "> 待撰写":
@@ -627,9 +674,48 @@ def generate_html():
         }}
 
         .content-wrapper {{
-            max-width: var(--content-max-width);
+            width: var(--content-max-width);
+            min-width: 360px;
+            max-width: 95vw;
             margin: 0 auto;
             padding: 0 40px;
+            position: relative;
+            border-left: 2px dashed var(--color-border);
+            border-right: 2px dashed var(--color-border);
+            border-bottom: 2px dashed var(--color-border);
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }}
+
+        /* 右边缘拖拽把手 —— 鼠标靠近右边界自动变成可拖拽状态 */
+        .drag-handle {{
+            position: absolute;
+            top: 0;
+            right: -12px;
+            width: 24px;
+            height: 100%;
+            cursor: ew-resize;
+            z-index: 10;
+            background: transparent;
+        }}
+
+        .drag-handle::after {{
+            content: "";
+            position: absolute;
+            right: 6px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 3px;
+            height: 60px;
+            border-radius: 2px;
+            background: var(--color-secondary);
+            opacity: 0.2;
+            transition: opacity 0.2s;
+        }}
+
+        .content-wrapper:hover .drag-handle::after,
+        .drag-handle:active::after {{
+            opacity: 0.6;
         }}
 
         /* 篇分割线 */
@@ -1113,8 +1199,9 @@ def generate_html():
 
         <!-- 主内容 -->
         <div id="main">
-            <div class="content-wrapper">
+            <div class="content-wrapper" id="drag-container">
                 {content_html}
+                <div class="drag-handle" id="drag-handle"></div>
             </div>
 
             <!-- 页脚 -->
@@ -1211,6 +1298,45 @@ def generate_html():
                 observer.observe(el);
             }});
         }}
+
+        // ============================================================
+        // 拖拽调整内容区宽度
+        // ============================================================
+        (function() {{
+            var container = document.getElementById('drag-container');
+            var handle = document.getElementById('drag-handle');
+            if (!container || !handle) return;
+
+            var isDragging = false;
+            var startX = 0;
+            var startWidth = 0;
+
+            handle.addEventListener('mousedown', function(e) {{
+                isDragging = true;
+                startX = e.clientX;
+                startWidth = container.offsetWidth;
+                document.body.style.cursor = 'ew-resize';
+                document.body.style.userSelect = 'none';
+                e.preventDefault();
+            }});
+
+            document.addEventListener('mousemove', function(e) {{
+                if (!isDragging) return;
+                var delta = e.clientX - startX;
+                var newWidth = startWidth + delta;
+                // 限制最小 360px，最大 95vw
+                newWidth = Math.max(360, Math.min(newWidth, window.innerWidth * 0.95));
+                container.style.width = newWidth + 'px';
+            }});
+
+            document.addEventListener('mouseup', function() {{
+                if (isDragging) {{
+                    isDragging = false;
+                    document.body.style.cursor = '';
+                    document.body.style.userSelect = '';
+                }}
+            }});
+        }})();
     </script>
 
 </body>
