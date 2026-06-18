@@ -343,112 +343,123 @@ table tr:hover {
 }
 
 /* ============================================================
-   12. 暗色主题（跟随系统设置自动切换）
+   12. PyCharm 暗色预览（直接应用，不走 @media 查询）
+       PyCharm 内嵌浏览器不触发 prefers-color-scheme，
+       所以此处直接覆盖全局样式。
    ============================================================ */
 
-@media (prefers-color-scheme: dark) {
+html, body {
+    color: #e6edf3 !important;
+    background-color: #0d1117 !important;
+}
 
-    html, body {
-        color: #e6edf3;
-        background-color: #0d1117;
-    }
+/* ---- 标题 ---- */
+h1 {
+    color: #e8f0ff !important;
+    border-bottom-color: #7ab8ff !important;
+}
 
-    h1 {
-        color: #79c0ff;
-        border-bottom-color: #1f6feb;
-    }
+h2 {
+    color: #5cff80 !important;
+    border-bottom-color: #5cff80 !important;
+}
 
-    h2 {
-        color: #7ee787;
-        border-bottom-color: #3fb950;
-    }
+h3 {
+    color: #ffe060 !important;
+}
 
-    h3 {
-        color: #f2cc60;
-    }
+h4 {
+    color: #f0f4f8 !important;
+}
 
-    h4 {
-        color: #b0b8c4;
-    }
+h5 {
+    color: #d8dde3 !important;
+}
 
-    h5 {
-        color: #9198a1;
-    }
+h6 {
+    color: #c0c6cc !important;
+}
 
-    h6 {
-        color: #7d8590;
-    }
+/* ---- 链接（含 file:// 引用） ---- */
+a, a:link, a:visited, a:hover, a:active,
+a[href^="file://"], a[href*=".md"] {
+    color: #5bb8ff !important;
+}
 
-    b, strong {
-        color: #ff7b72;
-    }
+/* ---- 行内代码（`` 包裹的文字） ---- */
+code, tt {
+    color: #ff9990 !important;
+    background-color: #2d1a20 !important;
+}
 
-    em, i {
-        color: #d2a8ff;
-    }
+/* ---- 粗体 / 斜体 ---- */
+b, strong {
+    color: #ffb8a8 !important;
+}
 
-    a {
-        color: #58a6ff;
-    }
+em, i {
+    color: #e2ccff !important;
+}
 
-    mark {
-        background-color: #3d2e00;
-        color: #f2cc60;
-    }
+/* ---- 引用块 ---- */
+blockquote {
+    color: #d8e8f8 !important;
+    background-color: #161b22 !important;
+    border-left-color: #5bb8ff !important;
+}
 
-    blockquote {
-        color: #a5c8e8;
-        background-color: #161b22;
-        border-left-color: #3b82c4;
-    }
+blockquote strong {
+    color: #5bb8ff !important;
+}
 
-    blockquote strong {
-        color: #79c0ff;
-    }
+/* ---- 高亮 ---- */
+mark {
+    background-color: #5a4818 !important;
+    color: #ffe060 !important;
+}
 
-    code {
-        color: #ff7b72;
-        background-color: #2d1b22;
-    }
+/* ---- 代码块 ---- */
+pre {
+    color: #e6edf3 !important;
+    background-color: #161b22 !important;
+}
 
-    pre {
-        color: #e6edf3;
-        background-color: #161b22;
-    }
+/* ---- 表格 ---- */
+table th {
+    background-color: #1f3d6b !important;
+    border-color: #4898f0 !important;
+}
 
-    table th {
-        background-color: #1f3d6b;
-        border-color: #1f6feb;
-    }
+table td {
+    border-color: #30363d !important;
+    color: #e6edf3 !important;
+}
 
-    table td {
-        border-color: #30363d;
-        color: #e6edf3;
-    }
+table tr {
+    background-color: transparent !important;
+    border-top-color: #30363d !important;
+}
 
-    table tr {
-        background-color: transparent;
-        border-top-color: #30363d;
-    }
+table tr:nth-child(even) {
+    background-color: #161b22 !important;
+}
 
-    table tr:nth-child(even) {
-        background-color: #161b22;
-    }
+table tr:hover {
+    background-color: #1c2433 !important;
+}
 
-    table tr:hover {
-        background-color: #1c2433;
-    }
+/* ---- 分隔线 ---- */
+hr {
+    background: linear-gradient(to right, #4898f0, #1f3d6b, #0d1117) !important;
+}
 
-    hr {
-        background: linear-gradient(to right, #3b82c4, #1f3d6b, #0d1117);
-    }
+/* ---- 脚注 ---- */
+.footnotes {
+    color: #c4cbd3 !important;
+    border-top-color: #30363d !important;
+}
 
-    .footnotes {
-        color: #9198a1;
-        border-top-color: #30363d;
-    }
-
-    dl dt {
-        color: #79c0ff;
-    }
+/* ---- 定义列表标题 ---- */
+dl dt {
+    color: #5bb8ff !important;
 }
