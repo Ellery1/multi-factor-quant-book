@@ -126,7 +126,7 @@ def extract_headings(md_text):
             continue
         if in_code_block:
             continue
-        m = re.match(r'^(#{1,2})\s+(.+)', line)
+        m = re.match(r'^(#{1,3})\s+(.+)', line)
         if m:
             level = len(m.group(1))
             title = m.group(2).strip()
@@ -198,8 +198,8 @@ def process_markdown(md_text, chapter_idx, heading_ids):
             continue
 
         if not in_code_block:
-            # 为 h1 和 h2 添加锚点
-            m = re.match(r'^(#{1,2})\s+(.+)', line)
+            # 为 h1/h2/h3 添加锚点
+            m = re.match(r'^(#{1,3})\s+(.+)', line)
             if m:
                 level = len(m.group(1))
                 title = m.group(2).strip()
@@ -273,11 +273,16 @@ def build_toc(all_heading_ids):
             # 第一个 h1 是章节标题
             h1_entry = None
             h2_entries = []
+            h3_by_h2 = {}
             for (idx, (level, title, anchor_id)) in chapter_headings:
                 if level == 1:
                     h1_entry = (title, anchor_id)
                 elif level == 2:
                     h2_entries.append((title, anchor_id))
+                    h3_by_h2[(title, anchor_id)] = []
+                elif level == 3:
+                    if h2_entries:
+                        h3_by_h2[h2_entries[-1]].append((title, anchor_id))
                 all_anchors.append(anchor_id)
 
             if h1_entry:
@@ -290,12 +295,22 @@ def build_toc(all_heading_ids):
                 if h2_entries:
                     sub_items = []
                     for sub_title, sub_id in h2_entries:
-                        # 截断过长的标题
                         display = sub_title if len(sub_title) <= 24 else sub_title[:24] + '…'
                         sub_items.append(
                             f'<li class="toc-section" data-anchor="{sub_id}">'
                             f'<a href="#{sub_id}">{escape(display)}</a></li>'
                         )
+                        # 如果有 h3 子标题
+                        h3_list = h3_by_h2.get((sub_title, sub_id), [])
+                        if h3_list:
+                            sub_sub = []
+                            for h3_title, h3_id in h3_list:
+                                h3_display = h3_title if len(h3_title) <= 28 else h3_title[:28] + '…'
+                                sub_sub.append(
+                                    f'<li class="toc-subsection" data-anchor="{h3_id}">'
+                                    f'<a href="#{h3_id}">{escape(h3_display)}</a></li>'
+                                )
+                            sub_items.append(f'<ul class="toc-subsections">{"".join(sub_sub)}</ul>')
                     toc_items.append(f'<ul class="toc-sections">{"".join(sub_items)}</ul>')
 
                 toc_items.append('</li>')
@@ -671,7 +686,7 @@ def generate_html():
             display: block;
             padding: 3px 20px 3px 40px;
             font-size: 12px;
-            color: var(--color-secondary);
+            color: var(--color-text);
             text-decoration: none;
             transition: color 0.15s;
             line-height: 1.5;
@@ -683,6 +698,30 @@ def generate_html():
         }}
 
         .toc-section.active a {{
+            color: var(--color-accent);
+            font-weight: 600;
+        }}
+
+        .toc-subsections {{
+            padding-bottom: 2px;
+        }}
+
+        .toc-subsection a {{
+            display: block;
+            padding: 2px 20px 2px 56px;
+            font-size: 11px;
+            color: #999;
+            text-decoration: none;
+            transition: color 0.15s;
+            line-height: 1.5;
+            font-family: var(--font-body);
+        }}
+
+        .toc-subsection a:hover {{
+            color: var(--color-accent);
+        }}
+
+        .toc-subsection.active a {{
             color: var(--color-accent);
             font-weight: 600;
         }}
@@ -1286,14 +1325,14 @@ def generate_html():
         }});
 
         // ============================================================
-        // 目录高亮：IntersectionObserver 追踪当前可见的标题
+        // 目录高亮：滚动时自动高亮当前所在章节
         // ============================================================
         var allAnchors = {all_anchors};
         var anchorElements = allAnchors.map(function(id) {{
             return document.getElementById(id);
         }}).filter(function(el) {{ return el !== null; }});
 
-        var tocItems = document.querySelectorAll('.toc-chapter, .toc-section');
+        var tocItems = document.querySelectorAll('.toc-chapter, .toc-section, .toc-subsection');
 
         function highlightAnchor(id) {{
             tocItems.forEach(function(item) {{
@@ -1305,22 +1344,39 @@ def generate_html():
             }});
         }}
 
-        if ('IntersectionObserver' in window) {{
-            var observer = new IntersectionObserver(function(entries) {{
-                entries.forEach(function(entry) {{
-                    if (entry.isIntersecting) {{
-                        highlightAnchor(entry.target.id);
-                    }}
-                }});
-            }}, {{
-                rootMargin: '-80px 0px -70% 0px',
-                threshold: 0
-            }});
+        function findCurrentHeading() {{
+            var bestId = null;
+            var bestTop = Infinity;
+            var threshold = 100; // 内容区顶部往下 100px 作为判断线
 
-            anchorElements.forEach(function(el) {{
-                observer.observe(el);
-            }});
+            // 找第一个"刚刚滚过顶部"的标题，它之前的那个就是当前章节
+            for (var i = 0; i < anchorElements.length; i++) {{
+                var top = anchorElements[i].getBoundingClientRect().top;
+                if (top > threshold) {{
+                    // 这个标题还在内容区下方，当前章节是它前一个
+                    if (i > 0) return anchorElements[i - 1].id;
+                    // 没有任何标题滚过顶部，取第一个（页面顶部）
+                    return anchorElements[0].id;
+                }}
+            }}
+
+            // 所有标题都已滚过顶部，当前是最后一个
+            return anchorElements[anchorElements.length - 1].id;
         }}
+
+        var scrollTimer = null;
+        window.addEventListener('scroll', function() {{
+            if (scrollTimer) return;
+            scrollTimer = setTimeout(function() {{
+                scrollTimer = null;
+                var currentId = findCurrentHeading();
+                if (currentId) highlightAnchor(currentId);
+            }}, 150);
+        }});
+
+        // 页面加载时也运行一次
+        var currentId = findCurrentHeading();
+        if (currentId) highlightAnchor(currentId);
 
         // ============================================================
         // 拖拽调整内容区宽度
