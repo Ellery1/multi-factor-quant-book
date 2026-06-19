@@ -19,8 +19,9 @@ import markdown
 from html import escape
 from datetime import datetime
 
-BOOK_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "book")
-OUTPUT_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "multi-factor-quant-book.html")
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+BOOK_DIR = os.path.join(PROJECT_DIR, "book")
+OUTPUT_FILE = os.path.join(PROJECT_DIR, "multi-factor-quant-book.html")
 BOOK_TITLE = "多因子量化投资：从理论到实践"
 
 # ============================================================
@@ -226,6 +227,27 @@ def process_markdown(md_text, chapter_idx, heading_ids):
     return html
 
 
+def fix_image_paths(html, md_filepath):
+    """将 markdown 中的相对图片路径改写为相对 HTML 输出文件的路径。
+
+    md_filepath 是相对于项目根目录的路径（如 book/part2-理论篇/ch03-因子的本质.md）。
+    HTML 输出在项目根目录，所以图片路径需要从 markdown 所在目录映射到根目录。
+    """
+    md_dir = os.path.dirname(md_filepath)  # e.g. book/part2-理论篇
+
+    def rewrite_src(match):
+        src = match.group(1)
+        # 跳过外部 URL
+        if src.startswith(('http://', 'https://', 'data:')):
+            return match.group(0)
+        # 解析相对路径
+        abs_src = os.path.normpath(os.path.join(md_dir, src)).replace('\\', '/')
+        return f'src="{abs_src}"'
+
+    html = re.sub(r'src="([^"]+)"', rewrite_src, html)
+    return html
+
+
 # ============================================================
 # 目录构建
 # ============================================================
@@ -338,6 +360,7 @@ def build_content_v2(chapter_data):
                 continue
 
             html = process_markdown(md_text, chapter_idx, heading_ids)
+            html = fix_image_paths(html, os.path.relpath(filepath, PROJECT_DIR))
             content_parts.append(f'''
             <section class="chapter-card" id="ch{chapter_idx}-card">
                 {html}
