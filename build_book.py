@@ -1330,6 +1330,17 @@ def generate_html():
             var handle = document.getElementById('drag-handle');
             if (!container || !handle) return;
 
+            var WIDTH_KEY = 'mfq_book_width';
+
+            // 恢复上次的宽度
+            var savedWidth = localStorage.getItem(WIDTH_KEY);
+            if (savedWidth) {{
+                var w = parseInt(savedWidth, 10);
+                if (w >= 360) {{
+                    container.style.width = w + 'px';
+                }}
+            }}
+
             var isDragging = false;
             var startX = 0;
             var startWidth = 0;
@@ -1347,7 +1358,6 @@ def generate_html():
                 if (!isDragging) return;
                 var delta = e.clientX - startX;
                 var newWidth = startWidth + delta;
-                // 限制最小 360px，最大 95vw
                 newWidth = Math.max(360, Math.min(newWidth, window.innerWidth * 0.95));
                 container.style.width = newWidth + 'px';
             }});
@@ -1357,7 +1367,41 @@ def generate_html():
                     isDragging = false;
                     document.body.style.cursor = '';
                     document.body.style.userSelect = '';
+                    localStorage.setItem(WIDTH_KEY, container.offsetWidth);
                 }}
+            }});
+        }})();
+
+        // ============================================================
+        // 阅读位置记忆：打开页面时自动滚动到上次离开的位置
+        // ============================================================
+        (function() {{
+            var STORAGE_KEY = 'mfq_book_scroll';
+            var saveTimer = null;
+
+            // 页面加载时恢复位置
+            var saved = localStorage.getItem(STORAGE_KEY);
+            if (saved) {{
+                var pos = parseInt(saved, 10);
+                if (pos > 0) {{
+                    window.scrollTo(0, pos);
+                    // MathJax 渲染可能导致高度变化，延迟再修正一次
+                    setTimeout(function() {{ window.scrollTo(0, pos); }}, 1500);
+                }}
+            }}
+
+            // 滚动时保存位置（节流：每 500ms 最多存一次）
+            window.addEventListener('scroll', function() {{
+                if (saveTimer) return;
+                saveTimer = setTimeout(function() {{
+                    saveTimer = null;
+                    localStorage.setItem(STORAGE_KEY, window.scrollY);
+                }}, 500);
+            }});
+
+            // 页面关闭前也存一次
+            window.addEventListener('beforeunload', function() {{
+                localStorage.setItem(STORAGE_KEY, window.scrollY);
             }});
         }})();
     </script>
