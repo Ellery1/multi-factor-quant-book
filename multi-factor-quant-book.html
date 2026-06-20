@@ -522,12 +522,14 @@
         /* 数学公式 */
         mjx-container {
             font-size: 1.0em !important;
+            overflow: visible !important;
+            line-height: normal !important;
         }
 
         mjx-container[display="true"] {
             margin: 18px 0 !important;
             overflow-x: auto;
-            overflow-y: hidden;
+            overflow-y: visible !important;
         }
 
         /* 分割线 */
@@ -828,16 +830,16 @@
 </li>
 <li class="toc-part">第二篇 · 理论篇</li>
 <li class="toc-chapter" data-anchor="ch3-h0"><a href="#ch3-h0">第3章：因子的本质——从直觉到严格定义</a>
-<ul class="toc-sections"><li class="toc-section" data-anchor="ch3-h1"><a href="#ch3-h1">3.1 什么是&quot;因子&quot;——从投资直觉出发</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch3-h2"><a href="#ch3-h2">3.1.1 一个简单的观察</a></li><li class="toc-subsection" data-anchor="ch3-h3"><a href="#ch3-h3">3.1.2 从&quot;特征&quot;到&quot;因子&quot;的概念跃迁</a></li><li class="toc-subsection" data-anchor="ch3-h4"><a href="#ch3-h4">3.1.3 为什么需要数学形式化？</a></li></ul><li class="toc-section" data-anchor="ch3-h5"><a href="#ch3-h5">3.2 因子的数学形式化：横截面回归模型</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch3-h6"><a href="#ch3-h6">3.2.1 单期横截面回归</a></li><li class="toc-subsection" data-anchor="ch3-h7"><a href="#ch3-h7">3.2.2 推导过程：从条件期望到 OLS 估计</a></li><li class="toc-subsection" data-anchor="ch3-h8"><a href="#ch3-h8">3.2.3 从单因子到多因子：自然的推广</a></li><li class="toc-subsection" data-anchor="ch3-h9"><a href="#ch3-h9">3.2.4 因子收益率的经济含义：多空组合视角</a></li></ul><li class="toc-section" data-anchor="ch3-h10"><a href="#ch3-h10">3.3 因子溢价的理论来源——为什么因子能赚钱？</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch3-h11"><a href="#ch3-h11">3.3.1 风险补偿假说</a></li><li class="toc-subsection" data-anchor="ch3-h12"><a href="#ch3-h12">3.3.2 行为金融假说</a></li><li class="toc-subsection" data-anchor="ch3-h13"><a href="#ch3-h13">3.3.3 结构性假说</a></li><li class="toc-subsection" data-anchor="ch3-h14"><a href="#ch3-h14">3.3.4 三种假说的可检验推论与对投资者的含义</a></li></ul><li class="toc-section" data-anchor="ch3-h15"><a href="#ch3-h15">3.4 因子的分类体系</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch3-h16"><a href="#ch3-h16">3.4.1 风格因子 vs 行业因子 vs Alpha因…</a></li><li class="toc-subsection" data-anchor="ch3-h17"><a href="#ch3-h17">3.4.2 从 APT 理论推导因子存在的条件</a></li></ul><li class="toc-section" data-anchor="ch3-h18"><a href="#ch3-h18">3.5 好因子的标准：一个评价框架的推导</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch3-h19"><a href="#ch3-h19">3.5.1 从信息论角度定义&quot;信息含量&quot;</a></li><li class="toc-subsection" data-anchor="ch3-h20"><a href="#ch3-h20">3.5.2 可解释性、持续性、容量，三标准的逻辑关系</a></li><li class="toc-subsection" data-anchor="ch3-h21"><a href="#ch3-h21">3.5.3 因子衰减的数学模型</a></li></ul><li class="toc-section" data-anchor="ch3-h22"><a href="#ch3-h22">3.6 本章小结</a></li><li class="toc-section" data-anchor="ch3-h23"><a href="#ch3-h23">常见陷阱</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch3-h24"><a href="#ch3-h24">参考文献</a></li></ul><li class="toc-section" data-anchor="ch3-h25"><a href="#ch3-h25">附：Python 验证代码</a></li><li class="toc-section" data-anchor="ch3-h26"><a href="#ch3-h26">补充：关键推导的 Worked Examples</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch3-h27"><a href="#ch3-h27">Worked Example 1：SDF框架计算因子溢价…</a></li><li class="toc-subsection" data-anchor="ch3-h28"><a href="#ch3-h28">Worked Example 2：APT定价方程的数值验…</a></li><li class="toc-subsection" data-anchor="ch3-h29"><a href="#ch3-h29">Worked Example 3：因子衰减半衰期的计算（…</a></li></ul></ul>
+<ul class="toc-sections"><li class="toc-section" data-anchor="ch3-h1"><a href="#ch3-h1">3.1 什么是&quot;因子&quot;——从投资直觉出发</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch3-h2"><a href="#ch3-h2">3.1.1 一个简单的观察</a></li><li class="toc-subsection" data-anchor="ch3-h3"><a href="#ch3-h3">3.1.2 从&quot;特征&quot;到&quot;因子&quot;的概念跃迁</a></li><li class="toc-subsection" data-anchor="ch3-h4"><a href="#ch3-h4">3.1.3 为什么需要数学形式化？</a></li></ul><li class="toc-section" data-anchor="ch3-h5"><a href="#ch3-h5">3.2 因子的数学形式化：横截面回归模型</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch3-h6"><a href="#ch3-h6">3.2.2 推导过程：从条件期望到 OLS 估计</a></li><li class="toc-subsection" data-anchor="ch3-h7"><a href="#ch3-h7">3.2.3 从单因子到多因子：自然的推广</a></li><li class="toc-subsection" data-anchor="ch3-h8"><a href="#ch3-h8">3.2.4 因子收益率的经济含义：多空组合视角</a></li></ul><li class="toc-section" data-anchor="ch3-h9"><a href="#ch3-h9">3.3 因子溢价的理论来源——为什么因子能赚钱？</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch3-h10"><a href="#ch3-h10">3.3.1 风险补偿假说</a></li><li class="toc-subsection" data-anchor="ch3-h11"><a href="#ch3-h11">3.3.2 行为金融假说</a></li><li class="toc-subsection" data-anchor="ch3-h12"><a href="#ch3-h12">3.3.3 结构性假说</a></li><li class="toc-subsection" data-anchor="ch3-h13"><a href="#ch3-h13">3.3.4 三种假说的可检验推论与对投资者的含义</a></li></ul><li class="toc-section" data-anchor="ch3-h14"><a href="#ch3-h14">3.4 因子的分类体系</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch3-h15"><a href="#ch3-h15">3.4.1 风格因子 vs 行业因子 vs Alpha因…</a></li><li class="toc-subsection" data-anchor="ch3-h16"><a href="#ch3-h16">3.4.2 从 APT 理论推导因子存在的条件</a></li></ul><li class="toc-section" data-anchor="ch3-h17"><a href="#ch3-h17">3.5 好因子的标准：一个评价框架的推导</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch3-h18"><a href="#ch3-h18">3.5.1 从信息论角度定义&quot;信息含量&quot;</a></li><li class="toc-subsection" data-anchor="ch3-h19"><a href="#ch3-h19">3.5.2 可解释性、持续性、容量，三标准的逻辑关系</a></li><li class="toc-subsection" data-anchor="ch3-h20"><a href="#ch3-h20">3.5.3 因子衰减的数学模型</a></li></ul><li class="toc-section" data-anchor="ch3-h21"><a href="#ch3-h21">3.6 本章小结</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch3-h22"><a href="#ch3-h22">3.6.1 因子投资的数学基础回顾</a></li><li class="toc-subsection" data-anchor="ch3-h23"><a href="#ch3-h23">3.6.2 常见陷阱</a></li></ul><li class="toc-section" data-anchor="ch3-h24"><a href="#ch3-h24">附1：参考文献</a></li><li class="toc-section" data-anchor="ch3-h25"><a href="#ch3-h25">附2：Python 验证代码</a></li><li class="toc-section" data-anchor="ch3-h26"><a href="#ch3-h26">附3：关键推导的 Worked Examples</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch3-h27"><a href="#ch3-h27">Worked Example 1：SDF框架计算因子溢价…</a></li><li class="toc-subsection" data-anchor="ch3-h28"><a href="#ch3-h28">Worked Example 2：APT定价方程的数值验…</a></li><li class="toc-subsection" data-anchor="ch3-h29"><a href="#ch3-h29">Worked Example 3：因子衰减半衰期的计算（…</a></li></ul></ul>
 </li>
 <li class="toc-chapter" data-anchor="ch4-h0"><a href="#ch4-h0">第4章：常见因子详解——经济逻辑与推导</a>
-<ul class="toc-sections"><li class="toc-section" data-anchor="ch4-h1"><a href="#ch4-h1">4.1 价值因子的逻辑推导</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch4-h2"><a href="#ch4-h2">4.1.1 什么是&quot;便宜&quot;？——价值因子的定义</a></li><li class="toc-subsection" data-anchor="ch4-h3"><a href="#ch4-h3">4.1.2 从 DDM 模型推导 EP 因子的理论基础</a></li><li class="toc-subsection" data-anchor="ch4-h4"><a href="#ch4-h4">4.1.3 推导过程：低 P/E 意味着什么？</a></li><li class="toc-subsection" data-anchor="ch4-h5"><a href="#ch4-h5">4.1.4 BP 因子：账面价值作为&quot;锚&quot;的理论依据</a></li><li class="toc-subsection" data-anchor="ch4-h6"><a href="#ch4-h6">4.1.5 价值因子为何有效？——错误定价 vs 风险补…</a></li></ul><li class="toc-section" data-anchor="ch4-h7"><a href="#ch4-h7">4.2 动量因子的逻辑推导</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch4-h8"><a href="#ch4-h8">4.2.1 动量因子的定义与实证现象</a></li><li class="toc-subsection" data-anchor="ch4-h9"><a href="#ch4-h9">4.2.2 从信息扩散模型推导动量效应</a></li><li class="toc-subsection" data-anchor="ch4-h10"><a href="#ch4-h10">4.2.3 反应不足的数学推导</a></li><li class="toc-subsection" data-anchor="ch4-h11"><a href="#ch4-h11">4.2.4 为什么反转是动量的&quot;另一面&quot;</a></li><li class="toc-subsection" data-anchor="ch4-h12"><a href="#ch4-h12">4.2.5 动量崩溃的理论机制与风险</a></li></ul><li class="toc-section" data-anchor="ch4-h13"><a href="#ch4-h13">4.3 质量因子的逻辑推导</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch4-h14"><a href="#ch4-h14">4.3.1 从企业价值创造理论推导 ROE 因子</a></li><li class="toc-subsection" data-anchor="ch4-h15"><a href="#ch4-h15">4.3.2 杜邦分解的逻辑：拆解 ROE 的驱动力</a></li><li class="toc-subsection" data-anchor="ch4-h16"><a href="#ch4-h16">4.3.3 应计利润异象的推导：从会计恒等式到投资信号</a></li><li class="toc-subsection" data-anchor="ch4-h17"><a href="#ch4-h17">4.3.4 质量因子的持续性——推导均值回归速度</a></li></ul><li class="toc-section" data-anchor="ch4-h18"><a href="#ch4-h18">4.4 规模因子与波动率因子</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch4-h19"><a href="#ch4-h19">4.4.1 小市值效应：流动性溢价的理论推导</a></li><li class="toc-subsection" data-anchor="ch4-h20"><a href="#ch4-h20">4.4.2 A股的特殊性：壳价值逻辑</a></li><li class="toc-subsection" data-anchor="ch4-h21"><a href="#ch4-h21">4.4.3 低波动异象：从杠杆约束与彩票偏好推导</a></li></ul><li class="toc-section" data-anchor="ch4-h22"><a href="#ch4-h22">4.5 因子间的逻辑关系</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch4-h23"><a href="#ch4-h23">4.5.1 因子冗余性的判定</a></li><li class="toc-subsection" data-anchor="ch4-h24"><a href="#ch4-h24">4.5.2 五大因子的相关性矩阵与经济含义</a></li><li class="toc-subsection" data-anchor="ch4-h25"><a href="#ch4-h25">4.5.3 各因子在A股的历史表现与证据强度</a></li><li class="toc-subsection" data-anchor="ch4-h26"><a href="#ch4-h26">参考文献</a></li></ul><li class="toc-section" data-anchor="ch4-h27"><a href="#ch4-h27">4.6 本章小结</a></li><li class="toc-section" data-anchor="ch4-h28"><a href="#ch4-h28">常见陷阱</a></li><li class="toc-section" data-anchor="ch4-h29"><a href="#ch4-h29">附：Python 验证代码</a></li><li class="toc-section" data-anchor="ch4-h30"><a href="#ch4-h30">补充：关键推导的 Worked Examples</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch4-h31"><a href="#ch4-h31">Worked Example 1：信息扩散模型的完整数值…</a></li><li class="toc-subsection" data-anchor="ch4-h32"><a href="#ch4-h32">Worked Example 2：杜邦分解实战——贵州茅…</a></li><li class="toc-subsection" data-anchor="ch4-h33"><a href="#ch4-h33">Worked Example 3：应计利润异象的数值示例…</a></li><li class="toc-subsection" data-anchor="ch4-h34"><a href="#ch4-h34">Worked Example 4：动量崩溃的数值推演（对…</a></li></ul></ul>
+<ul class="toc-sections"><li class="toc-section" data-anchor="ch4-h1"><a href="#ch4-h1">4.1 价值因子的逻辑推导</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch4-h2"><a href="#ch4-h2">4.1.1 什么是&quot;便宜&quot;？——价值因子的定义</a></li><li class="toc-subsection" data-anchor="ch4-h3"><a href="#ch4-h3">4.1.2 从 DDM 模型推导 EP 因子的理论基础</a></li><li class="toc-subsection" data-anchor="ch4-h4"><a href="#ch4-h4">4.1.3 推导过程：高 EP 意味着什么？</a></li><li class="toc-subsection" data-anchor="ch4-h5"><a href="#ch4-h5">4.1.4 BP 因子：账面价值作为&quot;锚&quot;的理论依据</a></li><li class="toc-subsection" data-anchor="ch4-h6"><a href="#ch4-h6">4.1.5 价值因子为何有效？——错误定价 vs 风险补…</a></li></ul><li class="toc-section" data-anchor="ch4-h7"><a href="#ch4-h7">4.2 动量因子的逻辑推导</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch4-h8"><a href="#ch4-h8">4.2.1 动量因子的定义与实证现象</a></li><li class="toc-subsection" data-anchor="ch4-h9"><a href="#ch4-h9">4.2.2 从信息扩散模型推导动量效应</a></li><li class="toc-subsection" data-anchor="ch4-h10"><a href="#ch4-h10">4.2.3 反应不足的数学推导</a></li><li class="toc-subsection" data-anchor="ch4-h11"><a href="#ch4-h11">4.2.4 为什么反转是动量的&quot;另一面&quot;</a></li><li class="toc-subsection" data-anchor="ch4-h12"><a href="#ch4-h12">4.2.5 动量崩溃的理论机制与风险</a></li></ul><li class="toc-section" data-anchor="ch4-h13"><a href="#ch4-h13">4.3 质量因子的逻辑推导</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch4-h14"><a href="#ch4-h14">4.3.1 从企业价值创造理论推导 ROE 因子</a></li><li class="toc-subsection" data-anchor="ch4-h15"><a href="#ch4-h15">4.3.2 杜邦分解的逻辑：拆解 ROE 的驱动力</a></li><li class="toc-subsection" data-anchor="ch4-h16"><a href="#ch4-h16">4.3.3 应计利润异象的推导：从会计恒等式到投资信号</a></li><li class="toc-subsection" data-anchor="ch4-h17"><a href="#ch4-h17">4.3.4 质量因子的持续性——推导均值回归速度</a></li></ul><li class="toc-section" data-anchor="ch4-h18"><a href="#ch4-h18">4.4 规模因子与波动率因子</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch4-h19"><a href="#ch4-h19">4.4.1 小市值效应：流动性溢价的理论推导</a></li><li class="toc-subsection" data-anchor="ch4-h20"><a href="#ch4-h20">4.4.2 A股的特殊性：壳价值逻辑</a></li><li class="toc-subsection" data-anchor="ch4-h21"><a href="#ch4-h21">4.4.3 低波动异象：从杠杆约束与彩票偏好推导</a></li></ul><li class="toc-section" data-anchor="ch4-h22"><a href="#ch4-h22">4.5 因子间的逻辑关系</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch4-h23"><a href="#ch4-h23">4.5.1 因子冗余性的判定</a></li><li class="toc-subsection" data-anchor="ch4-h24"><a href="#ch4-h24">4.5.2 五大因子的相关性矩阵与经济含义</a></li><li class="toc-subsection" data-anchor="ch4-h25"><a href="#ch4-h25">4.5.3 各因子在A股的历史表现与证据强度</a></li><li class="toc-subsection" data-anchor="ch4-h26"><a href="#ch4-h26">参考文献</a></li></ul><li class="toc-section" data-anchor="ch4-h27"><a href="#ch4-h27">4.6 本章小结</a></li><li class="toc-section" data-anchor="ch4-h28"><a href="#ch4-h28">常见陷阱</a></li><li class="toc-section" data-anchor="ch4-h29"><a href="#ch4-h29">附：Python 验证代码</a></li><li class="toc-section" data-anchor="ch4-h30"><a href="#ch4-h30">补充：关键推导的 Worked Examples</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch4-h31"><a href="#ch4-h31">Worked Example 1：信息扩散模型的完整数值…</a></li><li class="toc-subsection" data-anchor="ch4-h32"><a href="#ch4-h32">Worked Example 2：杜邦分解实战——贵州茅…</a></li><li class="toc-subsection" data-anchor="ch4-h33"><a href="#ch4-h33">Worked Example 3：应计利润异象的数值示例…</a></li><li class="toc-subsection" data-anchor="ch4-h34"><a href="#ch4-h34">Worked Example 4：动量崩溃的数值推演（对…</a></li></ul></ul>
 </li>
 <li class="toc-chapter" data-anchor="ch5-h0"><a href="#ch5-h0">第5章：因子检验方法论——统计推断的逻辑</a>
 <ul class="toc-sections"><li class="toc-section" data-anchor="ch5-h1"><a href="#ch5-h1">5.1 因子检验的核心问题</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch5-h2"><a href="#ch5-h2">5.1.1 统计假设检验的逻辑框架</a></li><li class="toc-subsection" data-anchor="ch5-h3"><a href="#ch5-h3">5.1.2 因子检验中的两大特殊性</a></li></ul><li class="toc-section" data-anchor="ch5-h4"><a href="#ch5-h4">5.2 IC 分析的理论推导</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch5-h5"><a href="#ch5-h5">5.2.1 IC的定义与信息论基础</a></li><li class="toc-subsection" data-anchor="ch5-h6"><a href="#ch5-h6">5.2.2 为什么用秩相关？——鲁棒性推导</a></li><li class="toc-subsection" data-anchor="ch5-h7"><a href="#ch5-h7">5.2.3 IC → IR 的推导：为什么IR比IC均值…</a></li><li class="toc-subsection" data-anchor="ch5-h8"><a href="#ch5-h8">5.2.4 IC的分布特征：零假设下IC服从什么分布？</a></li><li class="toc-subsection" data-anchor="ch5-h9"><a href="#ch5-h9">5.2.5 IC的统计显著性判定：t检验推导</a></li></ul><li class="toc-section" data-anchor="ch5-h10"><a href="#ch5-h10">5.3 分层回测的理论基础</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch5-h11"><a href="#ch5-h11">5.3.1 为什么需要分层回测？——IC分析的局限性</a></li><li class="toc-subsection" data-anchor="ch5-h12"><a href="#ch5-h12">5.3.2 分层回测的方法与统计模型</a></li><li class="toc-subsection" data-anchor="ch5-h13"><a href="#ch5-h13">5.3.3 单调性检验：不只是两头比较</a></li><li class="toc-subsection" data-anchor="ch5-h14"><a href="#ch5-h14">5.3.4 分层回测与IC方法的等价性条件</a></li></ul><li class="toc-section" data-anchor="ch5-h15"><a href="#ch5-h15">5.4 Fama-MacBeth 回归</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch5-h16"><a href="#ch5-h16">5.4.1 为什么不能直接做面板回归？</a></li><li class="toc-subsection" data-anchor="ch5-h17"><a href="#ch5-h17">5.4.2 Fama-MacBeth两步法的推导</a></li><li class="toc-subsection" data-anchor="ch5-h18"><a href="#ch5-h18">5.4.3 Newey-West 调整：处理时间自相关</a></li><li class="toc-subsection" data-anchor="ch5-h19"><a href="#ch5-h19">5.4.4 FM回归的局限性</a></li></ul><li class="toc-section" data-anchor="ch5-h20"><a href="#ch5-h20">5.5 多重检验问题</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch5-h21"><a href="#ch5-h21">5.5.1 为什么测试多个因子导致虚假发现？</a></li><li class="toc-subsection" data-anchor="ch5-h22"><a href="#ch5-h22">5.5.2 Bonferroni 校正与 FDR 控制</a></li><li class="toc-subsection" data-anchor="ch5-h23"><a href="#ch5-h23">5.5.3 Harvey, Liu and Zhu (2…</a></li><li class="toc-subsection" data-anchor="ch5-h24"><a href="#ch5-h24">5.5.4 数据窥探偏差的形式化</a></li></ul><li class="toc-section" data-anchor="ch5-h25"><a href="#ch5-h25">5.6 因子衰减分析</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch5-h26"><a href="#ch5-h26">5.6.1 IC时间序列的动态特征</a></li><li class="toc-subsection" data-anchor="ch5-h27"><a href="#ch5-h27">5.6.2 半衰期计算</a></li><li class="toc-subsection" data-anchor="ch5-h28"><a href="#ch5-h28">5.6.3 因子拥挤与长期衰减</a></li></ul><li class="toc-section" data-anchor="ch5-h29"><a href="#ch5-h29">5.7 本章小结</a></li><li class="toc-section" data-anchor="ch5-h30"><a href="#ch5-h30">常见陷阱</a></li><li class="toc-section" data-anchor="ch5-h31"><a href="#ch5-h31">附：Python 验证代码</a></li></ul>
 </li>
 <li class="toc-chapter" data-anchor="ch6-h0"><a href="#ch6-h0">第6章：因子合成与加权——最优性推导</a>
-<ul class="toc-sections"><li class="toc-section" data-anchor="ch6-h1"><a href="#ch6-h1">6.1 为什么需要合成：信息丢失的形式化</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch6-h2"><a href="#ch6-h2">6.1.1 单因子的局限性</a></li><li class="toc-subsection" data-anchor="ch6-h3"><a href="#ch6-h3">6.1.2 合成的目标函数</a></li></ul><li class="toc-section" data-anchor="ch6-h4"><a href="#ch6-h4">6.2 等权合成：最简单的起点</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch6-h5"><a href="#ch6-h5">6.2.1 等权的定义与贝叶斯解释</a></li><li class="toc-subsection" data-anchor="ch6-h6"><a href="#ch6-h6">6.2.2 等权的最优性条件</a></li><li class="toc-subsection" data-anchor="ch6-h7"><a href="#ch6-h7">6.2.3 等权的优势与局限</a></li></ul><li class="toc-section" data-anchor="ch6-h8"><a href="#ch6-h8">6.3 IC 加权：理论最优解的推导</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch6-h9"><a href="#ch6-h9">6.3.1 优化问题的设定</a></li><li class="toc-subsection" data-anchor="ch6-h10"><a href="#ch6-h10">6.3.2 用拉格朗日乘数法求解</a></li><li class="toc-subsection" data-anchor="ch6-h11"><a href="#ch6-h11">6.3.3 最优解的经济含义</a></li></ul><li class="toc-section" data-anchor="ch6-h12"><a href="#ch6-h12">6.4 正交化处理：消除因子间的重叠</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch6-h13"><a href="#ch6-h13">6.4.1 为什么需要正交化？——共线性的危害</a></li><li class="toc-subsection" data-anchor="ch6-h14"><a href="#ch6-h14">6.4.2 Gram-Schmidt 正交化</a></li><li class="toc-subsection" data-anchor="ch6-h15"><a href="#ch6-h15">6.4.3 对称正交化</a></li><li class="toc-subsection" data-anchor="ch6-h16"><a href="#ch6-h16">6.4.4 正交化的注意事项</a></li></ul><li class="toc-section" data-anchor="ch6-h17"><a href="#ch6-h17">6.5 动态加权：贝叶斯框架</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch6-h18"><a href="#ch6-h18">6.5.1 为什么需要动态加权？</a></li><li class="toc-subsection" data-anchor="ch6-h19"><a href="#ch6-h19">6.5.2 滚动IC加权</a></li><li class="toc-subsection" data-anchor="ch6-h20"><a href="#ch6-h20">6.5.3 贝叶斯更新：优雅的折中方案</a></li></ul><li class="toc-section" data-anchor="ch6-h21"><a href="#ch6-h21">6.6 收缩估计：对抗过拟合的利器</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch6-h22"><a href="#ch6-h22">6.6.1 为什么纯样本最优会失败？</a></li><li class="toc-subsection" data-anchor="ch6-h23"><a href="#ch6-h23">6.6.2 收缩估计的核心思想</a></li></ul><li class="toc-section" data-anchor="ch6-h24"><a href="#ch6-h24">6.7 合成方法的比较与实操建议</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch6-h25"><a href="#ch6-h25">6.7.1 各方法总结</a></li><li class="toc-subsection" data-anchor="ch6-h26"><a href="#ch6-h26">6.7.2 实操流程建议</a></li></ul><li class="toc-section" data-anchor="ch6-h27"><a href="#ch6-h27">6.8 本章小结</a></li><li class="toc-section" data-anchor="ch6-h28"><a href="#ch6-h28">常见陷阱</a></li><li class="toc-section" data-anchor="ch6-h29"><a href="#ch6-h29">附：Python 验证代码</a></li></ul>
+<ul class="toc-sections"><li class="toc-section" data-anchor="ch6-h1"><a href="#ch6-h1">6.1 为什么需要合成：信息丢失的形式化</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch6-h2"><a href="#ch6-h2">6.1.1 单因子的局限性</a></li><li class="toc-subsection" data-anchor="ch6-h3"><a href="#ch6-h3">6.1.2 合成的目标函数</a></li></ul><li class="toc-section" data-anchor="ch6-h4"><a href="#ch6-h4">6.2 等权合成：最简单的起点</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch6-h5"><a href="#ch6-h5">6.2.1 等权的定义与贝叶斯解释</a></li><li class="toc-subsection" data-anchor="ch6-h6"><a href="#ch6-h6">6.2.2 等权的最优性条件</a></li><li class="toc-subsection" data-anchor="ch6-h7"><a href="#ch6-h7">6.2.3 等权的优势与局限</a></li></ul><li class="toc-section" data-anchor="ch6-h8"><a href="#ch6-h8">6.3 IC 加权：理论最优解的推导</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch6-h9"><a href="#ch6-h9">6.3.2 用拉格朗日乘数法求解</a></li><li class="toc-subsection" data-anchor="ch6-h10"><a href="#ch6-h10">6.3.3 最优解的经济含义</a></li></ul><li class="toc-section" data-anchor="ch6-h11"><a href="#ch6-h11">6.4 正交化处理：消除因子间的重叠</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch6-h12"><a href="#ch6-h12">6.4.1 为什么需要正交化？——共线性的危害</a></li><li class="toc-subsection" data-anchor="ch6-h13"><a href="#ch6-h13">6.4.2 Gram-Schmidt 正交化</a></li><li class="toc-subsection" data-anchor="ch6-h14"><a href="#ch6-h14">6.4.3 对称正交化</a></li><li class="toc-subsection" data-anchor="ch6-h15"><a href="#ch6-h15">6.4.4 正交化的注意事项</a></li></ul><li class="toc-section" data-anchor="ch6-h16"><a href="#ch6-h16">6.5 动态加权：贝叶斯框架</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch6-h17"><a href="#ch6-h17">6.5.1 为什么需要动态加权？</a></li><li class="toc-subsection" data-anchor="ch6-h18"><a href="#ch6-h18">6.5.2 滚动IC加权</a></li><li class="toc-subsection" data-anchor="ch6-h19"><a href="#ch6-h19">6.5.3 贝叶斯更新：优雅的折中方案</a></li></ul><li class="toc-section" data-anchor="ch6-h20"><a href="#ch6-h20">6.6 收缩估计：对抗过拟合的利器</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch6-h21"><a href="#ch6-h21">6.6.1 为什么纯样本最优会失败？</a></li><li class="toc-subsection" data-anchor="ch6-h22"><a href="#ch6-h22">6.6.2 收缩估计的核心思想</a></li></ul><li class="toc-section" data-anchor="ch6-h23"><a href="#ch6-h23">6.7 合成方法的比较与实操建议</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch6-h24"><a href="#ch6-h24">6.7.1 各方法总结</a></li><li class="toc-subsection" data-anchor="ch6-h25"><a href="#ch6-h25">6.7.2 实操流程建议</a></li></ul><li class="toc-section" data-anchor="ch6-h26"><a href="#ch6-h26">6.8 本章小结</a></li><li class="toc-section" data-anchor="ch6-h27"><a href="#ch6-h27">常见陷阱</a></li><li class="toc-section" data-anchor="ch6-h28"><a href="#ch6-h28">附：Python 验证代码</a></li></ul>
 </li>
 <li class="toc-part">第三篇 · 工具篇</li>
 <li class="toc-chapter" data-anchor="ch7-h0"><a href="#ch7-h0">第7章：数据与工具基础——数据获取、清洗与Python工具链概要</a>
@@ -893,6 +895,7 @@
 <blockquote>
 <p><em>投资的核心问题，从来不是"买什么"，而是"为什么买"。</em></p>
 <p><em>多因子模型给我们的最大馈赠，不是某个能赚钱的公式，而是一套把"为什么"讲清楚的语言。</em></p>
+<p><em>这本书的世界观很简单：通过数学解释世界，通过数学预测未来。我们的工作，就是把这种信念落实为一行行可检验的推导。</em></p>
 </blockquote>
 <hr />
 <h2 id="ch0-h1">关于这本书</h2>
@@ -900,6 +903,7 @@
 <p>这本书写给一类特定的读者：<strong>你有理工科背景，看得懂公式推导，对金融市场有兴趣，但从未系统地接触过量化投资</strong>。你可能在 A 股摸爬滚打了几年，赚过也亏过，隐隐觉得"凭感觉炒股"不是长久之计，想把投资建立在一个更可靠的框架上。</p>
 <p>市面上关于量化投资的书不少，但多数落入两种极端。一种是 practitioner 手册——满页代码和调参技巧，跑通一个回测就万事大吉，至于"这个因子为什么有效""它在什么条件下会失效"，一笔带过。另一种是学术专著——模型优美、推导严谨，但从理论到"明天开盘我该怎么操作"之间，隔着一道鸿沟。</p>
 <p>这本书试图站在两者中间：<strong>以理论推导为主线，以代码为验证工具</strong>。我们相信，只有真正理解了一个因子"为什么有效"，才能在它失效时从容应对，而不是在回撤中恐慌清仓。</p>
+<p>撰写这本书的基本思路，植根于一种朴素的世界观：<strong>数学不仅是描述世界的语言，也是预测未来的工具</strong>。一个因子不应该仅仅因为是"历史上回测收益高"而有价值，而应该因为它能从数学上被证明——从 DDM 模型推导出 EP 与预期收益的关系，从信息扩散模型推导出动量的持续性，从杠杆约束推导出低波动异象——才值得被信赖。因此，全书以数学推导为理论基石，在每个环节追问"为什么"而非仅仅展示"是什么"。</p>
 <h2 id="ch0-h2">这本书讲什么</h2>
 
 <p>全书围绕一条主线展开——<strong>从"因子是什么"到"如何用因子构建一个可运行的策略"</strong>。</p>
@@ -930,14 +934,12 @@
 <p>关于数学：本书的推导用到微积分、线性代数和概率统计的基础知识，但不涉及测度论或随机分析。附录 B 提供了必要的数学回顾。如果某段推导暂时看不懂，可以先接受结论继续往下读——实践有时会反过来帮助你理解理论。</p>
 <h2 id="ch0-h5">配套资源</h2>
 
-<p>本书附带一套 Python 代码（<code>code/</code> 目录），覆盖因子计算、检验、回测和组合优化的核心环节。代码以教学可读性为第一优先，不追求生产级性能。</p>
+<p>本书附带一套 Python 代码，覆盖因子计算、检验、回测和组合优化的核心环节。代码以教学可读性为第一优先，不追求生产级性能。</p>
 <h2 id="ch0-h6">最后</h2>
 
 <p>多因子模型存在了三十年，学术文献浩如烟海。这本书里没有原创的理论突破——我们做的只是<strong>把散落在论文里的智慧，重新组织成一条对散户友好的学习路径</strong>。</p>
-<p>如果读完之后，你在看到一只"PE 只有 5 倍"的银行股时，第一反应不再是"好便宜，该买了"，而是"它的 EP 高是因为风险补偿还是市场低估了增长？这个高 EP 能持续吗？"——那么这本书就达到了它的目的。</p>
+<p>如果读完之后，你在看到一只"PE 只有 5 倍"的银行股时，第一反应不再是"好便宜，该买了"，而是"它的 EP 高是因为风险补偿还是市场低估了增长？这个高 EP 能持续吗？"，那么这本书就达到了它的目的。</p>
 <p>投资是一场终身学习。愿这本书成为你路上的一个路标。</p>
-<hr />
-<p><em>本书基于 A 股（沪深 300）真实数据案例，以 Python 作为唯一编程语言。</em></p>
             </section>
 <div class="part-divider"><span>第一篇 · 认知篇</span></div>
 
@@ -1553,10 +1555,8 @@ HML = "High Minus Low"（高减低，指B/P高减B/P低）</p>
 <p>📌 <strong>本节要解决的问题</strong>：我们发现"PE低的股票未来涨得多"，但这个规律到底有多强、多稳定？能不能用一个数字精确描述？</p>
 <p><strong>我们的做法</strong>：把3000只股票的因子值（比如EP）和下个月收益画成散点图，拟合一条直线，看斜率是多少</p>
 <p><strong>得到的结论</strong>：斜率β就是"因子收益率"，它直观的反映了EP每高0.01，下个月平均多赚多少。β越大说明这个因子越有效</p>
-<p>以下是这个结论的数学推导过程。如果你只想知道结论可以跳到下一节。</p>
+<p>以上是结论，以下为推导，读者可自行选择是否跳过该推导过程，继续阅读 3.2.1 节。</p>
 </blockquote>
-<h3 id="ch3-h6">3.2.1 单期横截面回归</h3>
-
 <p>现在让我们把直觉转化为数学。</p>
 <p>考虑在时刻 $t$，市场上有 $N$ 只股票。对于第 $i$ 只股票，我们观察到：</p>
 <ul>
@@ -1617,15 +1617,14 @@ HML = "High Minus Low"（高减低，指B/P高减B/P低）</p>
 <p>将上表中的离散数据绘制成散点图，并叠加上 OLS 回归拟合的直线，可以更直观地看到线性趋势：</p>
 <p><img alt="EP因子与下期收益率的散点图" src="book/images/ch03-ep-scatter.png" /></p>
 <p>目测可以看出EP越高、收益越高，这就是"价值因子有效"的具体表现。回归后得到的 $\hat{\beta}_t$ 就量化了EP每增加0.01对应多少额外收益（图中斜率为 76.13，意味着EP每增加0.01，下月收益平均上升约 0.76 个百分点）。</p>
-<h3 id="ch3-h7">3.2.2 推导过程：从条件期望到 OLS 估计</h3>
+<h3 id="ch3-h6">3.2.2 推导过程：从条件期望到 OLS 估计</h3>
 
 <blockquote>
 <p>📌 <strong>本节要解决的问题</strong>：散点图上的"最佳拟合直线"到底怎么画出来的？为什么用这个方法？</p>
 <p><strong>我们的做法</strong>：用最小二乘法（OLS）——让所有点到直线的距离之和最小，这样拟合出来的斜率最"公平"</p>
 <p><strong>得到的结论</strong>：斜率β = 因子值与收益的协方差 ÷ 因子值的方差。简单说：因子值和收益越"同涨同跌"，β越大；因子值本身越分散，β越精确</p>
-<p>以下是这个结论的数学推导过程。如果你只想知道结论可以跳到下一节。</p>
+<p>以上是结论，以下为推导，读者可自行选择是否跳过该推导过程，继续阅读 3.2.3 节。</p>
 </blockquote>
-<p>让我们严格推导 $\beta_t$ 的含义和计算方法。</p>
 <p><strong>假设 3.1</strong>（线性条件期望）：给定因子值 $f_{i,t}$，股票 $i$ 的预期超额收益为因子值的线性函数：</p>
 <blockquote>
 <p>如果你知道了某只股票的因子值，比如 EP = 0.10（10 块钱买 1 块盈利），那你就能估算出它"数学上大概率能涨多少"。因子值越大，预期收益越高（或越低，取决于 $\beta_t$ 的符号）。公式 (3.2) 去掉了 (3.1) 里的噪音 $\epsilon$，只留下"预期"部分，就好比你不可能提前知道明天上班会不会遭遇交通事故（那是 $\epsilon$），但你大概知道这条路走到公司的平均时间是 20 分钟（那是 $\alpha + \beta \times 距离$）。</p>
@@ -1660,7 +1659,7 @@ HML = "High Minus Low"（高减低，指B/P高减B/P低）</p>
 </ul>
 <p><strong>直觉</strong>：$\beta_t$ 回答的问题是"因子值比平均高出一个标准差的股票，收益率比平均高出多少？"——用因子值自身的离散程度做了标准化。</p>
 <p>用我们前面的5只股票例子验算：$\bar{f} = 0.086$，$\bar{r} = 3\%$，代入公式可以算出 $\hat{\beta}_t \approx 0.77$——即EP每增加0.01，预期月收益增加0.77个百分点。</p>
-<h3 id="ch3-h8">3.2.3 从单因子到多因子：自然的推广</h3>
+<h3 id="ch3-h7">3.2.3 从单因子到多因子：自然的推广</h3>
 
 <blockquote>
 <p>前面我们只用了一个因子（比如EP）来预测收益。但你炒股时肯定会同时关注很多指标——这只股票便不便宜？最近涨势如何？公司盈利能力强不强？每个指标都可能提供一部分预测信息。问题是：怎么把多个指标的信息<strong>同时</strong>放进一个模型里，让它们各自发挥作用又不互相打架？答案就是多元回归——把散点图从二维升级到高维。</p>
@@ -1694,15 +1693,14 @@ $$r_{i,t+1} = \alpha_t + \sum_{k=1}^{K} \beta_{k,t} \cdot f_{ki,t} + \epsilon_{i
 <p>则 OLS 估计为：</p>
 <p>$$\hat{\boldsymbol{\beta}} = (\mathbf{F}^T \mathbf{F})^{-1} \mathbf{F}^T \mathbf{r} \tag{3.6}$$</p>
 <p>这个公式是线性代数中"最小二乘解"的标准形式。它的重要性在于：它把"哪个因子对收益有预测力、预测力有多强"的问题，完全转化为了一个线性代数问题。</p>
-<h3 id="ch3-h9">3.2.4 因子收益率的经济含义：多空组合视角</h3>
+<h3 id="ch3-h8">3.2.4 因子收益率的经济含义：多空组合视角</h3>
 
 <blockquote>
 <p>📌 <strong>本节要解决的问题</strong>：回归算出来的"因子收益率β"，在真实投资中对应什么操作？我到底能赚多少钱？</p>
 <p><strong>我们的做法</strong>：构建一个"多空组合"——买入因子值高的股票、卖空因子值低的股票，看这个组合赚了多少</p>
 <p><strong>得到的结论</strong>：因子收益率 = 做多高EP股票同时做空低EP股票所获得的收益。比如Fama-French的HML因子，就是"买便宜卖贵"的组合收益</p>
-<p>以下是这个结论的数学推导过程。如果你只想知道结论可以跳到下一节。</p>
+<p>以上是结论，以下为推导，读者可自行选择是否跳过该推导过程，继续阅读 3.3 节。</p>
 </blockquote>
-<p>上面的数学推导给出了 $\beta_t$ 的统计定义。但它的经济含义是什么？它对应着一个什么样的投资操作？</p>
 <p><strong>命题 3.1</strong>：在因子值经过标准化（均值为0、标准差为1）处理后，因子收益率 $\beta_t$ 等价于一个多空组合的收益率。</p>
 <p><strong>证明</strong>：</p>
 <p>设标准化后的因子值为 $\tilde{f}_{i,t} = \frac{f_{i,t} - \bar{f}_t}{s_t}$，其中 $s_t$ 是横截面标准差。标准化后，$\tilde{f}$ 的均值为0、标准差为1。</p>
@@ -1734,19 +1732,18 @@ $$r_{i,t+1} = \alpha_t + \sum_{k=1}^{K} \beta_{k,t} \cdot f_{ki,t} + \epsilon_{i
 </blockquote>
 <p>但随之而来的问题是：<strong>为什么因子溢价能持续存在？市场难道不会消除这种"免费午餐"吗？</strong> 这就引出了下一节的核心议题。</p>
 <hr />
-<h2 id="ch3-h10">3.3 因子溢价的理论来源——为什么因子能赚钱？</h2>
+<h2 id="ch3-h9">3.3 因子溢价的理论来源——为什么因子能赚钱？</h2>
 
 <p>这是因子投资中最深刻、也是争议最大的问题。如果某个因子能系统性地带来超额收益，理性的投资者不会放过这个机会，他们的套利行为应该消除这种超额收益才对。那为什么因子溢价还能持续存在？</p>
 <p>对此有三种主流的理论解释。它们并不互斥——不同因子可能有不同的来源，甚至同一个因子可能同时有多种来源。</p>
-<h3 id="ch3-h11">3.3.1 风险补偿假说</h3>
+<h3 id="ch3-h10">3.3.1 风险补偿假说</h3>
 
 <blockquote>
 <p>📌 <strong>本节要解决的问题</strong>：便宜股长期跑赢贵的股、小盘股长期跑赢大盘股。这些"超额收益"为什么不会被套利消除？背后的经济学道理是什么？</p>
 <p><strong>我们的做法</strong>：从"投资者在好时候和坏时候分别怎么决策"出发，推导出一个"随机折现因子（SDF）"，它能解释所有资产的定价</p>
 <p><strong>得到的结论</strong>：因子溢价是"替别人扛风险"的报酬。就像保险公司平时稳赚保费、但大灾时巨亏一样，你赚的因子收益，是因为你在经济崩溃时会亏得比别人惨</p>
-<p>以下是这个结论的数学推导过程。如果你只想知道结论可以跳到下一节。</p>
+<p>以上是结论，以下为推导，读者可自行选择是否跳过该推导过程，继续阅读 3.3.2 节。</p>
 </blockquote>
-<p><strong>核心主张</strong>：因子溢价是投资者承担系统性风险的补偿。它不是"免费午餐"——你赚到的超额收益，本质上是你承担了别人不愿承担的风险。</p>
 <p><strong>类比</strong>：这就像保险公司收取保费一样。保险公司长期来看是赚钱的（保费收入 &gt; 理赔支出），但它承担了"大灾难"的风险。因子投资者的角色类似——大部分时间赚取稳定的因子溢价，但在市场崩溃时可能遭受巨大损失。</p>
 <p><strong>推导框架：随机折现因子（Stochastic Discount Factor, SDF）</strong></p>
 <p>为了理解"为什么承担风险就能获得补偿"，我们需要从资产定价的第一原理出发。这个推导稍微有些抽象，但它是整个金融经济学的基石，值得花时间理解。</p>
@@ -1833,7 +1830,7 @@ $$r_{i,t+1} = \alpha_t + \sum_{k=1}^{K} \beta_{k,t} \cdot f_{ki,t} + \epsilon_{i
 <p><strong>举例</strong>：假设只有一个因子——市场组合收益。$\beta_i$ 就是股票的市场beta，$\lambda$ 就是市场风险溢价（约6%/年）。高beta股票暴露于更多市场风险→更高的预期超额收益。这就是CAPM。</p>
 <p>多因子模型是同样逻辑的推广：价值因子的 $\lambda_{\text{value}} \approx 4\%/\text{年}$，动量因子的 $\lambda_{\text{mom}} \approx 6\%/\text{年}$……每个因子都代表一种系统性风险，承担这种风险就获得相应的补偿。</p>
 <p><strong>风险补偿假说的可检验推论</strong>：如果价值因子溢价来源于风险补偿，那么价值股必须在"坏时候"表现更差。具体地：在经济衰退期间，价值因子的收益应该为负（这恰好是投资者"被保险赔付"的时刻）。</p>
-<h3 id="ch3-h12">3.3.2 行为金融假说</h3>
+<h3 id="ch3-h11">3.3.2 行为金融假说</h3>
 
 <p><strong>核心主张</strong>：因子溢价来源于投资者的系统性非理性行为。市场不是完全有效的——投资者会犯可预测的错误。</p>
 <p>与风险补偿假说不同，行为金融假说认为因子溢价不是"合理补偿"，而是"市场定价错误"的产物。但这种错误是<strong>系统性的</strong>——因为人类的认知偏差是进化塑造的，根植于人性，很难被训练消除。</p>
@@ -1875,7 +1872,7 @@ $$r_{i,t+1} = \alpha_t + \sum_{k=1}^{K} \beta_{k,t} \cdot f_{ki,t} + \epsilon_{i
 <li>风险补偿：因子溢价是理性均衡的结果，<strong>不应该</strong>被套利消除（承担风险的补偿是合理的）</li>
 <li>行为金融：因子溢价是定价错误，理论上<strong>可以</strong>被充分套利消除，但由于客观上的技术水平限制（资金有限、做空困难、职业风险等），它在实践中持续存在</li>
 </ul>
-<h3 id="ch3-h13">3.3.3 结构性假说</h3>
+<h3 id="ch3-h12">3.3.3 结构性假说</h3>
 
 <p><strong>核心主张</strong>：因子溢价来源于市场的制度性约束，使得某些投资者<strong>无法</strong>充分套利——即使他们知道存在错误定价。</p>
 <p><strong>类比</strong>：就像你知道隔壁超市的鸡蛋便宜2毛钱，但过去要花10块钱打车——套利成本超过了价差，所以价差持续存在。</p>
@@ -1894,7 +1891,7 @@ $$r_{i,t+1} = \alpha_t + \sum_{k=1}^{K} \beta_{k,t} \cdot f_{ki,t} + \epsilon_{i
 <p><strong>做空限制</strong>：在A股，做空机制不完善（融券成本高、券源少、限制多）。这意味着即使你发现某些股票被严重高估，你也很难做空它→高估的状态持续更久→因子的空头端收益更大。</p>
 </li>
 </ol>
-<h3 id="ch3-h14">3.3.4 三种假说的可检验推论与对投资者的含义</h3>
+<h3 id="ch3-h13">3.3.4 三种假说的可检验推论与对投资者的含义</h3>
 
 <table>
 <thead>
@@ -1933,9 +1930,9 @@ $$r_{i,t+1} = \alpha_t + \sum_{k=1}^{K} \beta_{k,t} \cdot f_{ki,t} + \epsilon_{i
 <li>结构性因子（如A股小市值的壳价值）：制度变化后可能突然消失——需要动态监控政策环境</li>
 </ul>
 <hr />
-<h2 id="ch3-h15">3.4 因子的分类体系</h2>
+<h2 id="ch3-h14">3.4 因子的分类体系</h2>
 
-<h3 id="ch3-h16">3.4.1 风格因子 vs 行业因子 vs Alpha因子</h3>
+<h3 id="ch3-h15">3.4.1 风格因子 vs 行业因子 vs Alpha因子</h3>
 
 <p>因子可以从多个维度进行分类。最常用的分类方式将因子分为三大类，它们在投资实践中扮演不同的角色：</p>
 <p><strong>风格因子（Style Factors）</strong>：反映投资风格的系统性特征</p>
@@ -1978,15 +1975,14 @@ $$r_{i,t+1} = \alpha_t + \sum_{k=1}^{K} \beta_{k,t} \cdot f_{ki,t} + \epsilon_{i
 <li>$g_{i,t}$：Alpha因子在$t$期的值</li>
 <li>$\epsilon_{i,t+1}$：随机扰动项（个股特异风险）</li>
 </ul>
-<h3 id="ch3-h17">3.4.2 从 APT 理论推导因子存在的条件</h3>
+<h3 id="ch3-h16">3.4.2 从 APT 理论推导因子存在的条件</h3>
 
 <blockquote>
 <p>📌 <strong>本节要解决的问题</strong>：我们一直在用"因子模型"，即默认股票收益可以用几个因子来解释。但凭什么？在什么条件下这个假设才是对的？</p>
 <p><strong>我们的做法</strong>：用APT（套利定价理论）。APT只需要两个温和假设：① 股票收益由一个共同因子结构驱动，② 市场上不存在套利，即你无法用零本金、零风险的操作赚到正收益。在这两条下，收益必然可以写成因子暴露的线性函数</p>
 <p><strong>得到的结论</strong>：只要满足上述两个假设，那么"预期收益 = 各因子暴露 × 对应溢价"就自动成立。这是整个多因子投资的理论根基</p>
-<p>以下是这个结论的数学推导过程。如果你只想知道结论可以跳到下一节。</p>
+<p>以上是结论，以下为推导，读者可自行选择是否跳过该推导过程，继续阅读 3.5 节。</p>
 </blockquote>
-<p>前面我们讨论了因子的定义和分类，那么<strong>在什么条件下，因子模型成立？</strong> 即在什么条件下，资产的预期收益确实是因子暴露的线性函数？</p>
 <p><strong>套利定价理论（Arbitrage Pricing Theory, APT）</strong> 回答了这个问题。它是因子模型的理论基础，由Stephen Ross于1976年提出[2]。APT的美妙之处在于：它不依赖于投资者效用函数的具体形式（不像CAPM），仅依赖于两个相对更通用的假设。</p>
 <p><strong>APT 的核心假设</strong>：</p>
 <p><strong>假设 3.2</strong>（因子结构）：所有资产的收益率可以用 $K$ 个公共因子的线性组合加上一个个股特异项来表示：</p>
@@ -2082,19 +2078,18 @@ $$r_{i,t+1} = \alpha_t + \sum_{k=1}^{K} \beta_{k,t} \cdot f_{ki,t} + \epsilon_{i
 </li>
 </ol>
 <hr />
-<h2 id="ch3-h18">3.5 好因子的标准：一个评价框架的推导</h2>
+<h2 id="ch3-h17">3.5 好因子的标准：一个评价框架的推导</h2>
 
 <p>前面我们证明了因子模型成立的条件，也理解了因子溢价为什么存在。但实际操作中，你可能计算出上百个看似"有效"的指标——它们都是值得投资的因子吗？</p>
 <p>答案是否定的。一个指标要成为"好因子"，它需要通过多重标准的考验。本节从理论上推导这些标准。</p>
-<h3 id="ch3-h19">3.5.1 从信息论角度定义&quot;信息含量&quot;</h3>
+<h3 id="ch3-h18">3.5.1 从信息论角度定义&quot;信息含量&quot;</h3>
 
 <blockquote>
 <p>📌 <strong>本节要解决的问题</strong>：怎么用一个数字衡量"一个因子到底有多好用"？IC（信息系数）是什么、为什么大家都看IC？</p>
 <p><strong>我们的做法</strong>：从信息论出发——如果知道了因子值后，你对未来收益的"不确定感"减少了多少？减少得越多，因子越有用。在正态分布假设下，这个"减少量"恰好跟IC的平方成正比</p>
 <p><strong>得到的结论</strong>：IC就是因子值和未来收益的相关系数。IC=0.05意味着因子能解释收益0.25%的变化——听起来很小，但在3000只股票上每月操作，积累起来就是巨大的优势</p>
-<p>以下是这个结论的数学推导过程。如果你只想知道结论可以跳到下一节。</p>
+<p>以上是结论，以下为推导，读者可自行选择是否跳过该推导过程，继续阅读 3.5.2 节。</p>
 </blockquote>
-<p>一个因子的投资价值，归根结底取决于它提供了多少关于未来收益率的<strong>信息</strong>。"信息"这个概念可以用信息论精确量化。</p>
 <p>设 $r_{t+1}$ 是未来收益率（随机变量），$f_t$ 是当前因子值。因子的信息含量可以用<strong>互信息</strong>（Mutual Information）度量：</p>
 <blockquote>
 <p>互信息 = 你"啥都不知道时"对未来收益的懵逼程度 - 你"知道了因子值之后"剩下的懵逼程度。差额越大，说明这个因子帮你消除的不确定性越多，也就是这个因子越有价值。打个比方：你蒙着眼睛猜明天的天气有多难（$H$），和你看了天气预报之后猜天气有多难（$H|f$），两者的难度差就是天气预报给你的"信息量"。</p>
@@ -2107,7 +2102,7 @@ $$r_{i,t+1} = \alpha_t + \sum_{k=1}^{K} \beta_{k,t} \cdot f_{ki,t} + \epsilon_{i
 <p>对于小的 $\rho$（实际中IC通常在0.02-0.08之间），Taylor展开得到近似：</p>
 <p>$$I \approx \frac{\rho^2}{2}$$</p>
 <p>所以IC=0.05对应的互信息约为 $0.05^2 / 2 = 0.00125$ bits。虽然看起来微乎其微，但记住：Ａ股有几千只股票、每月做一次决策。微小的信息优势在大量重复中累积起来就是巨大的投资回报，这就是"广度"的力量（第5章会量化推导这一点）。</p>
-<h3 id="ch3-h20">3.5.2 可解释性、持续性、容量，三标准的逻辑关系</h3>
+<h3 id="ch3-h19">3.5.2 可解释性、持续性、容量，三标准的逻辑关系</h3>
 
 <p>在信息含量（IC）之上，一个好因子还需要满足三个实践标准。让我们逐个推导它们的理论基础。</p>
 <p><strong>标准1：可解释性（Interpretability）</strong></p>
@@ -2167,7 +2162,7 @@ $$r_{i,t+1} = \alpha_t + \sum_{k=1}^{K} \beta_{k,t} \cdot f_{ki,t} + \epsilon_{i
 <li>无持续性 → 因子已衰竭或太不稳定，净值曲线像过山车</li>
 <li>无容量 → 理论上赚钱但实际操作中交易成本吞噬全部利润，导致策略亏损</li>
 </ul>
-<h3 id="ch3-h21">3.5.3 因子衰减的数学模型</h3>
+<h3 id="ch3-h20">3.5.3 因子衰减的数学模型</h3>
 
 <p>因子不是永恒的。一旦被市场发现并广泛应用，套利行为会逐渐压缩其溢价。理解衰减的数学模型，帮助你判断一个因子还值不值得追踪。</p>
 <blockquote>
@@ -2238,7 +2233,9 @@ $$r_{i,t+1} = \alpha_t + \sum_{k=1}^{K} \beta_{k,t} \cdot f_{ki,t} + \epsilon_{i
 <li>对快速衰减的因子保持警惕（如发现某因子溢价在5年内从8%降到3%，考虑减少权重）</li>
 <li>因子的发现日期很重要——如果一篇论文在2005年发表、当时因子很强，到2020年可能已经衰减了大半</li>
 </ol>
-<h2 id="ch3-h22">3.6 本章小结</h2>
+<h2 id="ch3-h21">3.6 本章小结</h2>
+
+<h3 id="ch3-h22">3.6.1 因子投资的数学基础回顾</h3>
 
 <p>本章建立了因子投资的完整数学基础，其中关键的逻辑链条：</p>
 <ol>
@@ -2260,7 +2257,7 @@ $$r_{i,t+1} = \alpha_t + \sum_{k=1}^{K} \beta_{k,t} \cdot f_{ki,t} + \epsilon_{i
 </ol>
 <p>这些是后续所有章节的理论基石。第4章将把这个框架应用到具体的因子（价值、动量、质量等），给出每个因子从经济学直觉到数学推导的完整逻辑链。</p>
 <hr />
-<h2 id="ch3-h23">常见陷阱</h2>
+<h3 id="ch3-h23">3.6.2 常见陷阱</h3>
 
 <ol>
 <li>
@@ -2280,7 +2277,7 @@ $$r_{i,t+1} = \alpha_t + \sum_{k=1}^{K} \beta_{k,t} \cdot f_{ki,t} + \epsilon_{i
 </li>
 </ol>
 <hr />
-<h3 id="ch3-h24">参考文献</h3>
+<h2 id="ch3-h24">附1：参考文献</h2>
 
 <blockquote>
 <p>[1] Frazzini, A. &amp; Pedersen, L.H., "Betting Against Beta," <em>Journal of Financial Economics</em>, Vol.111, No.1, 2014, pp.1-25.</p>
@@ -2291,7 +2288,7 @@ $$r_{i,t+1} = \alpha_t + \sum_{k=1}^{K} \beta_{k,t} \cdot f_{ki,t} + \epsilon_{i
 <p>[6] McLean, R.D. &amp; Pontiff, J., "Does Academic Research Destroy Stock Return Predictability?", <em>Journal of Finance</em>, Vol.71, No.1, 2016, pp.5-32.</p>
 </blockquote>
 <hr />
-<h2 id="ch3-h25">附：Python 验证代码</h2>
+<h2 id="ch3-h25">附2：Python 验证代码</h2>
 
 <p>以下代码验证本章的两个核心推导：(1) OLS回归系数等价于协方差/方差；(2) 因子收益率与多空组合收益成正比。</p>
 <pre><code class="language-python">import numpy as np
@@ -2349,7 +2346,7 @@ df = pd.DataFrame({'factor': f, 'return': r})
 df['group'] = pd.qcut(df['factor'], 5, labels=['G1(低)', 'G2', 'G3', 'G4', 'G5(高)'])
 
 print(&quot;\n--- 分层回测结果 ---&quot;)
-print(df.groupby('group')['return'].mean().round(4))
+print(df.groupby('group', observed=True)['return'].mean().round(4).to_string())
 print(f&quot;\n多空收益(G5-G1): {df[df['group']=='G5(高)']['return'].mean() - df[df['group']=='G1(低)']['return'].mean():.4f}&quot;)
 </code></pre>
 <p><strong>运行结果解读</strong>：</p>
@@ -2360,7 +2357,7 @@ print(f&quot;\n多空收益(G5-G1): {df[df['group']=='G5(高)']['return'].mean()
 <li>多空收益（G5-G1）与因子收益率成正比（验证命题3.1）</li>
 </ul>
 <hr />
-<h2 id="ch3-h26">补充：关键推导的 Worked Examples</h2>
+<h2 id="ch3-h26">附3：关键推导的 Worked Examples</h2>
 
 <h3 id="ch3-h27">Worked Example 1：SDF框架计算因子溢价（对应3.3.1节）</h3>
 
@@ -2475,8 +2472,8 @@ print(f&quot;\n多空收益(G5-G1): {df[df['group']=='G5(高)']['return'].mean()
 <p><strong>学习目标</strong>：掌握价值、动量、质量、规模、波动率五大类因子的经济学逻辑推导；理解每类因子"为什么有效"的理论基础；区分"经验规律"与"理论推导"；建立因子间逻辑关系的认知</p>
 </blockquote>
 <hr />
-<p>在第3章中，我们建立了因子投资的数学框架——知道了因子是什么、因子收益率的本质、以及因子溢价为什么存在。但那些讨论是抽象的——我们用 $f$ 来代表"某个因子"，用 $\beta$ 代表"某个因子收益率"。</p>
-<p>现在是时候把这个框架"落地"了。本章将逐一推导五大类经典因子：价值、动量、质量、规模、波动率。对于每一类因子，我们都将完成三件事：</p>
+<p>在第3章中，我们建立了因子投资的数学框架，知道了因子是什么、因子收益率的本质、以及因子溢价为什么存在。那些讨论是抽象的，我们用 $f$ 来代表"某个因子"，用 $\beta$ 代表"某个因子收益率"。</p>
+<p>本章试图把这个框架"落地"了，为此，将逐一推导五大类经典因子：价值、动量、质量、规模、波动率。对于每一类因子，我们都将完成三件事：</p>
 <ol>
 <li><strong>经济学直觉</strong>："为什么这个指标可能预测收益"</li>
 <li><strong>严密的数学推导</strong>：从经济模型出发，推导出因子有效的理论条件</li>
@@ -2485,11 +2482,10 @@ print(f&quot;\n多空收益(G5-G1): {df[df['group']=='G5(高)']['return'].mean()
 <hr />
 <h2 id="ch4-h1">4.1 价值因子的逻辑推导</h2>
 
-<p>价值因子是所有因子中历史最悠久、研究最充分的。从Benjamin Graham的《证券分析》（1934年）到Fama-French三因子模型（1992年），"买便宜股"这个理念贯穿了近一个世纪的投资实践。</p>
-<p>但"便宜股长期跑赢昂贵股"这个观察本身不是理论——它是一个需要解释的现象。我们的任务是：从第一原理出发，推导出这个现象为什么会发生。</p>
+<p>价值因子是所有因子中历史最悠久、研究最充分的。从Benjamin Graham的《证券分析》（1934年）到Fama-French三因子模型（1992年），"买便宜股"这个理念贯穿了近一个世纪的投资实践。我们现在从第一原理出发，推导出这个现象为什么会发生。</p>
 <h3 id="ch4-h2">4.1.1 什么是&quot;便宜&quot;？——价值因子的定义</h3>
 
-<p>在日常语言中，"便宜"是一个相对概念。一只100元的股票不一定比10元的"贵"——关键是看你为每一块钱的盈利（或资产）支付了多少价格。</p>
+<p>在日常语言中，"便宜"是一个相对概念。一只100元的股票不一定比10元的"贵"，关键是看你为每一块钱的盈利（或资产）支付了多少价格。</p>
 <p>常用的价值指标包括：</p>
 <table>
 <thead>
@@ -2527,7 +2523,7 @@ print(f&quot;\n多空收益(G5-G1): {df[df['group']=='G5(高)']['return'].mean()
 </tr>
 </tbody>
 </table>
-<p>注意这些指标都是"越高越便宜"——EP高意味着"花较少的钱就能买到较多的盈利"。我们统一采用"分子在上"的形式（而非PE、PB这种"分母在上"的形式），这样因子方向一致：<strong>因子值越高 = 越便宜 = 预期收益越高</strong>。</p>
+<p>注意这些指标都是"越高越便宜"。本书统一采用"分子在上"的形式（EP = Earnings / Price，即市盈率的倒数，EP = 1/PE；BP 同理），这样因子方向一致：<strong>因子值越高 = 越便宜 = 预期收益越高</strong>。</p>
 <p><strong>为什么要用多个价值指标？</strong> 因为每个指标捕捉的"便宜"维度略有不同：</p>
 <ul>
 <li>EP关注盈利能力</li>
@@ -2538,62 +2534,70 @@ print(f&quot;\n多空收益(G5-G1): {df[df['group']=='G5(高)']['return'].mean()
 <h3 id="ch4-h3">4.1.2 从 DDM 模型推导 EP 因子的理论基础</h3>
 
 <blockquote>
-<p>📌 <strong>本节要解决的问题</strong>：为什么"便宜的股票"（EP高）长期回报更高？这不是"捡便宜"那么简单——我们需要从股票定价的根本逻辑来证明</p>
+<p>📌 <strong>本节要解决的问题</strong>：为什么"便宜的股票"（EP高）长期回报更高？这不是"捡便宜"那么简单，需要从股票定价的根本逻辑来证明</p>
 <p><strong>我们的做法</strong>：从最基础的DDM模型（股票价格 = 未来所有分红的折现值）出发，推导出EP和未来收益之间的数学关系</p>
-<p><strong>得到的结论</strong>：EP高意味着市场对这家公司的未来增长预期很低（所以给了低价），但只要实际增长没那么差，股价就会"纠偏"上涨——这就是价值因子赚钱的本质</p>
-<p>以下是这个结论的数学推导过程。如果你只想知道结论可以跳到下一节。</p>
-</blockquote>
-<p>现在让我们从最基本的股票定价模型出发，理解"为什么EP能预测未来收益"。</p>
-<blockquote>
+<p><strong>得到的结论</strong>：EP高意味着市场对这家公司的未来增长预期很低（所以给了低价），但只要实际增长没那么差，股价就会"纠偏"上涨，这就是价值因子赚钱的本质</p>
+<p>以上是结论，以下为推导，读者可自行选择是否跳过该推导过程，继续阅读 4.1.3 节。</p>
 <p><strong>前置知识：DDM 模型（股利贴现模型）</strong></p>
-<p>DDM（Dividend Discount Model，股利贴现模型）是股票定价中最经典的理论框架，由 John Burr Williams 在 1938 年提出。它的核心思想极其朴素：</p>
+<p>DDM（Dividend Discount Model，股利贴现模型）是股票定价中最经典的理论框架，由 John Burr Williams 在 1938 年提出。它的核心思想是：</p>
 <p><strong>持有一只股票能获得的全部现金流就是未来的股利。因此，股票的合理价格应当等于未来所有股利的现值之和。</strong></p>
+</blockquote>
 <p>一般形式的 DDM 公式为：</p>
 <p>$$P = \sum_{t=1}^{\infty} \frac{D_t}{(1+r)^t} \tag{4.0}$$</p>
 <p>其中：</p>
 <ul>
-<li>$P$ 是股票当前的理论价值（合理价格）</li>
+<li>$P$ 是股票当前的理论价值（合理价格）<ul>
 <li>$D_t$ 是第 $t$ 期预期的股利</li>
 <li>$r$ 是投资者的要求回报率（折现率），反映了资金的机会成本和风险补偿，可以理解为，投资者冒风险买入这只股票，每年至少需要赚多少才"划算"。它由两部分构成：</li>
 </ul>
+</li>
+</ul>
 <p>$$r = r_f + \text{风险溢价}$$</p>
 <ul>
-<li><strong>无风险利率 $r_f$</strong>：不冒任何风险就能拿到的收益（比如存银行、买国债）。这是资金的机会成本——如果你不买这只股票，至少能把钱放在这里稳赚。</li>
+<li><strong>无风险利率 $r_f$</strong>：不冒任何风险就能拿到的收益（比如存银行、买国债）。这是资金的机会成本——如果你不买这只股票，至少能把钱放在这里稳赚。<ul>
 <li><strong>风险溢价</strong>：因为你买股票要承担价格波动、公司经营不善等风险，你会额外要求一笔"风险辛苦费"。风险越大的股票，风险溢价越高，$r$ 也就越大。</li>
 </ul>
-<p>举个例子：如果银行理财年化 3%，而你觉得这只股票的风险值得额外再要 5%，那么你的要求回报率 $r = 8\%$。这个 $r$ 同时也就是折现率——因为明年的 1 元钱在 8% 的折现率下，今天只值约 $1/(1.08) \approx 0.93$ 元。</p>
-</blockquote>
-<p>这个公式的含义是：<strong>今天你愿意花多少钱买一只股票，取决于（1）你预期未来能拿到多少股利，以及（2）你对这些未来收入的"耐心程度"（折现率 $r$ 越高，未来的钱在今天就越不值钱）。</strong></p>
+</li>
+</ul>
+<p>公式4.0的含义是：<strong>今天你愿意花多少钱买一只股票，取决于（1）你预期未来能拿到多少股利，以及（2）你对这些未来收入的"耐心程度"（折现率 $r$ 越高，未来的钱在今天就越不值钱）。</strong></p>
 <blockquote>
 <p>直观例子：如果一只股票预计明年分红 1 元、后年分红 1.1 元、大后年分红 1.21 元……永续增长，而你的要求回报率是 10%，那么你算出它的合理价格就是 $P = 1/(1.1) + 1.1/(1.1)^2 + 1.21/(1.1)^3 + ... = 10$ 元。</p>
-<p>DDM 的一般形式（公式 4.0）中，每一期股利 $D_t$ 可以各不相同，计算起来很麻烦。一个重要的特例是——如果假设股利以一个恒定的速率 $g$ 永续增长，无穷级数就能化简为一个非常简洁的公式，这就是接下来要用的 <strong>Gordon 增长模型</strong>。</p>
 <p>注意：DDM 看似只关心"股利"，但股利最终来源于公司的盈利。因此 DDM 实际上搭建了<strong>股价 ↔ 盈利 ↔ 增长 ↔ 风险</strong>之间的桥梁——这正是我们推导 EP 因子经济含义的关键工具。</p>
 </blockquote>
+<p>DDM 的一般形式（公式4.0）中，每一期股利 $D_t$ 可以各不相同，计算起来很麻烦。但它有一个重要的特例：如果假设股利以一个恒定的速率 $g$ 永续增长，无穷级数就能化简为一个非常简洁的公式，这就是接下来要用的 <strong>Gordon 增长模型</strong>。</p>
+<p><strong>推导：从一般 DDM 到 Gordon 增长模型</strong></p>
+<p>设下一期股利为 $D_1$，此后每年股利以恒定速率 $g$ 增长，即：</p>
+<p>$$D_2 = D_1(1+g),\quad D_3 = D_1(1+g)^2,\quad \dots,\quad D_t = D_1(1+g)^{t-1}$$</p>
+<p>代入 DDM 的一般形式 (4.0)：</p>
+<p>$$P = \frac{D_1}{1+r} + \frac{D_1(1+g)}{(1+r)^2} + \frac{D_1(1+g)^2}{(1+r)^3} + \cdots$$</p>
+<p>提取公因子 $D_1$：</p>
+<p>$$P = D_1 \cdot \left[ \frac{1}{1+r} + \frac{1+g}{(1+r)^2} + \frac{(1+g)^2}{(1+r)^3} + \cdots \right]$$</p>
+<p>括号中是一个无穷等比级数，首项 $a = \frac{1}{1+r}$，公比 $q = \frac{1+g}{1+r}$。假设 $r > g$（投资者的要求回报率高于公司增长率，这是成熟公司的特性），则 $q < 1$，级数收敛。</p>
+<p>无穷等比级数求和公式：$\sum_{k=1}^{\infty} a \cdot q^{k-1} = \frac{a}{1-q}$。代入：</p>
+<p>$$P = D_1 \cdot \frac{\frac{1}{1+r}}{1 - \frac{1+g}{1+r}} = D_1 \cdot \frac{1}{1+r - (1+g)} = \frac{D_1}{r - g}$$</p>
 <p><strong>出发点：Gordon 增长模型（恒定增长DDM）</strong></p>
-<p>假设一家公司每年的盈利以固定速率 $g$ 增长，且将固定比例 $d$ 的盈利作为股利分配给股东。在投资者的要求回报率为 $r$ 的条件下，公司股票的理论价值为：</p>
-<blockquote>
-<p>$P$（股价）= $\frac{d \cdot E}{r - g}$，也就是 <strong>"每股能分到的钱"</strong> 除以 <strong>"要求回报率减去增长率"</strong>。分母 $(r-g)$ 越小，股价越高——这意味着：同样的盈利，如果你对公司增长更乐观（$g$ 大）或者你要求的回报更低（$r$ 小），你就愿意出更高的价格。</p>
-</blockquote>
+<p>因此，假设一家公司每年的盈利以固定速率 $g$ 增长，且将固定比例 $d$ 的盈利作为股利分配给股东。在投资者的要求回报率为 $r$ 的条件下，公司股票的理论价值为：</p>
 <p>$$P = \frac{D_1}{r - g} = \frac{d \cdot E \cdot (1+g)}{r - g} \approx \frac{d \cdot E}{r - g} \tag{4.1}$$</p>
 <p>其中 $E$ 是当期盈利，$D_1 = d \cdot E \cdot (1+g)$ 是下一期股利。最后一步近似假设 $g$ 不太大。</p>
 <blockquote>
+<p>对公式4.1的直观解释：$P$（股价）= $\frac{d \cdot E}{r - g}$，也就是 <strong>"每股能分到的钱"</strong> 除以 <strong>"要求回报率减去增长率"</strong>。分母 $(r-g)$ 越小，股价越高。这意味着：同样的盈利，如果你对公司增长更乐观（$g$ 大）或者你要求的回报更低（$r$ 小），你就愿意出更高的价格。</p>
 <p>⚠️ <strong>重要限制</strong>：Gordon模型要求 $r > g$（要求回报率必须大于增长率），否则分母为零或为负，公式无意义。这意味着该模型只适用于已进入稳态增长的成熟公司（如银行、电力）。对于高增长公司（如早期的宁德时代，g可能暂时超过r），需要使用多阶段DDM——先按高速增长估值若干年，再用Gordon模型估值远期。</p>
 </blockquote>
 <p>这个模型虽然简单，但它揭示了股价与基本面之间的核心关系：<strong>股价等于未来所有股利的折现值之和</strong>。</p>
 <p>对公式 (4.1) 两边取倒数，再乘以 $E$：</p>
 <p>$$\frac{E}{P} = \frac{r - g}{d} \tag{4.2}$$</p>
 <p>这就是 <strong>EP（Earnings-to-Price）比率</strong> 的理论分解。</p>
-<h3 id="ch4-h4">4.1.3 推导过程：低 P/E 意味着什么？</h3>
+<h3 id="ch4-h4">4.1.3 推导过程：高 EP 意味着什么？</h3>
 
 <p>公式 (4.2) 告诉我们，EP的高低由三个变量决定：$r$（要求回报率）、$g$（增长率）、$d$（分红比例）。让我们逐个分析它们对EP的影响，以及由此推导出的投资含义。</p>
 <p><strong>情况 A：高 EP 反映高要求回报率 $r$（风险补偿解释）</strong></p>
-<p>如果市场是理性的，EP高的唯一合理原因是投资者对这只股票要求更高的回报率——因为它风险更大。</p>
+<p>如果市场是理性的，EP高的唯一合理原因是投资者对这只股票要求更高的回报率，因为它风险更大。</p>
 <p>推导如下：由公式 (4.2)，在 $g$ 和 $d$ 相同的条件下：</p>
 <p>$$EP_A > EP_B \iff r_A > r_B$$</p>
 <p>而"要求回报率"$r$就是该股票的<strong>预期收益率</strong>（在均衡状态下，价格会调整到让预期收益率恰好等于要求回报率）。所以：</p>
 <p>$$\boxed{EP \text{ 高} \Rightarrow r \text{ 高} \Rightarrow \text{该股票的预期收益更高}} \tag{4.3}$$</p>
 <p>这就是价值因子的<strong>风险补偿解释</strong>：高EP股票本质上是高风险股票，它们的高预期收益是对风险的合理补偿。</p>
-<p><strong>这种风险体现在哪里？</strong> 典型的高EP（低PE）股票是什么样子？</p>
+<p><strong>这种风险体现在哪里？</strong> 典型的高EP（即低市盈率）股票是什么样子？</p>
 <ul>
 <li>银行股：PE通常只有5-7倍，EP约15-20%。风险在于：坏账爆发、利率变动、系统性金融危机</li>
 <li>钢铁/煤炭股：周期底部PE极低。风险在于：产能过剩、需求崩塌、行业被淘汰</li>
@@ -2611,34 +2615,46 @@ print(f&quot;\n多空收益(G5-G1): {df[df['group']=='G5(高)']['return'].mean()
 <li>但实际上：增长率有<strong>均值回归</strong>的趋势——过去增长快的公司未来增速大概率放缓，过去增长慢的公司未来增速大概率回升</li>
 </ul>
 <p>当实际增长好于悲观预期时，高EP股票的价格向上修正 → 产生超额收益。</p>
+<blockquote>
 <p><strong>数值例子</strong>：</p>
 <p>假设公司X当前盈利 $E = 1$ 亿元，市场认为其增长率 $\hat{g} = 2\%$，要求回报率 $r = 10\%$，分红率 $d = 50\%$。</p>
 <p>把上述条件代入 Gordon 增长公式 (4.1)：</p>
 <p>市场定价：$P = \frac{d \cdot E}{r - \hat{g}} = \frac{0.5 \times 1}{0.10 - 0.02} = 6.25$ 亿，EP = $1/6.25 = 16\%$</p>
-<p>但如果真实增长率 $g_{\text{true}} = 5\%$，合理价格应该是：$P_{\text{true}} = \frac{d \cdot E}{r - g_{\text{true}}} = \frac{0.5 \times 1}{0.10 - 0.05} = 10$ 亿</p>
-<p>当市场逐渐认识到真实增长率时，股价从6.25亿涨到10亿——涨幅60%。这就是价值因子的收益来源之一。</p>
+<p>但如果真实增长率 $g_{\text{true}} = 5\%$，合理价格应该是：$P_{\text{true}} = \frac{d \cdot E}{r - g_{\text{true}}} = \frac{0.5 \times 1}{0.10 - > 0.05} = 10$ 亿</p>
+<p>当市场逐渐认识到真实增长率时，股价从6.25亿涨到10亿，涨幅60%。这就是价值因子的收益来源之一。</p>
+</blockquote>
 <h3 id="ch4-h5">4.1.4 BP 因子：账面价值作为&quot;锚&quot;的理论依据</h3>
 
 <p><strong>市净率的倒数（BP = Book Value / Price）</strong> 是另一个经典的价值因子，也是Fama-French三因子模型中HML因子的核心指标。</p>
-<p>BP 因子有一个独特的理论优势：账面价值（净资产）提供了一个相对稳定的"锚"——它不像盈利那样容易被会计操纵或短期波动影响。</p>
+<p>BP 因子有一个独特的理论优势：账面价值（净资产）提供了一个相对稳定的"锚"，它不像盈利那样容易被会计操纵或短期波动影响。</p>
 <p><strong>从剩余收益模型（Residual Income Model, RIM）推导BP的经济含义</strong>：</p>
 <p>RIM 是DDM的一种等价变形。它将股票的内在价值分解为两部分：</p>
 <blockquote>
-<p>$P$（股票的合理价值）= $B$（当前账上的净资产）+ 未来所有年份"超额收益"的折现值。所谓"超额收益"，就是公司每年实际赚的钱（ROE）超过投资者要求的回报（$r$）的那部分——如果公司持续赚得比要求的多，股票就值高于净资产；反之则值低于净资产。</p>
+<p>$P$（股票的合理价值）= $B$（当前账上的净资产）+ 未来所有年份"超额收益"的折现值。</p>
+<p>所谓"超额收益"，就是公司每年实际赚的钱（ROE）超过投资者要求的回报（$r$）的那部分。如果公司持续赚得比要求的多，股票就值高于净资产；反之则值低于净资产。</p>
 </blockquote>
 <p>$$P = B + \sum_{t=1}^{\infty} \frac{E[(ROE_t - r) \cdot B_{t-1}]}{(1+r)^t} \tag{4.4}$$</p>
 <p>其中 $B$ 是当前账面价值，$ROE_t$ 是第 $t$ 期的净资产收益率，$r$ 是要求回报率。</p>
+<blockquote>
 <p><strong>理解这个公式</strong>：</p>
 <ul>
-<li>第一项 $B$：如果公司未来的ROE恰好等于资本成本 $r$，那股票就值它的账面价值——不多不少</li>
-<li>第二项求和：如果ROE &gt; $r$（公司能赚取超过资本成本的利润），这部分"剩余收益"的折现值是正的→股票值得溢价</li>
-<li>如果ROE &lt; $r$，剩余收益为负→股票应该折价交易</li>
+<li>
+<p>第一项 $B$：如果公司未来的ROE恰好等于资本成本 $r$，那股票就值它的账面价值——不多不少</p>
+</li>
+<li>
+<p>第二项求和：如果ROE &gt; $r$（公司能赚取超过资本成本的利润），这部分"剩余收益"的折现值是正的→股票值得溢价</p>
+</li>
+<li>
+<p>如果ROE &lt; $r$，剩余收益为负→股票应该折价交易</p>
+</li>
 </ul>
+</blockquote>
 <p>两边除以 $P$：</p>
 <p>$$1 = \frac{B}{P} + \frac{\text{未来剩余收益的折现值}}{P}$$</p>
-<p>$$BP = 1 - \frac{\text{市场对未来超额盈利能力的定价}}{P} \tag{4.5}$$</p>
+<p>其中 $\frac{B}{P}$ 就是 BP（Book-to-Price，市净率的倒数）。移项即得：</p>
+<p>$$\frac{B}{P} = 1 - \frac{\text{市场对未来超额盈利能力的定价}}{P} \tag{4.5}$$</p>
 <p><strong>关键推论</strong>：</p>
-<p>BP 高 → 市场认为该公司未来的"超额盈利能力"（ROE - $r$）很低甚至为负 → 要么市场是对的（公司确实差），要么市场过度悲观（存在低估机会）。</p>
+<p>BP（即 $B/P$）高 → 市场认为该公司未来的"超额盈利能力"（ROE - $r$）很低甚至为负 → 要么市场是对的（公司确实差），要么市场过度悲观（存在低估机会）。</p>
 <p><strong>BP vs EP 的区别</strong>：</p>
 <table>
 <thead>
@@ -2672,9 +2688,9 @@ print(f&quot;\n多空收益(G5-G1): {df[df['group']=='G5(高)']['return'].mean()
 </tbody>
 </table>
 <p>在A股实践中，BP因子在银行、地产等重资产行业效果显著，但对科技股的区分度较低。</p>
-<h3 id="ch4-h6">4.1.5 价值因子为何有效？——错误定价 vs 风险补偿的完整辩论</h3>
+<h3 id="ch4-h6">4.1.5 价值因子为何有效？——错误定价 vs 风险补偿 的完整辩论</h3>
 
-<p>这场辩论是学术金融中持续了30年的核心争论。让我们完整呈现双方的论证逻辑。</p>
+<p>这场辩论是学术金融中持续了30年的核心争论，双方的论证逻辑分别如下：</p>
 <p><strong>风险补偿阵营（代表人物：Fama &amp; French, 1992, 1993）</strong></p>
 <p>论证链条：</p>
 <ol>
@@ -2704,23 +2720,23 @@ print(f&quot;\n多空收益(G5-G1): {df[df['group']=='G5(高)']['return'].mean()
 <p><strong>对投资者的实操含义</strong>：</p>
 <ul>
 <li>如果主要是风险补偿：你需要有能力承受经济衰退期的大回撤，否则会在最坏时刻被迫卖出</li>
-<li>如果主要是行为偏差：你需要有逆向思维的心理素质——在市场极度悲观时买入"被厌恶"的股票</li>
+<li>如果主要是行为偏差：你需要有逆向思维的心理素质，在市场极度悲观时买入"被厌恶"的股票</li>
 </ul>
 <hr />
 <h2 id="ch4-h7">4.2 动量因子的逻辑推导</h2>
 
-<p>动量因子（Momentum）可能是最"反直觉"的因子——它说的是"过去涨得好的股票，未来还会继续涨得好"。这似乎与"均值回归"或"不能追涨杀跌"的常识相矛盾。</p>
+<p>动量因子（Momentum）可能是最"反直觉"的因子，它说的是"过去涨得好的股票，未来还会继续涨得好"。这似乎与"均值回归"或"不能追涨杀跌"的常识相矛盾。</p>
 <p>但数据不会说谎：动量效应是全球范围内最持久、最一致的异象之一。从美国到日本到A股，从股票到商品到货币，动量效应几乎无处不在。</p>
 <h3 id="ch4-h8">4.2.1 动量因子的定义与实证现象</h3>
 
 <p><strong>定义</strong>：动量因子通常取过去 $J$ 个月的累计收益率（跳过最近1个月，避免短期反转效应）：</p>
 <blockquote>
-<p>$\text{MOM}_{i,t}$ 是股票 $i$ 在 $t$ 时刻的<strong>动量因子值</strong>（不是收益！），它就是这个股票过去一段时间涨了多少。这里 $t$ 只是一个时间下标（比如"2026年6月"），而看多远则由参数 $J$ 控制（$J=11$ 即回头看12个月）。比如 $J=11$ 时，如果过去12个月股价翻倍了，那 $\text{MOM}_{i,t} = 1.0$；如果跌了30%，则 $\text{MOM}_{i,t} = -0.3$。注意区分：这是因子<strong>值</strong>（暴露），之后在截面回归中用它去预测未来的收益，那才是因子收益。</p>
+<p>$\text{MOM}_{i,t}$ 是股票 $i$ 在 $t$ 时刻的<strong>动量因子值</strong>（不是收益！），它表示这个股票过去一段时间涨了多少百分比。这里 $t$ 只是一个时间下标（比如"2026年6月"），而看多远则由参数 $J$ 控制（$J=11$ 即回头看12个月）。比如 $J=11$ 时，如果过去12个月股价翻倍了，那 $\text{MOM}_{i,t} = 1.0$；如果跌了30%，则 $\text{MOM}_{i,t} = -0.3$。注意区分：这是因子<strong>值</strong>（暴露），之后在截面回归中用它去预测未来的收益，那才是因子收益。</p>
 <p>公式等号右边有两种写法，说的其实是一回事。第一种直接比价格：$P_{t-1}/P_{t-J-1} - 1$，就是用上个月收盘价除以 $J+1$ 个月前的收盘价再减1；第二种用收益连乘：$(1+r_{t-J}) \times (1+r_{t-J+1}) \times \dots \times (1+r_{t-1}) - 1$。比如过去12个月每个月分别涨 1%、2%、-1%...，把 1.01 × 1.02 × 0.99 × ... 一路乘下来再减 1，就是动量因子的值。</p>
 </blockquote>
 <p>$$\text{MOM}_{i,t} = \frac{P_{i,t-1}}{P_{i,t-J-1}} - 1 = \prod_{s=t-J}^{t-1}(1 + r_{i,s}) - 1 \tag{4.6}$$</p>
 <p>最常用的参数是 $J = 11$（即从$t-12$到$t-1$共11个月的累计收益，不含当月），这就是经典的"12-1动量"（"12"指回看起点在12个月前，"1"指跳过最近1个月）。</p>
-<p><strong>为什么跳过最近1个月？</strong> 因为实证研究发现，最近1个月有一个强烈的<strong>短期反转</strong>效应——上月涨得最多的股票本月倾向于回调。这可能是由流动性冲击、做市商调仓等短期微观结构原因造成的，与中长期动量的机制不同。所以我们把它排除在外。</p>
+<p><strong>为什么跳过最近1个月？</strong> 因为实证研究发现，最近1个月有一个强烈的<strong>短期反转</strong>效应：上月涨得最多的股票本月倾向于回调。这可能是由流动性冲击、做市商调仓等短期微观结构原因造成的，与中长期动量的机制不同。所以我们把它排除在外。</p>
 <p><strong>A股的动量效应（示意数据）</strong>：</p>
 <table>
 <thead>
@@ -2761,11 +2777,11 @@ print(f&quot;\n多空收益(G5-G1): {df[df['group']=='G5(高)']['return'].mean()
 <p>赢家减输家的月均收益约 2.3%，年化约 28%。看起来惊人地高。但动量策略的波动也很大，且偶尔会经历毁灭性的"动量崩溃"（后面会推导）。</p>
 <h3 id="ch4-h9">4.2.2 从信息扩散模型推导动量效应</h3>
 
-<p>为什么过去涨得好的股票未来还会继续涨？一个有力的理论解释是Hong &amp; Stein (1999) 的<strong>信息逐渐扩散模型</strong>[2]。</p>
+<p>为什么过去涨得好的股票未来还会继续涨？Hong &amp; Stein (1999) 的<strong>信息逐渐扩散模型</strong>[2] 对此做出了一种解释。</p>
 <p><strong>模型设定</strong>：</p>
 <p>假设市场中有两类投资者：</p>
 <ul>
-<li><strong>基本面投资者（News Watchers）</strong>：直接获取公司基本面信息（如盈利超预期），根据这些信息交易。但他们有一个关键特点：<strong>他们不看价格历史</strong>——只根据自己收到的基本面信号做决策。</li>
+<li><strong>基本面投资者（News Watchers）</strong>：直接获取公司基本面信息（如盈利超预期），根据这些信息交易。但他们有一个关键特点：<strong>他们不看价格历史</strong>，只根据自己收到的基本面信号做决策。</li>
 <li><strong>技术交易者（Momentum Traders）</strong>：不获取基本面信息，但观察价格趋势并跟随。他们的行为可以概括为"涨了就买"。</li>
 </ul>
 <p><strong>信息扩散的关键假设</strong>：基本面信息 $\Delta V$（公司真实价值变化，比如"公司拿下一个大订单，价值增加10%"）<strong>不是同时传播到所有基本面投资者的</strong>。而是逐步扩散：</p>
@@ -2774,7 +2790,7 @@ print(f&quot;\n多空收益(G5-G1): {df[df['group']=='G5(高)']['return'].mean()
 <li>第2期：又有新一批人得知</li>
 <li>第k期：累计比例 $1-(1-\phi)^k$ 的人已经得知</li>
 </ul>
-<p>这个假设合理吗？非常合理。想想现实中：</p>
+<p>这个假设在现实中是每天发生都会发生的：</p>
 <ul>
 <li>一家公司发布了超预期财报。当天，关注这家公司的分析师和专业投资者就读到了报告</li>
 <li>但大部分散户可能一周后才在新闻推送中看到</li>
@@ -2787,12 +2803,11 @@ print(f&quot;\n多空收益(G5-G1): {df[df['group']=='G5(高)']['return'].mean()
 <p>📌 <strong>本节要解决的问题</strong>：为什么"涨了还会涨、跌了还会跌"（动量效应）？信息明明已经公布了，股价为什么不一步到位？</p>
 <p><strong>我们的做法</strong>：建立一个"信息扩散模型"——假设好消息发布后，不是所有投资者同时看到，而是一部分一部分地传播开来</p>
 <p><strong>得到的结论</strong>：因为信息传播需要时间、投资者调整仓位也需要时间，所以股价对新信息的反应是"分好几天慢慢涨到位"的。在这个过程中，过去涨的股票未来还会继续涨——这就是动量因子赚钱的数学解释</p>
-<p>以下是这个结论的数学推导过程。如果你只想知道结论可以跳到下一节。</p>
+<p>以上是结论，以下为推导，读者可自行选择是否跳过该推导过程，继续阅读 4.2.4 节。</p>
 </blockquote>
-<p>设公司的真实价值在 $t=0$ 时发生了正向变化 $\Delta V > 0$。我们来推导股价的调整路径。</p>
 <p><strong>第1期</strong>：只有 $\phi$ 比例的基本面投资者获知消息并买入。他们的交易推动股价上涨：</p>
 <blockquote>
-<p>一条好消息公布后（公司真实价值涨了 $\Delta V$），第一天只有一小撮人看到并下单买入。这些人的买单把股价推上去了一截，但因为没有所有人都参与，股价只涨了"真实涨幅"的 $\phi$ 比例（比如 30%）。打个比方：公司实际增值 10%，但第一天只有 30% 的人看到了消息，所以当天股价只涨了 3%，剩 7% 还没反应——这就叫"反应不足"。</p>
+<p>一条好消息公布后（公司真实价值涨了 $\Delta V$），第一天只有一小撮人看到并下单买入。这些人的买单把股价推上去了一截，但因为没有所有人都参与，股价只涨了"真实涨幅"的 $\phi$ 比例（比如 30%）。打个比方：公司实际增值 10%，但第一天只有 30% 的人看到了消息，所以当天股价只涨了 3%，剩 7% 还没反应，这就叫"反应不足"。</p>
 </blockquote>
 <p>$$\Delta P_1 = \phi \cdot \Delta V \tag{4.7}$$</p>
 <p>此时股价只反映了部分信息（$\phi < 1$），存在"反应不足"：$P_1 - P_0 = \phi \Delta V < \Delta V$。</p>
@@ -2901,7 +2916,7 @@ $$\Delta P_2 = P_2 - P_1 = \phi(1-\phi) \cdot \Delta V \tag{4.8}$$</p>
          → [12-36个月] 过度反应修正（动量减弱）
          → [36-60个月] 反转（过去的赢家变成输家）
 </code></pre>
-<p>这解释了为什么动量策略通常使用"12-1个月"的回看窗口——太短会撞上短期反转，太长会遇到长期反转。3-12个月是动量效应最强的"甜蜜区"。</p>
+<p>这解释了为什么动量策略通常使用"12-1个月"的回看窗口：太短会撞上短期反转，太长会遇到长期反转。3-12个月是动量效应最强的"甜蜜区"。</p>
 <h3 id="ch4-h12">4.2.5 动量崩溃的理论机制与风险</h3>
 
 <p>动量策略最致命的风险是<strong>动量崩溃（Momentum Crash）</strong>——市场急剧反转时，动量策略遭受巨额损失，有时单月亏损超过30%。</p>
@@ -2912,7 +2927,7 @@ $$\Delta P_2 = P_2 - P_1 = \phi(1-\phi) \cdot \Delta V \tag{4.8}$$</p>
 <li><strong>空头（输家）</strong>：那些跌幅最大的股票，通常是高杠杆、周期性强、高beta的公司</li>
 </ul>
 <blockquote>
-<p><strong>什么是 beta？</strong> beta 衡量一只股票对大盘波动的敏感程度。beta = 1.5 意味着大盘涨 1%，这只股票平均涨 1.5%（涨得更猛，跌也更猛）；beta = 0.5 意味着大盘涨 1%，它只涨 0.5%（波动更小）。高 beta 股票就是"放大版大盘"，低 beta 股票就是"缩小版大盘"。在熊市中，高beta股往往跌得最惨→成为动量策略的空头；而低beta股相对抗跌→成为多头。</p>
+<p><strong>什么是 beta？</strong> 我们之前在2.1.1提到过beta，为了避免读者忘记，现在再解释一遍：beta 衡量一只股票对大盘波动的敏感程度。beta = 1.5 意味着大盘涨 1%，这只股票平均涨 1.5%（涨得更猛，跌也更猛）；beta = 0.5 意味着大盘涨 1%，它只涨 0.5%（波动更小）。高 beta 股票就是"放大版大盘"，低 beta 股票就是"缩小版大盘"。在熊市中，高beta股往往跌得最惨→成为动量策略的空头；而低beta股相对抗跌→成为多头。</p>
 </blockquote>
 <p>设赢家组的平均beta为 $\beta_W$，输家组的平均beta为 $\beta_L$。在熊市中，$\beta_L > \beta_W$（高beta股跌得更多，成为"输家"）。</p>
 <p>动量组合的市场暴露为：</p>
@@ -2926,7 +2941,7 @@ $$\Delta P_2 = P_2 - P_1 = \phi(1-\phi) \cdot \Delta V \tag{4.8}$$</p>
 <li>$\beta_L$：输家组（空头端）的平均 beta，这些是高beta的周期型股票</li>
 <li>$\beta_{\text{MOM}}$：动量组合的整体市场暴露。$\beta_{\text{MOM}} < 0$ 说明组合与大盘反向——大盘涨组合亏</li>
 </ul>
-<p>这意味着：动量组合在熊市末期对市场有<strong>负暴露</strong>。</p>
+<p>这意味着：动量组合在熊市末期对市场有<strong>负暴露</strong>（亏钱）。</p>
 <p>当市场突然反弹（bear market rally）时：</p>
 <p>$$r_{\text{MOM}} \approx \beta_{\text{MOM}} \cdot r_{\text{市场}} = (\beta_W - \beta_L) \cdot r_{\text{市场}} < 0 \tag{4.13}$$</p>
 <p>参数说明：</p>
@@ -2935,9 +2950,9 @@ $$\Delta P_2 = P_2 - P_1 = \phi(1-\phi) \cdot \Delta V \tag{4.8}$$</p>
 <li>$r_{\text{市场}}$：市场整体的收益率。熊市转牛市反弹时，$r_{\text{市场}} > 0$</li>
 <li>核心结论：$\beta_{\text{MOM}}$ 为负数 × $r_{\text{市场}}$ 为正数 → 乘积为负。反弹越猛烈（$r_{\text{市场}}$ 越大），动量亏得越惨</li>
 </ul>
-<p>市场涨得越多，动量亏得越惨——因为输家（高beta、超跌）股票暴力反弹，而赢家（低beta、抗跌）股票涨得少。</p>
+<p>市场涨得越多，动量亏得越惨：因为输家（高beta、超跌）股票暴力反弹，而赢家（低beta、抗跌）股票涨得少。</p>
 <blockquote>
-<p><strong>本质原因——动量的滞后性</strong>：动量策略的选股逻辑是"过去涨得好→做多，过去跌得惨→做空"。但在市场拐点处，这种基于"过去"的持仓结构恰恰与"未来"的方向相反：熊市末期，持仓还停留在"防守股做多、周期股做空"的旧格局上，而拐点一旦到来，高beta周期股暴力反弹、低beta防守股滞涨——组合被反向打脸。动量的优势来自"趋势延续"，劣势则来自"趋势反转时来不及掉头"。这种滞后性是动量因子与生俱来的阿喀琉斯之踵。</p>
+<p><strong>本质原因是动量的滞后性</strong>：动量策略的选股逻辑是"过去涨得好→做多，过去跌得惨→做空"。但在市场拐点处，这种基于"过去"的持仓结构恰恰与"未来"的方向相反：熊市末期，持仓还停留在"防守股做多、周期股做空"的旧格局上，而拐点一旦到来，高beta周期股暴力反弹、低beta防守股滞涨，导致组合被反向打脸。动量的优势来自"趋势延续"，劣势则来自"趋势反转时来不及掉头"。这种滞后性是动量因子与生俱来的阿喀琉斯之踵。</p>
 </blockquote>
 <p><strong>历史案例</strong>：</p>
 <ul>
@@ -2953,43 +2968,57 @@ $$\Delta P_2 = P_2 - P_1 = \phi(1-\phi) \cdot \Delta V \tag{4.8}$$</p>
 <hr />
 <h2 id="ch4-h13">4.3 质量因子的逻辑推导</h2>
 
-<p>质量因子的核心理念是：<strong>好公司的股票长期回报更高</strong>。这里的"好"不是主观判断，而是可以用财务指标客观度量的：盈利能力强、经营效率高、财务健康。</p>
+<p>质量因子的核心理念是：<strong>好公司的股票长期回报更高</strong>。这里对"好"的定义是可以用财务指标客观度量的：盈利能力强、经营效率高、财务健康。</p>
 <h3 id="ch4-h14">4.3.1 从企业价值创造理论推导 ROE 因子</h3>
 
 <blockquote>
 <p>📌 <strong>本节要解决的问题</strong>：我们都知道"好公司股票涨得多"，但"好"到底怎么定义？ROE高就一定好吗？能不能从数学上证明ROE高→股票回报高？</p>
 <p><strong>我们的做法</strong>：从企业价值创造的角度推导——如果一家公司的ROE持续高于其资金成本，那么它每留存一块钱利润，就能创造超过一块钱的市值</p>
 <p><strong>得到的结论</strong>：ROE &gt; 资金成本的公司，留存利润越多、未来增长越快、股价涨得越多。所以买入高ROE公司就是在押注"好公司会越来越值钱"</p>
-<p>以下是这个结论的数学推导过程。如果你只想知道结论可以跳到下一节。</p>
+<p>以上是结论，以下为推导，读者可自行选择是否跳过该推导过程，继续阅读 4.3.2 节。</p>
 </blockquote>
-<p><strong>ROE（净资产收益率 = 净利润/净资产）</strong> 是质量因子中最核心的指标。它度量的是"股东投入的每一块钱净资产，能赚回多少利润"。</p>
 <p><strong>直觉</strong>：ROE = 20% 意味着公司用100块钱的净资产每年能赚20块钱。如果另一家公司ROE只有5%，那同样100块钱净资产每年只赚5块。显然前者是更好的"赚钱机器"。</p>
 <p><strong>但问题是</strong>：如果高ROE公司确实更好，市场不是应该给它更高的估值吗？一旦估值反映了"好公司"的信息，高ROE还能带来超额收益吗？</p>
 <p>答案是：<strong>能，而且持续能。</strong> 实证数据一致显示，高ROE公司即使在控制了估值因子之后，仍然有正的超额收益。这说明市场<strong>系统性地低估了质量的价值</strong>。</p>
 <p><strong>推导：为什么市场低估质量？</strong></p>
-<p>回到Gordon模型，加入ROE与增长率的关系：</p>
+<p>我们将 ROE 与 Gordon 增长模型结合，推导预期回报率与 ROE 的关系。推导分三步走。</p>
+<p><strong>第一步：确立 ROE 与增长率 $g$ 的关系。</strong></p>
+<p>一家公司能在未来持续增长，靠的是把一部分利润留在公司里做再投资。留存得越多、再投资的回报（ROE）越高，增长就越快。用公式表达：</p>
 <p>$$g = ROE \times b \tag{4.14}$$</p>
-<p>其中 $b = 1 - d$ 是利润留存率。这个公式的直觉是：如果公司ROE为20%，留存了50%的利润用于再投资，那净资产增长10% → 盈利也增长10% → $g = 20\% \times 50\% = 10\%$。</p>
-<p>代入Gordon模型：</p>
+<p>其中：</p>
+<ul>
+<li>$g$：盈利增长率</li>
+<li>$ROE$：净资产收益率，即每 1 元净资产能赚多少利润</li>
+<li>$b = 1 - d$：利润留存率，$d$ 是分红率。若公司把 50% 的利润分红（$d=0.5$），剩下 50% 留存再投资（$b=0.5$）</li>
+</ul>
+<blockquote>
+<p>若 ROE = 20%，留存率 $b=50\%$，则 $g = 20\% \times 50\% = 10\%$——净资产每年增长 10%，盈利也同步增长 10%。</p>
+</blockquote>
+<p><strong>第二步：将 $g = ROE \cdot b$ 代入 Gordon 模型。</strong></p>
+<p>回顾 Gordon 增长模型（公式 4.1）：$P = \dfrac{d \cdot E}{r - g}$。把 $g$ 替换为 $ROE \cdot b$，再用 $b = 1-d$ 整理：</p>
 <p>$$P = \frac{d \cdot E}{r - ROE \times (1-d)} \tag{4.15}$$</p>
-<p>股票的预期回报率：</p>
+<p><strong>第三步：从价格公式反解出预期回报率 $r$。</strong></p>
+<p>将 (4.15) 两边同乘分母，移项解出 $r$：</p>
 <p>$$r = \frac{d \cdot E}{P} + ROE \times (1-d) = EP \cdot d + g \tag{4.16}$$</p>
+<blockquote>
+<p>注意：公式中的 EP 是 Earnings-to-Price 比率（市盈率的倒数），即 $E/P$，不是 $E \times P$。</p>
+</blockquote>
 <p><strong>命题4.1</strong>：在控制了EP（价值因子）之后，ROE越高的公司预期回报率越高——前提是市场未能充分为高ROE支付溢价。</p>
 <p><strong>为什么市场未能充分定价？</strong> 有几个可能的原因：</p>
 <ol>
 <li>
-<p><strong>均值回归偏见</strong>：投资者过度相信"树不能长到天上"——认为ROE终将回归平均水平。但顶级公司（如贵州茅台、海天味业）的ROE实际上比大多数人想象的更持久。</p>
+<p><strong>均值回归偏见</strong>：投资者过度相信"树不能长到天上"，认为ROE终将回归平均水平。但顶级公司（如贵州茅台、海天味业）的ROE实际上比大多数人想象的更持久。</p>
 </li>
 <li>
-<p><strong>"贵"的恐惧</strong>：高ROE公司往往PE也不低（比如PE=30倍），许多投资者（尤其是价值投资者）因此回避它们——"太贵了"。但他们忽略了高ROE意味着高增长，高增长合理化了高估值。</p>
+<p><strong>"贵"的恐惧</strong>：高ROE公司往往PE也不低（比如PE=30倍），许多投资者（尤其是价值投资者）因此回避它们，"太贵了"。但他们忽略了高ROE意味着高增长，高增长合理化了高估值。</p>
 </li>
 <li>
-<p><strong>锚定效应</strong>：投资者对估值有"锚"——习惯性认为PE超过某个阈值就是"泡沫"，而不去分析背后的ROE支撑。</p>
+<p><strong>锚定效应</strong>：投资者对估值有"锚"，习惯性认为PE超过某个阈值就是"泡沫"，而不去分析背后的ROE支撑。</p>
 </li>
 </ol>
 <h3 id="ch4-h15">4.3.2 杜邦分解的逻辑：拆解 ROE 的驱动力</h3>
 
-<p>同样是ROE = 20%的两家公司，盈利的"来源"可能完全不同。杜邦分解帮助我们看穿表面。</p>
+<p>同样是ROE = 20%的两家公司，盈利的"来源"可能完全不同。杜邦分解可以继续细化ROE的驱动因素。</p>
 <p><strong>三级杜邦分解</strong>：</p>
 <p>$$ROE = \underbrace{\frac{\text{净利润}}{\text{营收}}}_{\text{净利润率}} \times \underbrace{\frac{\text{营收}}{\text{总资产}}}_{\text{资产周转率}} \times \underbrace{\frac{\text{总资产}}{\text{净资产}}}_{\text{权益乘数（杠杆）}} \tag{4.17}$$</p>
 <p><strong>三个驱动力的经济含义</strong>：</p>
@@ -3023,10 +3052,7 @@ $$\Delta P_2 = P_2 - P_1 = \phi(1-\phi) \cdot \Delta V \tag{4.8}$$</p>
 <li><strong>公司 B</strong>：净利润率 2%、资产周转率 2.0、权益乘数 5.0 → 靠<strong>高杠杆</strong>驱动</li>
 </ul>
 <p>哪个更好？从因子投资角度看，公司A更优，原因如下：</p>
-<p><strong>高杠杆的ROE包含风险溢价</strong>。由Modigliani-Miller定理的推广：</p>
-<blockquote>
-<p>下面这个公式解释了"为什么加杠杆会放大股票的波动性"。想象你拿100万自有资金加上400万借款买入一个项目（杠杆5倍）。如果项目涨10%，你的500万变成550万，还掉400万借款后你有150万——自有资金回报率是50%！但如果项目跌10%，500万变450万，你只剩50万——亏了50%。杠杆把资产层面10%的涨跌，放大成了权益层面50%的涨跌。beta是衡量波动性的指标，所以杠杆越高、权益beta越大。</p>
-</blockquote>
+<p><strong>高杠杆的ROE包含风险溢价</strong>。由 Hamada (1972) 提出的杠杆 beta 公式[6]：</p>
 <p>$$\beta_{\text{equity}} = \beta_{\text{asset}} \times (1 + D/E) \tag{4.18}$$</p>
 <p>参数说明：</p>
 <ul>
@@ -3035,22 +3061,24 @@ $$\Delta P_2 = P_2 - P_1 = \phi(1-\phi) \cdot \Delta V \tag{4.8}$$</p>
 <li>$D/E$：负债/权益比率（杠杆水平）。D/E=4意味着借了4倍于自有资金的钱</li>
 <li>$(1+D/E)$：杠杆乘数——D/E越大，股票beta被放大得越多</li>
 </ul>
+<blockquote>
+<p>公式 4.18 解释了"为什么加杠杆会放大股票的波动性"。想象你拿100万自有资金加上400万借款买入一个项目（杠杆5倍）。如果项目涨10%，你的500万变成550万，还掉400万借款后你有150万——自有资金回报率是50%！但如果项目跌10%，500万变450万，你只剩50万——亏了50%。杠杆把资产层面10%的涨跌，放大成了权益层面50%的涨跌。beta是衡量波动性的指标，所以杠杆越高、权益beta越大。</p>
+</blockquote>
 <p>公司B的权益beta约为公司A的5倍 → 高杠杆公司的"看似高ROE"部分来源于其承担了更高的财务风险 → 这部分超额收益是风险补偿而非真正的"质量溢价"。</p>
 <p><strong>实操建议</strong>：构建质量因子时，应该：</p>
 <ul>
-<li>优先使用<strong>毛利率 / 总资产</strong>（Gross Profitability，Novy-Marx 2013推荐）——不含杠杆效应</li>
-<li>或者使用<strong>ROA</strong>（净利润/总资产）代替ROE——消除了杠杆的影响</li>
+<li>优先使用<strong>毛利率 / 总资产</strong>（Gross Profitability，Novy-Marx 2013推荐） → 不含杠杆效应</li>
+<li>或者使用<strong>ROA</strong>（净利润/总资产）代替ROE → 消除了杠杆的影响</li>
 <li>如果使用ROE，应该同时控制杠杆水平（剔除高杠杆带来的"虚假质量"）</li>
 </ul>
 <h3 id="ch4-h16">4.3.3 应计利润异象的推导：从会计恒等式到投资信号</h3>
 
 <blockquote>
-<p>📌 <strong>本节要解决的问题</strong>：两家公司报表利润一样，但一家是真金白银赚来的，另一家是会计手段"算"出来的——股价会区分这两种情况吗？</p>
+<p>📌 <strong>本节要解决的问题</strong>：两家公司报表利润一样，但一家是真金白银赚来的，另一家是会计手段"算"出来的，那么股价会区分这两种情况吗？</p>
 <p><strong>我们的做法</strong>：从会计恒等式出发，把利润拆成"现金部分"和"应计部分"（欠条部分），看哪种利润更能预测未来股价</p>
-<p><strong>得到的结论</strong>：应计利润高的公司（利润中"欠条"占比大）未来股价表现更差。因为应计利润容易被操纵、也更容易在未来反转——做空高应计的公司是一个有效的因子策略</p>
-<p>以下是这个结论的数学推导过程。如果你只想知道结论可以跳到下一节。</p>
+<p><strong>得到的结论</strong>：应计利润高的公司（利润中"欠条"占比大）未来股价表现更差。因为应计利润容易被操纵、也更容易在未来反转，所以做空高应计的公司是一个有效的因子策略</p>
+<p>以上是结论，以下为推导，读者可自行选择是否跳过该推导过程，继续阅读 4.3.4 节。</p>
 </blockquote>
-<p><strong>应计利润（Accruals）</strong> 是会计学与因子投资交叉的经典案例。它揭示了一个深刻的洞察：<strong>同样的利润数字，"含金量"可以天差地别</strong>。</p>
 <p><strong>定义</strong>：</p>
 <p>$$\text{应计利润} = \text{净利润} - \text{经营活动现金流} \tag{4.19}$$</p>
 <p><strong>直觉</strong>：净利润中有多少比例是"真金白银"进了公司口袋（现金流），又有多少只是"账面数字"（应收账款增加、存货增加等）？</p>
@@ -3058,26 +3086,28 @@ $$\Delta P_2 = P_2 - P_1 = \phi(1-\phi) \cdot \Delta V \tag{4.8}$$</p>
 <li><strong>低应计</strong>（现金流 &gt; 净利润）：利润是"实打实"的现金——质量高</li>
 <li><strong>高应计</strong>（现金流 &lt; 净利润）：利润中大量是"账面数字"——质量可疑</li>
 </ul>
-<p><strong>Sloan (1996) 的发现</strong>[3]：应计利润高的公司，未来1-3年回报率系统性地低于应计利润低的公司。</p>
-<p><strong>为什么？完整的推导链条</strong>：</p>
+<p><strong>Sloan (1996) 的发现</strong>[3]：应计利润高的公司，未来1-3年回报率系统性地低于应计利润低的公司。<strong>为什么：</strong></p>
 <p><strong>步骤1</strong>：将盈利分解为两个成分：</p>
 <p>$$E_t = CF_t + ACC_t$$</p>
 <p>其中 $CF$ = 经营现金流，$ACC$ = 应计利润。</p>
 <p><strong>步骤2</strong>：两个成分对未来盈利的预测能力不同。</p>
 <p>设未来盈利的持续性方程为：</p>
 <p>$$E_{t+1} = \phi_{CF} \cdot CF_t + \phi_{ACC} \cdot ACC_t + \eta_{t+1} \tag{4.20}$$</p>
-<p>实证数据一致发现：$\phi_{CF} > \phi_{ACC}$（约0.8 vs 0.5）</p>
+<p>实证数据一致发现：$\phi_{CF} > \phi_{ACC}$</p>
+<blockquote>
+<p>Sloan (1996)[3] 基于美股数据测算发现 $\phi_{CF} \approx 0.8$，$\phi_{ACC} \approx 0.5$。A 股的应计利润异象同样存在，但数值略有差异——A 股现金流持续性约 0.&gt; 75-0.85，应计利润持续性约 0.4-0.55，大致趋势与美股一致</p>
+</blockquote>
 <p><strong>直觉</strong>：为什么现金流的持续性更高？</p>
 <ul>
-<li>现金流代表真实的商业活动——客户付了钱，这是"确认"的收入</li>
-<li>应计利润包含大量估计和判断——应收账款可能收不回来、存货可能贬值、在建工程可能达不到预期效益</li>
+<li>现金流代表真实的商业活动：客户付了钱，这是"确认"的收入</li>
+<li>应计利润包含大量估计和判断：应收账款可能收不回来、存货可能贬值、在建工程可能达不到预期效益</li>
 </ul>
-<p><strong>步骤3</strong>：如果投资者<strong>不区分</strong>盈利的来源（即天真地假设 $\phi_{CF} = \phi_{ACC} = \phi$），会怎样？</p>
+<p><strong>步骤3</strong>：如果投资者<strong>不区分</strong>盈利的来源（即天真地以为 $\phi_{CF} = \phi_{ACC} = \phi$），会怎样？</p>
 <p>投资者的预期：$\hat{E}[E_{t+1}] = \phi \cdot E_t = \phi \cdot (CF_t + ACC_t)$</p>
 <p>真实预期：$E[E_{t+1}] = \phi_{CF} \cdot CF_t + \phi_{ACC} \cdot ACC_t$</p>
 <p>预期偏差：</p>
 <p>$$\hat{E}[E_{t+1}] - E[E_{t+1}] = (\phi - \phi_{CF}) \cdot CF_t + (\phi - \phi_{ACC}) \cdot ACC_t \tag{4.21}$$</p>
-<p>如果 $\phi$ 介于 $\phi_{CF}$ 和 $\phi_{ACC}$ 之间（合理假设），则：</p>
+<p>合理假设 $\phi$ 介于 $\phi_{CF}$ 和 $\phi_{ACC}$ 之间，则：</p>
 <ul>
 <li>对高应计公司：$ACC_t$ 大 → $(\phi - \phi_{ACC}) \cdot ACC_t > 0$ → 投资者<strong>高估</strong>了未来盈利 → 当期定价偏高</li>
 <li>当实际盈利低于预期时，股价下修 → 产生负超额收益</li>
@@ -3089,25 +3119,20 @@ $$\Delta P_2 = P_2 - P_1 = \phi(1-\phi) \cdot \Delta V \tag{4.8}$$</p>
 <li>存货异常积累（产品卖不动但不愿计提减值）</li>
 <li>在建工程长期不转固（隐藏亏损）</li>
 </ul>
-<p>应计因子本质上是一个<strong>盈利质量</strong>指标——它帮你识别出"纸面上好看但实际上含金量低"的公司。</p>
+<p>应计因子本质上是一个<strong>盈利质量</strong>指标，它帮你识别出"纸面上好看但实际上含金量低"的公司。</p>
 <h3 id="ch4-h17">4.3.4 质量因子的持续性——推导均值回归速度</h3>
 
 <p>一个关键的投资问题：高ROE能持续多久？如果ROE很快回归平均水平，那"买高ROE股票"的时间窗口就很短。</p>
-<p><strong>AR(1) 模型</strong>：</p>
-<p>假设公司的ROE围绕长期均值 $\mu$ 波动，遵循一阶自回归过程：</p>
-<blockquote>
-<p>下面这个公式描述ROE如何随时间变化。核心思想是：<strong>今年ROE偏高的公司，明年ROE大概率还是偏高——但会向平均水平"缩回去"一部分。</strong> $\rho$越接近1，"缩回去"得越慢（高ROE能维持很久）；$\rho$越接近0，"缩回去"得越快（高ROE昙花一现）。这个模型叫一阶自回归（AR(1)）——"自回归"意思是"用自己的过去值来预测自己的未来值"。</p>
-</blockquote>
-<p>$$ROE_{t+1} - \mu = \rho \cdot (ROE_t - \mu) + \eta_t, \quad \rho \in (0,1) \tag{4.22}$$</p>
-<p>参数说明：</p>
+<p><strong>Auto-Regressive of order 1 （一阶自回归） 模型</strong>：</p>
+<p>假设公司的ROE围绕长期均值 $\mu$ 波动，遵循一阶自回归过程。那么，<strong>明年ROE偏离均值的幅度 = 持续性系数 $\rho$ × 今年偏离均值的幅度 + 随机扰动</strong>。也就是说，如果今年偏离了 10 个百分点，明年预计还会偏离 $\rho \times 10$ 个百分点——$\rho$ 越接近 1，偏离消退得越慢（高 ROE 越持久）；$\rho$ 越接近 0，消退得越快（高 ROE 昙花一现）。写为公式：</p>
+<p>$$ROE_{t+1} - \mu = \rho \cdot (ROE_t - \mu) + \eta_t, \quad \rho \in (0,1) \tag{4.22}$$
+参数说明：</p>
 <ul>
-<li>$ROE_{t+1} - \mu$（等式左边）：明年ROE偏离长期均值$\mu$的幅度</li>
-<li>$\rho$：持续性系数。$\rho=0.8$意味着今年偏离均值10个百分点，明年预计还偏离8个百分点</li>
-<li>$ROE_t - \mu$：今年ROE偏离均值的幅度</li>
-<li>$\eta_t$：随机扰动（不可预测的部分）</li>
-<li>$\mu$：所有公司ROE的长期平均水平（A股约8-10%）</li>
+<li>$ROE_{t+1} - \mu$：明年 ROE 偏离均值的幅度（向左是回归、向右是创新高）</li>
+<li>$\rho \cdot (ROE_t - \mu)$：今年偏离中有多少比例会"遗传"到明年——$\rho=0.8$ 则表示保留 80%</li>
+<li>$\eta_t$：随机扰动，每个公司每年遭遇的"意外事件"（不可预测）</li>
+<li>$\mu$：所有公司 ROE 的长期平均水平（A 股约 8-10%）</li>
 </ul>
-<p>其中 $\rho$ 是<strong>持续性系数</strong>——越接近1，ROE越持久；越接近0，越快回归平均。</p>
 <p><strong>半衰期推导</strong>：设当前ROE偏离均值的幅度为 $\delta_0 = ROE_0 - \mu$。$k$ 期后：</p>
 <p>$$E[\delta_k] = \rho^k \cdot \delta_0$$</p>
 <p>半衰期 $t_{1/2}$ 满足 $\rho^{t_{1/2}} = 1/2$：</p>
@@ -3154,9 +3179,8 @@ $$\Delta P_2 = P_2 - P_1 = \phi(1-\phi) \cdot \Delta V \tag{4.8}$$</p>
 <p>📌 <strong>本节要解决的问题</strong>：为什么小盘股长期回报比大盘股高？这钱是"白赚"的还是有代价的？</p>
 <p><strong>我们的做法</strong>：建立流动性溢价模型——小盘股交易不活跃，买卖价差大、冲击成本高，相当于每次交易都要"交过路费"</p>
 <p><strong>得到的结论</strong>：小盘股的超额收益本质是"流动性补偿"——因为小盘股难买难卖，投资者要求更高的回报才愿意持有。在A股，这个效应曾经非常显著，但注册制改革后已大幅减弱</p>
-<p>以下是这个结论的数学推导过程。如果你只想知道结论可以跳到下一节。</p>
+<p>以上是结论，以下为推导，读者可自行选择是否跳过该推导过程，继续阅读 4.4.2 节。</p>
 </blockquote>
-<p><strong>经验规律</strong>：小市值股票长期跑赢大市值股票。在A股，这个效应尤为显著——2010-2016年间，中证500（中小盘）年化跑赢沪深300（大盘）约10-15个百分点。</p>
 <p><strong>流动性溢价推导（Amihud &amp; Mendelson, 1986）</strong>[4]：</p>
 <p>为什么小公司的股票回报更高？一个有力的解释是<strong>流动性补偿</strong>。</p>
 <p><strong>设定</strong>：</p>
@@ -3206,9 +3230,8 @@ $$\Delta P_2 = P_2 - P_1 = \phi(1-\phi) \cdot \Delta V \tag{4.8}$$</p>
 <p>📌 <strong>本节要解决的问题</strong>：教科书说"高风险高收益"，但现实中低波动股票反而赚得更多——这违反常识的现象怎么解释？</p>
 <p><strong>我们的做法</strong>：从"杠杆约束"出发推导——很多基金不允许加杠杆，所以它们只能通过买高波动股票来"变相加杠杆"，这推高了高波动股票的价格</p>
 <p><strong>得到的结论</strong>：因为大量资金被迫追逐高波动股票（想多赚又不能借钱），高波动股票被炒贵了、未来回报反而低。反过来，没人要的低波动股票便宜，长期回报反而更高——买无聊股票是一个有效策略</p>
-<p>以下是这个结论的数学推导过程。如果你只想知道结论可以跳到下一节。</p>
+<p>以上是结论，以下为推导，读者可自行选择是否跳过该推导过程，继续阅读 4.5 节。</p>
 </blockquote>
-<p><strong>经验规律</strong>：在控制了市场beta之后，低波动率股票的长期收益反而<strong>高于</strong>高波动率股票——表现为证券市场线（beta-收益关系）比CAPM预测的更"平"：高波动股票的实际收益低于CAPM预测值，低波动股票的实际收益高于CAPM预测值。这与"高风险必然带来高收益"的教科书简化说法相矛盾。</p>
 <p>这个现象有多强？在A股，过去10年低波动组相对高波动组的年化超额收益约3-6个百分点，且回撤更小。</p>
 <p><strong>解释1：杠杆约束（Frazzini &amp; Pedersen, 2014）</strong>[5]</p>
 <p><strong>核心推导</strong>：</p>
@@ -3403,6 +3426,7 @@ $$\text{s.t.} \quad \mathbf{w}^T \mathbf{1} \leq L \tag{4.29}$$</p>
 <p>[3] Sloan, R.G., "Do Stock Prices Fully Reflect Information in Accruals and Cash Flows about Future Earnings?", <em>The Accounting Review</em>, Vol.71, No.3, 1996, pp.289-315.</p>
 <p>[4] Amihud, Y. &amp; Mendelson, H., "Asset Pricing and the Bid-Ask Spread," <em>Journal of Financial Economics</em>, Vol.17, No.2, 1986, pp.223-249.</p>
 <p>[5] Frazzini, A. &amp; Pedersen, L.H., "Betting Against Beta," <em>Journal of Financial Economics</em>, Vol.111, No.1, 2014, pp.1-25.</p>
+<p>[6] Hamada, R.S., "The Effect of the Firm's Capital Structure on the Systematic Risk of Common Stocks," <em>Journal of Finance</em>, Vol.27, No.2, 1972, pp.435-452.</p>
 </blockquote>
 <hr />
 <h2 id="ch4-h27">4.6 本章小结</h2>
@@ -3841,9 +3865,8 @@ for factor in ['EP', 'MOM', 'QUALITY', 'SIZE', 'LOW_VOL']:
 <p>📌 <strong>本节要解决的问题</strong>：IC是量化投资中最常见的指标，人人都在看IC，但IC到底在度量什么？IC=0.05算高还是低？</p>
 <p><strong>我们的做法</strong>：从"因子值能预测多少收益"这个问题出发，推导IC的数学含义和统计性质</p>
 <p><strong>得到的结论</strong>：IC就是"因子排名"和"收益排名"的相关性。IC=0.05看起来很小，但每月对3000只股票做一次选股，日积月累就能产生显著超额收益。IC的关键不是绝对值大，而是要稳定——IC均值/IC标准差（即IR）才是真正的赚钱能力指标</p>
-<p>以下是这个结论的数学推导过程。如果你只想知道结论可以跳到下一节。</p>
+<p>以上是结论，以下为推导，读者可自行选择是否跳过该推导过程，继续阅读 5.2.2 节。</p>
 </blockquote>
-<p>IC（Information Coefficient）是因子研究中使用最广泛的效果指标。本节从理论上推导它的性质。</p>
 <h3 id="ch5-h5">5.2.1 IC的定义与信息论基础</h3>
 
 <p>回忆第3章的结论：在线性高斯假设下，因子的信息含量为：</p>
@@ -3937,9 +3960,8 @@ for factor in ['EP', 'MOM', 'QUALITY', 'SIZE', 'LOW_VOL']:
 <p>📌 <strong>本节要解决的问题</strong>：我算出IC=0.05，但这是真的有效还是纯属运气？t值在回答什么问题？</p>
 <p><strong>我们的做法</strong>：假设因子完全无效（IC真实值=0），计算"如果纯靠运气，观察到IC=0.05的概率有多大"</p>
 <p><strong>得到的结论</strong>：t值 = IC均值 × √观察月数 ÷ IC标准差。t&gt;2大致意味着"因子有效的概率超过95%"。一个实用规则：120个月数据、IC均值0.03、IC标准差0.06，t≈5.5，统计上非常显著</p>
-<p>以下是这个结论的数学推导过程。如果你只想知道结论可以跳到下一节。</p>
+<p>以上是结论，以下为推导，读者可自行选择是否跳过该推导过程，继续阅读 5.3 节。</p>
 </blockquote>
-<p>设我们有 $T$ 期的IC观测值 $IC_1, IC_2, ..., IC_T$（如120个月）。</p>
 <p><strong>样本均值</strong>：$\overline{IC} = \frac{1}{T}\sum_{t=1}^T IC_t$</p>
 <p><strong>样本标准差</strong>：$s_{IC} = \sqrt{\frac{1}{T-1}\sum_{t=1}^T (IC_t - \overline{IC})^2}$</p>
 <p><strong>标准误（$\overline{IC}$ 的不确定性）</strong>：$SE(\overline{IC}) = \frac{s_{IC}}{\sqrt{T}}$</p>
@@ -4054,9 +4076,8 @@ for factor in ['EP', 'MOM', 'QUALITY', 'SIZE', 'LOW_VOL']:
 <p>📌 <strong>本节要解决的问题</strong>：为什么不能简单地把所有股票所有月份的数据放在一起做回归？为什么要用这个看起来很复杂的"两步法"？</p>
 <p><strong>我们的做法</strong>：解释普通回归的致命缺陷（同一时间的股票不独立，导致t值虚高），然后推导Fama-MacBeth方法如何巧妙绕开这个问题</p>
 <p><strong>得到的结论</strong>：FM两步法的核心思想是"先每月单独回归，再对月度结果取平均"。这样用的是月度之间的变化来判断显著性，而月与月之间是基本独立的，t值才可信。简单粗暴的全样本回归会让你觉得因子很有效，但实际上可能只是自欺欺人</p>
-<p>以下是这个结论的数学推导过程。如果你只想知道结论可以跳到下一节。</p>
+<p>以上是结论，以下为推导，读者可自行选择是否跳过该推导过程，继续阅读 5.4.3 节。</p>
 </blockquote>
-<p>Fama &amp; MacBeth (1973) 提出了一个优雅的解决方案——把截面和时间分开处理。</p>
 <p><strong>第一步：逐期横截面回归</strong></p>
 <p>对每个时刻 $t$（$t = 1, ..., T$），<strong>独立地</strong>做一次横截面回归：</p>
 <p>$$r_{i,t+1} = \alpha_t + \beta_t f_{i,t} + \epsilon_{i,t+1}, \quad i = 1, ..., N \tag{5.17}$$</p>
@@ -4125,9 +4146,8 @@ $$t_{FM} = \frac{\hat{\lambda}}{SE(\hat{\lambda})} \tag{5.20}$$</p>
 <p>📌 <strong>本节要解决的问题</strong>：我测了100个因子，其中5个通过了显著性检验——这5个真的有效吗？为什么测试越多因子，越容易自我欺骗？</p>
 <p><strong>我们的做法</strong>：用概率论说明"多重检验问题"——如果你反复抛硬币，总会偶然出现连续正面；同理，测试足够多的因子，总有几个"碰巧"看起来显著</p>
 <p><strong>得到的结论</strong>：测100个因子、用5%显著性水平，期望会有5个"假阳性"——纯随机因子也能通过检验。解决办法是提高显著性门槛（比如用t&gt;3而非t&gt;2）或控制"错误发现率"。这就是为什么学术论文里t&gt;3的因子才可信</p>
-<p>以下是这个结论的数学推导过程。如果你只想知道结论可以跳到下一节。</p>
+<p>以上是结论，以下为推导，读者可自行选择是否跳过该推导过程，继续阅读 5.5.3 节。</p>
 </blockquote>
-<p><strong>场景</strong>：你是一个勤奋的因子研究员，尝试了100个因子候选（各种财务指标的组合变形）。每个用5%显著性水平检验。</p>
 <p><strong>问题</strong>：如果这100个因子<strong>全部无效</strong>（全是噪声），你期望"发现"几个"显著"的？</p>
 <p>$$E[\text{假阳性数}] = 100 \times 0.05 = 5 \text{ 个} \tag{5.23}$$</p>
 <p>你几乎必然会"发现"4-6个看似显著的因子——但它们全是假的！</p>
@@ -4477,21 +4497,19 @@ print(f&quot;\nBH校正后显著的数量: {bh_significant} (大幅减少假阳�
 <p>📌 <strong>本节要解决的问题</strong>：手上有5个因子（价值、动量、质量等），每个都有一定的预测能力——怎么把它们组合起来，让整体预测能力最大化？各占多少权重最优？</p>
 <p><strong>我们的做法</strong>：把"因子合成"转化为一个数学优化问题——在总风险固定的前提下，找到让预期收益最大的权重组合</p>
 <p><strong>得到的结论</strong>：最优权重 = IC协方差矩阵的逆 × 各因子的IC均值。直觉上说：IC高的因子多配、IC之间相关性高的因子少配（避免重复信息）。这就是"IC加权"方法的数学根基</p>
-<p>以下是这个结论的数学推导过程。如果你只想知道结论可以跳到下一节。</p>
+<p>以上是结论，以下为推导，读者可自行选择是否跳过该推导过程，继续阅读 6.4 节。</p>
 </blockquote>
-<h3 id="ch6-h9">6.3.1 优化问题的设定</h3>
-
 <p><strong>目标</strong>：找到权重向量 $\mathbf{w}$，最大化综合得分的IC：</p>
 <p>$$\max_{\mathbf{w}} \quad IC_S = \frac{\mathbf{w}^T \boldsymbol{\mu}}{\sqrt{\mathbf{w}^T \Sigma \mathbf{w}}} \tag{6.7}$$</p>
 <p>这是一个经典的<strong>分式规划</strong>问题。由于目标函数对 $\mathbf{w}$ 的缩放不变（$IC_S(\lambda\mathbf{w}) = IC_S(\mathbf{w})$），我们可以固定分母为1：</p>
 <p>$$\max_{\mathbf{w}} \quad \mathbf{w}^T \boldsymbol{\mu} \quad \text{s.t.} \quad \mathbf{w}^T \Sigma \mathbf{w} = 1 \tag{6.8}$$</p>
-<h3 id="ch6-h10">6.3.2 用拉格朗日乘数法求解</h3>
+<h3 id="ch6-h9">6.3.2 用拉格朗日乘数法求解</h3>
 
 <blockquote>
 <p>📌 <strong>本节要解决的问题</strong>：上面列出了优化问题，但最优权重的公式到底怎么算出来的？为什么最终答案是"协方差矩阵的逆乘以IC均值"？</p>
 <p><strong>我们的做法</strong>：用拉格朗日乘数法——把"带约束的最优化"转化为"无约束的求导=0"，然后解方程</p>
 <p><strong>得到的结论</strong>：数学上证明了最优权重 ∝ Σ⁻¹μ（协方差逆矩阵乘IC均值向量）。实操含义：如果价值和动量IC相关性低（比如0.1），两个都多配；如果价值和低波IC高度相关（比如0.7），那就挑一个配就好，另一个是"重复信息"</p>
-<p>以下是这个结论的数学推导过程。如果你只想知道结论可以跳到下一节。</p>
+<p>以上是结论，以下为推导，读者可自行选择是否跳过该推导过程，继续阅读 6.6 节。</p>
 </blockquote>
 <p>构造拉格朗日函数：</p>
 <p>$$\mathcal{L}(\mathbf{w}, \lambda) = \mathbf{w}^T \boldsymbol{\mu} - \frac{\lambda}{2}(\mathbf{w}^T \Sigma \mathbf{w} - 1) \tag{6.9}$$</p>
@@ -4502,7 +4520,7 @@ print(f&quot;\nBH校正后显著的数量: {bh_significant} (大幅减少假阳�
 <p>由于权重的绝对缩放不影响IC（只影响综合得分的方差），我们忽略常数 $1/\lambda$：</p>
 <p>$$\boxed{\mathbf{w}^* \propto \Sigma^{-1} \boldsymbol{\mu}} \tag{6.12}$$</p>
 <p>这就是<strong>IC加权的最优解</strong>——它在形式上与Markowitz均值方差组合的最优解完全相同！这不是巧合：因子合成问题和资产配置问题在数学上<strong>同构</strong>。</p>
-<h3 id="ch6-h11">6.3.3 最优解的经济含义</h3>
+<h3 id="ch6-h10">6.3.3 最优解的经济含义</h3>
 
 <p>公式 (6.12) 的含义非常深刻。让我们通过特殊情况来理解它：</p>
 <p><strong>情况1：因子互不相关</strong>（$\Sigma = I$）</p>
@@ -4519,15 +4537,15 @@ print(f&quot;\nBH校正后显著的数量: {bh_significant} (大幅减少假阳�
 <p>BP因子的最优权重为<strong>负</strong>！这说明在EP已经存在时，BP不仅没有增量价值，加入它反而引入了噪声。最优策略是给BP零或负权重。</p>
 <p><strong>深层含义</strong>：$\Sigma^{-1}$ 的作用是"去重"——如果两个因子信息高度重叠，它自动只保留增量部分。这就是为什么IC加权比简单的"按IC大小分配权重"（忽略相关性）要好。</p>
 <hr />
-<h2 id="ch6-h12">6.4 正交化处理：消除因子间的重叠</h2>
+<h2 id="ch6-h11">6.4 正交化处理：消除因子间的重叠</h2>
 
-<h3 id="ch6-h13">6.4.1 为什么需要正交化？——共线性的危害</h3>
+<h3 id="ch6-h12">6.4.1 为什么需要正交化？——共线性的危害</h3>
 
 <blockquote>
 <p>📌 <strong>本节要解决的问题</strong>：如果两个因子高度相似（比如EP和BP相关性0.7），放在一起用会出什么问题？</p>
 <p><strong>我们的做法</strong>：分析当因子间相关性很高时，协方差矩阵接近"奇异"，它的逆矩阵元素会变得极大——微小的估计误差被放大几十倍</p>
 <p><strong>得到的结论</strong>：因子太相似时，最优权重公式会变得极不稳定——这个月算出来配70%价值+30%动量，下个月可能变成-50%价值+150%动量。解决办法是先做"正交化"——把相关性剥离，让每个因子只保留独有的信息</p>
-<p>以下是这个结论的数学推导过程。如果你只想知道结论可以跳到下一节。</p>
+<p>以上是结论，以下为推导，读者可自行选择是否跳过该推导过程，继续阅读 6.4.2 节。</p>
 </blockquote>
 <p>当因子高度相关时（如EP和BP相关0.7），$\Sigma$ 接近奇异（最小特征值接近0），$\Sigma^{-1}$ 的元素变得极大——<strong>微小的IC估计误差会被放大数十倍</strong>。</p>
 <blockquote>
@@ -4582,7 +4600,7 @@ print(f&quot;\nBH校正后显著的数量: {bh_significant} (大幅减少假阳�
 </tbody>
 </table>
 <p>通常VIF &gt; 5认为共线性问题严重，需要处理（正交化或剔除冗余因子）。</p>
-<h3 id="ch6-h14">6.4.2 Gram-Schmidt 正交化</h3>
+<h3 id="ch6-h13">6.4.2 Gram-Schmidt 正交化</h3>
 
 <p><strong>目标</strong>：将相关的因子 $f_1, ..., f_K$ 转换为不相关的正交因子 $g_1, ..., g_K$。</p>
 <p><strong>步骤</strong>：</p>
@@ -4596,7 +4614,7 @@ print(f&quot;\nBH校正后显著的数量: {bh_significant} (大幅减少假阳�
 <p>$g_2$ 的经济含义：BP中扣除了EP已经包含的信息后剩余的部分——可能反映与有形资产密度相关的定价信息。</p>
 <p>如果 $g_2$ 的IC接近零，说明BP没有超出EP的增量预测力——可以直接从模型中剔除。</p>
 <p><strong>Gram-Schmidt的缺点</strong>：结果依赖<strong>正交化顺序</strong>。先处理的因子保留完整信息，后处理的只保留残差。如果先正交化EP再正交化BP，和先BP再EP，得到的结果不同。</p>
-<h3 id="ch6-h15">6.4.3 对称正交化</h3>
+<h3 id="ch6-h14">6.4.3 对称正交化</h3>
 
 <p>对称正交化避免了顺序依赖问题——它"公平地"对待所有因子。</p>
 <p><strong>目标</strong>：找一组正交因子 $\mathbf{G}$，使其与原始因子 $\mathbf{F}$ 的总"距离"最小：</p>
@@ -4608,7 +4626,7 @@ print(f&quot;\nBH校正后显著的数量: {bh_significant} (大幅减少假阳�
 <p>$$\mathbf{G} = \mathbf{F} \cdot \Sigma^{-1/2} = \mathbf{F} \cdot \mathbf{P} \Lambda^{-1/2} \mathbf{P}^T \tag{6.17}$$</p>
 <p>验证正交性：$\mathbf{G}^T\mathbf{G}/N = \Sigma^{-1/2}\Sigma\Sigma^{-1/2} = I$ ✓</p>
 <p><strong>直觉</strong>：对称正交化相当于在因子空间中做了一个"等距收缩"——每个因子都被均匀地向正交方向"推"了一小步，没有哪个被"牺牲"。</p>
-<h3 id="ch6-h16">6.4.4 正交化的注意事项</h3>
+<h3 id="ch6-h15">6.4.4 正交化的注意事项</h3>
 
 <p><strong>重要警示</strong>：正交化后的因子通常<strong>失去清晰的经济含义</strong>。</p>
 <p>原始因子"EP"有明确含义（市盈率倒数），但正交化后的 $g_2 = BP - 0.7 \times EP$ 是什么？很难用一句话说清楚。</p>
@@ -4619,13 +4637,13 @@ print(f&quot;\nBH校正后显著的数量: {bh_significant} (大幅减少假阳�
 <li><strong>权重转换</strong>：$\mathbf{w}_{\text{原始}} = \Sigma^{-1/2} \mathbf{w}_{\text{正交}}$</li>
 </ul>
 <hr />
-<h2 id="ch6-h17">6.5 动态加权：贝叶斯框架</h2>
+<h2 id="ch6-h16">6.5 动态加权：贝叶斯框架</h2>
 
-<h3 id="ch6-h18">6.5.1 为什么需要动态加权？</h3>
+<h3 id="ch6-h17">6.5.1 为什么需要动态加权？</h3>
 
 <p>前面的IC加权用的是全历史的IC均值。但因子效果会随时间变化——有些年价值强、有些年动量强。</p>
 <p><strong>例子</strong>：2016-2017年A股"漂亮50"行情中，价值因子IC高达0.08+；但2019-2020年"赛道股"行情中，价值因子IC转负。如果你一直用2016年的IC均值做权重，2020年你会严重亏损。</p>
-<h3 id="ch6-h19">6.5.2 滚动IC加权</h3>
+<h3 id="ch6-h18">6.5.2 滚动IC加权</h3>
 
 <p>最直觉的动态方法：用最近 $W$ 期的IC均值代替全历史均值：</p>
 <p>$$\hat{\mu}_{k,t} = \frac{1}{W}\sum_{s=t-W+1}^{t} IC_{k,s} \tag{6.18}$$</p>
@@ -4635,13 +4653,13 @@ print(f&quot;\nBH校正后显著的数量: {bh_significant} (大幅减少假阳�
 <li>$W$ 太小（如6个月）：对IC的短期波动过度反应→权重频繁大幅变动→高换手成本</li>
 <li>$W$ 太大（如60个月）：反应太慢→等你发现因子失效时已经亏了很多</li>
 </ul>
-<h3 id="ch6-h20">6.5.3 贝叶斯更新：优雅的折中方案</h3>
+<h3 id="ch6-h19">6.5.3 贝叶斯更新：优雅的折中方案</h3>
 
 <blockquote>
 <p>📌 <strong>本节要解决的问题</strong>：因子的有效性会变化——去年动量因子很强，今年可能弱了。权重要不要跟着调？调多快合适？</p>
 <p><strong>我们的做法</strong>：用贝叶斯更新——把"历史经验"和"最新数据"加权平均，新数据越多就越相信新数据，数据不够就更多依赖历史</p>
 <p><strong>得到的结论</strong>：最优权重应该是"先验（长期历史IC）"和"近期证据（最近几个月IC）"的加权平均。数据越多，权重越倾向近期；数据少时，坚持历史均值更安全。这就是为什么动态调权不应该调太快——你的近期数据不够多，不值得全信</p>
-<p>以下是这个结论的数学推导过程。如果你只想知道结论可以跳到下一节。</p>
+<p>以上是结论，以下为推导，读者可自行选择是否跳过该推导过程，继续阅读 6.6 节。</p>
 </blockquote>
 <p>贝叶斯框架为动态加权提供了理论最优的解决方案。</p>
 <p><strong>设定</strong>：</p>
@@ -4679,9 +4697,9 @@ print(f&quot;\nBH校正后显著的数量: {bh_significant} (大幅减少假阳�
 <p>$\hat{\mu}_A^{\text{Bayes}} = 0.27 \times 0.03 + 0.73 \times 0.07 = 0.008 + 0.051 = 0.059$</p>
 <p>对比：样本直接估计为0.07，贝叶斯估计为0.059——向先验"收缩"了约15%。这种收缩在样本外通常表现更好，因为它抑制了估计误差的放大。</p>
 <hr />
-<h2 id="ch6-h21">6.6 收缩估计：对抗过拟合的利器</h2>
+<h2 id="ch6-h20">6.6 收缩估计：对抗过拟合的利器</h2>
 
-<h3 id="ch6-h22">6.6.1 为什么纯样本最优会失败？</h3>
+<h3 id="ch6-h21">6.6.1 为什么纯样本最优会失败？</h3>
 
 <p>公式 (6.12) 的实际应用有一个严重问题：$\Sigma^{-1}$ 和 $\boldsymbol{\mu}$ 都是从有限样本中<strong>估计</strong>出来的，含有误差。</p>
 <p><strong>估计误差的放大效应</strong>：</p>
@@ -4694,7 +4712,7 @@ print(f&quot;\nBH校正后显著的数量: {bh_significant} (大幅减少假阳�
 <p><strong>数值例子</strong>：假设5个因子，条件数 $\kappa = 50$，IC估计误差10%，相关性估计误差5%：</p>
 <p>$$\text{权重误差} \leq 50 \times (5\% + 10\%) = 750\%$$</p>
 <p>权重的相对误差可达7.5倍！今年算出"价值权重40%"，明年可能变成"价值权重-20%"——完全不可靠。</p>
-<h3 id="ch6-h23">6.6.2 收缩估计的核心思想</h3>
+<h3 id="ch6-h22">6.6.2 收缩估计的核心思想</h3>
 
 <p><strong>解决方案</strong>：不完全相信样本估计，而是向一个"简单但稳健"的目标收缩。</p>
 <p><strong>对协方差矩阵的收缩</strong>：</p>
@@ -4715,9 +4733,9 @@ print(f&quot;\nBH校正后显著的数量: {bh_significant} (大幅减少假阳�
 <p>将样本IC向"所有因子平均IC"（$\bar{\mu}$）方向收缩——本质上是说"我不完全相信各因子IC的差异，可能一部分差异是噪声"。</p>
 <p><strong>实际效果</strong>：收缩后的权重更稳定（不会月度间大幅跳变），样本外表现通常优于纯样本最优。代价是样本内表现略差——但投资赚的是样本外的钱，不是样本内的。</p>
 <hr />
-<h2 id="ch6-h24">6.7 合成方法的比较与实操建议</h2>
+<h2 id="ch6-h23">6.7 合成方法的比较与实操建议</h2>
 
-<h3 id="ch6-h25">6.7.1 各方法总结</h3>
+<h3 id="ch6-h24">6.7.1 各方法总结</h3>
 
 <table>
 <thead>
@@ -4755,7 +4773,7 @@ print(f&quot;\nBH校正后显著的数量: {bh_significant} (大幅减少假阳�
 </tr>
 </tbody>
 </table>
-<h3 id="ch6-h26">6.7.2 实操流程建议</h3>
+<h3 id="ch6-h25">6.7.2 实操流程建议</h3>
 
 <ol>
 <li><strong>起步</strong>：等权作为基准（baseline）</li>
@@ -4764,7 +4782,7 @@ print(f&quot;\nBH校正后显著的数量: {bh_significant} (大幅减少假阳�
 <li><strong>底线原则</strong>：任何复杂方法都与等权做对比。如果不能在样本外稳定跑赢等权至少1%/年→不值得引入额外复杂度</li>
 </ol>
 <hr />
-<h2 id="ch6-h27">6.8 本章小结</h2>
+<h2 id="ch6-h26">6.8 本章小结</h2>
 
 <p>本章完整推导了因子合成的理论框架：</p>
 <ol>
@@ -4777,7 +4795,7 @@ print(f&quot;\nBH校正后显著的数量: {bh_significant} (大幅减少假阳�
 </ol>
 <p><strong>核心教训</strong>：<strong>理论最优 ≠ 实践最优</strong>。样本内最优的权重方案往往样本外最差（过拟合了噪声）。收缩和正则化是弥合理论与实践差距的桥梁。在量化投资中，"足够好且稳健"永远胜过"纸面上完美但脆弱"。</p>
 <hr />
-<h2 id="ch6-h28">常见陷阱</h2>
+<h2 id="ch6-h27">常见陷阱</h2>
 
 <ol>
 <li>
@@ -4797,7 +4815,7 @@ print(f&quot;\nBH校正后显著的数量: {bh_significant} (大幅减少假阳�
 </li>
 </ol>
 <hr />
-<h2 id="ch6-h29">附：Python 验证代码</h2>
+<h2 id="ch6-h28">附：Python 验证代码</h2>
 
 <pre><code class="language-python">import numpy as np
 from scipy import optimize
@@ -7464,7 +7482,7 @@ $$\text{滑点} = \frac{|P_{\text{实际}} - P_{\text{收盘}}|}{P_{\text{收盘
         // ============================================================
         // 目录高亮：滚动时自动高亮当前所在章节
         // ============================================================
-        var allAnchors = ['ch0-h0', 'ch0-h1', 'ch0-h2', 'ch0-h3', 'ch0-h4', 'ch0-h5', 'ch0-h6', 'ch1-h0', 'ch1-h1', 'ch1-h2', 'ch1-h3', 'ch1-h4', 'ch1-h5', 'ch1-h6', 'ch1-h7', 'ch1-h8', 'ch1-h9', 'ch1-h10', 'ch1-h11', 'ch1-h12', 'ch1-h13', 'ch1-h14', 'ch1-h15', 'ch1-h16', 'ch1-h17', 'ch1-h18', 'ch1-h19', 'ch2-h0', 'ch2-h1', 'ch2-h2', 'ch2-h3', 'ch2-h4', 'ch2-h5', 'ch2-h6', 'ch2-h7', 'ch2-h8', 'ch2-h9', 'ch2-h10', 'ch2-h11', 'ch2-h12', 'ch2-h13', 'ch2-h14', 'ch2-h15', 'ch2-h16', 'ch2-h17', 'ch2-h18', 'ch2-h19', 'ch2-h20', 'ch3-h0', 'ch3-h1', 'ch3-h2', 'ch3-h3', 'ch3-h4', 'ch3-h5', 'ch3-h6', 'ch3-h7', 'ch3-h8', 'ch3-h9', 'ch3-h10', 'ch3-h11', 'ch3-h12', 'ch3-h13', 'ch3-h14', 'ch3-h15', 'ch3-h16', 'ch3-h17', 'ch3-h18', 'ch3-h19', 'ch3-h20', 'ch3-h21', 'ch3-h22', 'ch3-h23', 'ch3-h24', 'ch3-h25', 'ch3-h26', 'ch3-h27', 'ch3-h28', 'ch3-h29', 'ch4-h0', 'ch4-h1', 'ch4-h2', 'ch4-h3', 'ch4-h4', 'ch4-h5', 'ch4-h6', 'ch4-h7', 'ch4-h8', 'ch4-h9', 'ch4-h10', 'ch4-h11', 'ch4-h12', 'ch4-h13', 'ch4-h14', 'ch4-h15', 'ch4-h16', 'ch4-h17', 'ch4-h18', 'ch4-h19', 'ch4-h20', 'ch4-h21', 'ch4-h22', 'ch4-h23', 'ch4-h24', 'ch4-h25', 'ch4-h26', 'ch4-h27', 'ch4-h28', 'ch4-h29', 'ch4-h30', 'ch4-h31', 'ch4-h32', 'ch4-h33', 'ch4-h34', 'ch5-h0', 'ch5-h1', 'ch5-h2', 'ch5-h3', 'ch5-h4', 'ch5-h5', 'ch5-h6', 'ch5-h7', 'ch5-h8', 'ch5-h9', 'ch5-h10', 'ch5-h11', 'ch5-h12', 'ch5-h13', 'ch5-h14', 'ch5-h15', 'ch5-h16', 'ch5-h17', 'ch5-h18', 'ch5-h19', 'ch5-h20', 'ch5-h21', 'ch5-h22', 'ch5-h23', 'ch5-h24', 'ch5-h25', 'ch5-h26', 'ch5-h27', 'ch5-h28', 'ch5-h29', 'ch5-h30', 'ch5-h31', 'ch6-h0', 'ch6-h1', 'ch6-h2', 'ch6-h3', 'ch6-h4', 'ch6-h5', 'ch6-h6', 'ch6-h7', 'ch6-h8', 'ch6-h9', 'ch6-h10', 'ch6-h11', 'ch6-h12', 'ch6-h13', 'ch6-h14', 'ch6-h15', 'ch6-h16', 'ch6-h17', 'ch6-h18', 'ch6-h19', 'ch6-h20', 'ch6-h21', 'ch6-h22', 'ch6-h23', 'ch6-h24', 'ch6-h25', 'ch6-h26', 'ch6-h27', 'ch6-h28', 'ch6-h29', 'ch7-h0', 'ch7-h1', 'ch7-h2', 'ch7-h3', 'ch7-h4', 'ch7-h5', 'ch7-h6', 'ch7-h7', 'ch7-h8', 'ch7-h9', 'ch7-h10', 'ch7-h11', 'ch7-h12', 'ch7-h13', 'ch7-h14', 'ch7-h15', 'ch7-h16', 'ch8-h0', 'ch8-h1', 'ch8-h2', 'ch8-h3', 'ch8-h4', 'ch8-h5', 'ch8-h6', 'ch8-h7', 'ch8-h8', 'ch8-h9', 'ch8-h10', 'ch8-h11', 'ch8-h12', 'ch8-h13', 'ch8-h14', 'ch9-h0', 'ch9-h1', 'ch9-h2', 'ch9-h3', 'ch9-h4', 'ch9-h5', 'ch9-h6', 'ch9-h7', 'ch9-h8', 'ch9-h9', 'ch9-h10', 'ch9-h11', 'ch9-h12', 'ch9-h13', 'ch9-h14', 'ch9-h15', 'ch9-h16', 'ch9-h17', 'ch9-h18', 'ch9-h19', 'ch9-h20', 'ch10-h0', 'ch10-h1', 'ch10-h2', 'ch10-h3', 'ch10-h4', 'ch10-h5', 'ch10-h6', 'ch10-h7', 'ch10-h8', 'ch10-h9', 'ch10-h10', 'ch10-h11', 'ch10-h12', 'ch10-h13', 'ch10-h14', 'ch10-h15', 'ch10-h16', 'ch10-h17', 'ch10-h18', 'ch11-h0', 'ch11-h1', 'ch11-h2', 'ch11-h3', 'ch11-h4', 'ch11-h5', 'ch11-h6', 'ch11-h7', 'ch11-h8', 'ch11-h9', 'ch11-h10', 'ch11-h11', 'ch11-h12', 'ch11-h13', 'ch11-h14', 'ch11-h15', 'ch11-h16', 'ch12-h0', 'ch12-h1', 'ch12-h2', 'ch12-h3', 'ch12-h4', 'ch12-h5', 'ch12-h6', 'ch12-h7', 'ch12-h8', 'ch12-h9', 'ch12-h10', 'ch12-h11', 'ch12-h12', 'ch12-h13', 'ch12-h14', 'ch12-h15', 'ch12-h16', 'ch13-h0', 'ch13-h1', 'ch13-h2', 'ch13-h3', 'ch13-h4', 'ch13-h5', 'ch13-h6', 'ch13-h7', 'ch13-h8', 'ch13-h9', 'ch13-h10', 'ch13-h11', 'ch13-h12', 'ch13-h13', 'ch13-h14', 'ch13-h15', 'ch13-h16', 'ch13-h17', 'ch13-h18', 'ch14-h0', 'ch14-h1', 'ch14-h2', 'ch14-h3', 'ch14-h4', 'ch14-h5', 'ch14-h6', 'ch14-h7', 'ch14-h8', 'ch14-h9', 'ch14-h10', 'ch14-h11', 'ch14-h12', 'ch14-h13', 'ch15-h0', 'ch15-h1', 'ch15-h2', 'ch15-h3', 'ch15-h4', 'ch15-h5', 'ch15-h6', 'ch15-h7', 'ch15-h8', 'ch15-h9', 'ch15-h10', 'ch15-h11', 'ch15-h12', 'ch15-h13', 'ch15-h14', 'ch15-h15', 'ch15-h16', 'ch15-h17', 'ch15-h18', 'ch15-h19', 'ch15-h20', 'ch15-h21', 'ch15-h22', 'ch15-h23', 'ch16-h0', 'ch17-h0', 'ch18-h0', 'ch19-h0'];
+        var allAnchors = ['ch0-h0', 'ch0-h1', 'ch0-h2', 'ch0-h3', 'ch0-h4', 'ch0-h5', 'ch0-h6', 'ch1-h0', 'ch1-h1', 'ch1-h2', 'ch1-h3', 'ch1-h4', 'ch1-h5', 'ch1-h6', 'ch1-h7', 'ch1-h8', 'ch1-h9', 'ch1-h10', 'ch1-h11', 'ch1-h12', 'ch1-h13', 'ch1-h14', 'ch1-h15', 'ch1-h16', 'ch1-h17', 'ch1-h18', 'ch1-h19', 'ch2-h0', 'ch2-h1', 'ch2-h2', 'ch2-h3', 'ch2-h4', 'ch2-h5', 'ch2-h6', 'ch2-h7', 'ch2-h8', 'ch2-h9', 'ch2-h10', 'ch2-h11', 'ch2-h12', 'ch2-h13', 'ch2-h14', 'ch2-h15', 'ch2-h16', 'ch2-h17', 'ch2-h18', 'ch2-h19', 'ch2-h20', 'ch3-h0', 'ch3-h1', 'ch3-h2', 'ch3-h3', 'ch3-h4', 'ch3-h5', 'ch3-h6', 'ch3-h7', 'ch3-h8', 'ch3-h9', 'ch3-h10', 'ch3-h11', 'ch3-h12', 'ch3-h13', 'ch3-h14', 'ch3-h15', 'ch3-h16', 'ch3-h17', 'ch3-h18', 'ch3-h19', 'ch3-h20', 'ch3-h21', 'ch3-h22', 'ch3-h23', 'ch3-h24', 'ch3-h25', 'ch3-h26', 'ch3-h27', 'ch3-h28', 'ch3-h29', 'ch4-h0', 'ch4-h1', 'ch4-h2', 'ch4-h3', 'ch4-h4', 'ch4-h5', 'ch4-h6', 'ch4-h7', 'ch4-h8', 'ch4-h9', 'ch4-h10', 'ch4-h11', 'ch4-h12', 'ch4-h13', 'ch4-h14', 'ch4-h15', 'ch4-h16', 'ch4-h17', 'ch4-h18', 'ch4-h19', 'ch4-h20', 'ch4-h21', 'ch4-h22', 'ch4-h23', 'ch4-h24', 'ch4-h25', 'ch4-h26', 'ch4-h27', 'ch4-h28', 'ch4-h29', 'ch4-h30', 'ch4-h31', 'ch4-h32', 'ch4-h33', 'ch4-h34', 'ch5-h0', 'ch5-h1', 'ch5-h2', 'ch5-h3', 'ch5-h4', 'ch5-h5', 'ch5-h6', 'ch5-h7', 'ch5-h8', 'ch5-h9', 'ch5-h10', 'ch5-h11', 'ch5-h12', 'ch5-h13', 'ch5-h14', 'ch5-h15', 'ch5-h16', 'ch5-h17', 'ch5-h18', 'ch5-h19', 'ch5-h20', 'ch5-h21', 'ch5-h22', 'ch5-h23', 'ch5-h24', 'ch5-h25', 'ch5-h26', 'ch5-h27', 'ch5-h28', 'ch5-h29', 'ch5-h30', 'ch5-h31', 'ch6-h0', 'ch6-h1', 'ch6-h2', 'ch6-h3', 'ch6-h4', 'ch6-h5', 'ch6-h6', 'ch6-h7', 'ch6-h8', 'ch6-h9', 'ch6-h10', 'ch6-h11', 'ch6-h12', 'ch6-h13', 'ch6-h14', 'ch6-h15', 'ch6-h16', 'ch6-h17', 'ch6-h18', 'ch6-h19', 'ch6-h20', 'ch6-h21', 'ch6-h22', 'ch6-h23', 'ch6-h24', 'ch6-h25', 'ch6-h26', 'ch6-h27', 'ch6-h28', 'ch7-h0', 'ch7-h1', 'ch7-h2', 'ch7-h3', 'ch7-h4', 'ch7-h5', 'ch7-h6', 'ch7-h7', 'ch7-h8', 'ch7-h9', 'ch7-h10', 'ch7-h11', 'ch7-h12', 'ch7-h13', 'ch7-h14', 'ch7-h15', 'ch7-h16', 'ch8-h0', 'ch8-h1', 'ch8-h2', 'ch8-h3', 'ch8-h4', 'ch8-h5', 'ch8-h6', 'ch8-h7', 'ch8-h8', 'ch8-h9', 'ch8-h10', 'ch8-h11', 'ch8-h12', 'ch8-h13', 'ch8-h14', 'ch9-h0', 'ch9-h1', 'ch9-h2', 'ch9-h3', 'ch9-h4', 'ch9-h5', 'ch9-h6', 'ch9-h7', 'ch9-h8', 'ch9-h9', 'ch9-h10', 'ch9-h11', 'ch9-h12', 'ch9-h13', 'ch9-h14', 'ch9-h15', 'ch9-h16', 'ch9-h17', 'ch9-h18', 'ch9-h19', 'ch9-h20', 'ch10-h0', 'ch10-h1', 'ch10-h2', 'ch10-h3', 'ch10-h4', 'ch10-h5', 'ch10-h6', 'ch10-h7', 'ch10-h8', 'ch10-h9', 'ch10-h10', 'ch10-h11', 'ch10-h12', 'ch10-h13', 'ch10-h14', 'ch10-h15', 'ch10-h16', 'ch10-h17', 'ch10-h18', 'ch11-h0', 'ch11-h1', 'ch11-h2', 'ch11-h3', 'ch11-h4', 'ch11-h5', 'ch11-h6', 'ch11-h7', 'ch11-h8', 'ch11-h9', 'ch11-h10', 'ch11-h11', 'ch11-h12', 'ch11-h13', 'ch11-h14', 'ch11-h15', 'ch11-h16', 'ch12-h0', 'ch12-h1', 'ch12-h2', 'ch12-h3', 'ch12-h4', 'ch12-h5', 'ch12-h6', 'ch12-h7', 'ch12-h8', 'ch12-h9', 'ch12-h10', 'ch12-h11', 'ch12-h12', 'ch12-h13', 'ch12-h14', 'ch12-h15', 'ch12-h16', 'ch13-h0', 'ch13-h1', 'ch13-h2', 'ch13-h3', 'ch13-h4', 'ch13-h5', 'ch13-h6', 'ch13-h7', 'ch13-h8', 'ch13-h9', 'ch13-h10', 'ch13-h11', 'ch13-h12', 'ch13-h13', 'ch13-h14', 'ch13-h15', 'ch13-h16', 'ch13-h17', 'ch13-h18', 'ch14-h0', 'ch14-h1', 'ch14-h2', 'ch14-h3', 'ch14-h4', 'ch14-h5', 'ch14-h6', 'ch14-h7', 'ch14-h8', 'ch14-h9', 'ch14-h10', 'ch14-h11', 'ch14-h12', 'ch14-h13', 'ch15-h0', 'ch15-h1', 'ch15-h2', 'ch15-h3', 'ch15-h4', 'ch15-h5', 'ch15-h6', 'ch15-h7', 'ch15-h8', 'ch15-h9', 'ch15-h10', 'ch15-h11', 'ch15-h12', 'ch15-h13', 'ch15-h14', 'ch15-h15', 'ch15-h16', 'ch15-h17', 'ch15-h18', 'ch15-h19', 'ch15-h20', 'ch15-h21', 'ch15-h22', 'ch15-h23', 'ch16-h0', 'ch17-h0', 'ch18-h0', 'ch19-h0'];
         var anchorElements = allAnchors.map(function(id) {
             return document.getElementById(id);
         }).filter(function(el) { return el !== null; });

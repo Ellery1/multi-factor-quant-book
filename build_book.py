@@ -961,12 +961,14 @@ def generate_html():
         /* 数学公式 */
         mjx-container {{
             font-size: 1.0em !important;
+            overflow: visible !important;
+            line-height: normal !important;
         }}
 
         mjx-container[display="true"] {{
             margin: 18px 0 !important;
             overflow-x: auto;
-            overflow-y: hidden;
+            overflow-y: visible !important;
         }}
 
         /* 分割线 */
