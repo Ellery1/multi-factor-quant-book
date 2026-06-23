@@ -21,8 +21,8 @@ from datetime import datetime
 
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 BOOK_DIR = os.path.join(PROJECT_DIR, "book")
-OUTPUT_FILE = os.path.join(PROJECT_DIR, "multi-factor-quant-book.html")
-BOOK_TITLE = "多因子量化投资：从理论到实践"
+OUTPUT_FILE = os.path.join(PROJECT_DIR, "量化之路-多因子的语言.html")
+BOOK_TITLE = "量化之路：多因子的语言"
 
 # ============================================================
 # 章节定义：按书籍顺序
