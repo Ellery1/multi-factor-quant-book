@@ -41,20 +41,15 @@ CHAPTERS = [
         (os.path.join(BOOK_DIR, "part2-理论篇", "ch05-因子检验方法论.md"),),
         (os.path.join(BOOK_DIR, "part2-理论篇", "ch06-因子合成与加权.md"),),
     ]),
-    ("第三篇 · 工具篇", [
-        (os.path.join(BOOK_DIR, "part3-工具篇", "ch07-数据与工具基础.md"),),
-        (os.path.join(BOOK_DIR, "part3-工具篇", "ch08-回测框架设计.md"),),
+    ("第三篇 · 工具与实践篇", [
+        (os.path.join(BOOK_DIR, "part3-工具与实践篇", "ch07-数据获取与回测框架.md"),),
+        (os.path.join(BOOK_DIR, "part3-工具与实践篇", "ch08-A股多因子策略实战.md"),),
     ]),
-    ("第四篇 · 实践篇", [
-        (os.path.join(BOOK_DIR, "part4-实践篇", "ch09-A股因子挖掘实战.md"),),
-        (os.path.join(BOOK_DIR, "part4-实践篇", "ch10-组合构建与优化.md"),),
-        (os.path.join(BOOK_DIR, "part4-实践篇", "ch11-完整策略开发.md"),),
-    ]),
-    ("第五篇 · 进阶篇", [
-        (os.path.join(BOOK_DIR, "part5-进阶篇", "ch12-风险管理与归因.md"),),
-        (os.path.join(BOOK_DIR, "part5-进阶篇", "ch13-过拟合与陷阱.md"),),
-        (os.path.join(BOOK_DIR, "part5-进阶篇", "ch14-从回测到实盘.md"),),
-        (os.path.join(BOOK_DIR, "part5-进阶篇", "ch15-前沿方向与延伸阅读.md"),),
+    ("第四篇 · 进阶篇", [
+        (os.path.join(BOOK_DIR, "part4-进阶篇", "ch09-风险管理与归因.md"),),
+        (os.path.join(BOOK_DIR, "part4-进阶篇", "ch10-过拟合与陷阱.md"),),
+        (os.path.join(BOOK_DIR, "part4-进阶篇", "ch11-从回测到实盘.md"),),
+        (os.path.join(BOOK_DIR, "part4-进阶篇", "ch12-前沿方向与延伸阅读.md"),),
     ]),
     ("附录", [
         (os.path.join(BOOK_DIR, "appendix", "appendix-a-python快速入门.md"),),
