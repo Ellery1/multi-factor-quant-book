@@ -1692,6 +1692,9 @@ $$r_{i,t+1} = \alpha_t + \sum_{k=1}^{K} \beta_{k,t} \cdot f_{ki,t} + \epsilon_{i
 </ul>
 <p>则 OLS 估计为：</p>
 <p>$$\hat{\boldsymbol{\beta}} = (\mathbf{F}^T \mathbf{F})^{-1} \mathbf{F}^T \mathbf{r} \tag{3.6}$$</p>
+<blockquote>
+<p>为什么最小二乘的解长这样？直觉上，$\mathbf{F}^T\mathbf{r}$ 计算的是"每个因子和收益的协方差"（信号强度），而 $(\mathbf{F}^T\mathbf{F})^{-1}$ 做的是"去除因子间的重叠后归一化"（避免重复计算）。两者相乘，就得到了"在考虑因子间相关性后，每个因子独立贡献了多少收益"。这和单因子情形下$\beta = \text{Cov}(f,r)/\text{Var}(f)$是同一个思想的多维推广。</p>
+</blockquote>
 <p>这个公式是线性代数中"最小二乘解"的标准形式。它的重要性在于：它把"哪个因子对收益有预测力、预测力有多强"的问题，完全转化为了一个线性代数问题。</p>
 <h3 id="ch3-h8">3.2.4 因子收益率的经济含义：多空组合视角</h3>
 
