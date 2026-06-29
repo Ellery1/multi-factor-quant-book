@@ -4882,14 +4882,60 @@ $$t_{FM} = \frac{\hat{\lambda}}{SE(\hat{\lambda})} \tag{5.20}$$</p>
 </tr>
 </tbody>
 </table>
-<p>基于 A 股 2015-2024 年实际数据的估计：</p>
+<p>基于 tushare 全 A 股 2018.06-2024.06 月度 Spearman IC 序列拟合 AR(1) 的实测结果（代码见 <code>book/code/verify_ic_halflife.py</code>）：</p>
 <table>
 <thead>
 <tr>
 <th>因子</th>
-<th>φ 估值</th>
-<th>半衰期</th>
-<th>建议调仓频率</th>
+<th>φ 实测值</th>
+<th>IC半衰期</th>
+<th>自相关特征</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EP（价值）</td>
+<td>0.14</td>
+<td>&lt;1个月</td>
+<td>极弱正相关，基本独立</td>
+</tr>
+<tr>
+<td>12-1动量</td>
+<td>-0.16</td>
+<td>不适用</td>
+<td>轻微负相关（反转）</td>
+</tr>
+<tr>
+<td>ROE（质量）</td>
+<td>0.03</td>
+<td>&lt;1个月</td>
+<td>几乎无相关</td>
+</tr>
+<tr>
+<td>市值（规模）</td>
+<td>-0.13</td>
+<td>不适用</td>
+<td>轻微负相关（反转）</td>
+</tr>
+<tr>
+<td>波动率</td>
+<td>-0.12</td>
+<td>不适用</td>
+<td>轻微负相关（反转）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>关键发现</strong>：A股因子的月度IC自相关性极低（φ接近0），月度IC序列基本是随机游走。"本月EP因子IC高"几乎不能预测"下月也高"。这与部分海外文献报告的较高持续性形成对比，可能原因是A股风格轮动更频繁、量化资金加速了因子效应的消化。对调仓策略的含义是：根据最近IC动态调整因子权重的策略在A股收效甚微，更稳健的做法是使用长期IC均值。</p>
+</blockquote>
+<p>~~基于 A 股 2015-2024 年实际数据的估计~~（以下为旧数据，已被上方实测数据替代，仅供参考）：</p>
+<table>
+<thead>
+<tr>
+<th>因子</th>
+<th>φ 估值（旧）</th>
+<th>半衰期（旧）</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
