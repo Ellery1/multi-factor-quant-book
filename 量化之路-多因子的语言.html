@@ -5130,7 +5130,11 @@ print(f&quot;c (常数项): {c_hat:.4f}&quot;)
 print(f&quot;φ (持续性): {phi_hat:.3f} (逼近公式: {np.corrcoef(ic_series[:-1], ic_series[1:])[0,1]:.3f})&quot;)
 print(f&quot;长期均值 μ = c/(1-φ): {mu_ar:.4f} (直接平均: {ic_mean:.4f})&quot;)
 print(f&quot;创新项标准差 σ_η: {sigma_eta:.4f}&quot;)
-print(f&quot;半衰期: {-np.log(2)/np.log(phi_hat):.1f} 个月 = {-np.log(2)/np.log(phi_hat)/12:.1f} 年&quot;)
+if 0 &lt; phi_hat &lt; 1:
+    hl = -np.log(2)/np.log(phi_hat)
+    print(f&quot;半衰期: {hl:.1f} 个月 = {hl/12:.1f} 年&quot;)
+else:
+    print(f&quot;半衰期: 不适用（φ={phi_hat:.3f}≤0，IC无正向惯性，不存在'衰减'过程）&quot;)
 
 # ============================================================
 # 模拟Fama-MacBeth回归
@@ -5201,11 +5205,13 @@ bh_significant = sum(p_values[i] &lt;= bh_threshold[i] for i in range(M))
 print(f&quot;\nBH校正后显著的数量: {bh_significant} (大幅减少假阳性)&quot;)
 </code></pre>
 <p><strong>运行结果解读</strong>：</p>
-<ul>
-<li>IC分析验证了 $t = IR \times \sqrt{T}$ 公式的正确性</li>
-<li>FM回归展示了NW调整对t值的影响（通常降低10-30%）</li>
-<li>多重检验演示了为什么100个无效因子中必然会出现几个"显著"的，这不是发现，是统计幻觉</li>
-</ul>
+<ol>
+<li><strong>IC分析</strong>：IC均值0.04、IR=0.70、t=7.7——因子高度显著。验证了 $t = IR \times \sqrt{T}$ 公式（0.70×√120≈7.7）。</li>
+<li><strong>AR(1)动态</strong>：φ=-0.12（轻微负相关），说明IC序列没有正向惯性，半衰期概念不适用。这与§5.6.2的A股实测结论一致：月度IC基本是随机游走。</li>
+<li><strong>FM回归</strong>：NW调整使t值降低约5%（从7.0降到6.6）。本例中因子足够强，调整后仍然高度显著。但对于t值在2附近的边缘因子，5%的调整可能改变结论。</li>
+<li><strong>多重检验</strong>：100个无效因子中出现8个p&lt;0.05的"假阳性"（数学期望是5个，实际可能4-8个属正常波动）。BH校正后只剩1个——说明校正确实能大幅减少假发现。
+- 多重检验演示了为什么100个无效因子中必然会出现几个"显著"的，这不是发现，是统计幻觉</li>
+</ol>
             </section>
 
             <section class="chapter-card" id="ch6-card">
