@@ -52,10 +52,7 @@ CHAPTERS = [
         (os.path.join(BOOK_DIR, "part4-进阶篇", "ch12-前沿方向与延伸阅读.md"),),
     ]),
     ("附录", [
-        (os.path.join(BOOK_DIR, "appendix", "appendix-a-python快速入门.md"),),
-        (os.path.join(BOOK_DIR, "appendix", "appendix-b-数学回顾.md"),),
-        (os.path.join(BOOK_DIR, "appendix", "appendix-c-数据源与工具清单.md"),),
-        (os.path.join(BOOK_DIR, "appendix", "appendix-d-术语表.md"),),
+        (os.path.join(BOOK_DIR, "appendix", "appendix-a-量化系统设计蓝图.md"),),
     ]),
 ]
 
