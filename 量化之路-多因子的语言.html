@@ -519,6 +519,21 @@
             border-radius: 0;
         }
 
+        /* 表格单元格内嵌的树形图/ASCII 图：浅底深字、窄宽度 */
+        .chapter-card td pre {
+            display: inline-block;
+            background: var(--bg-code-inline);
+            color: var(--color-text);
+            border: 1px solid var(--color-border);
+            border-radius: 6px;
+            padding: 8px 10px;
+            margin: 4px 0;
+            font-size: 0.78em;
+            line-height: 1.35;
+            white-space: pre;
+            width: auto;
+        }
+
         /* 数学公式 */
         mjx-container {
             font-size: 1.0em !important;
@@ -856,10 +871,10 @@
 <ul class="toc-sections"><li class="toc-section" data-anchor="ch10-h1"><a href="#ch10-h1">10.1 什么是过拟合？</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch10-h2"><a href="#ch10-h2">10.1.1 统计学习理论的定义</a></li><li class="toc-subsection" data-anchor="ch10-h3"><a href="#ch10-h3">10.1.2 一个典型的过拟合案例</a></li><li class="toc-subsection" data-anchor="ch10-h4"><a href="#ch10-h4">10.1.3 过拟合的根源：自由度过多</a></li></ul><li class="toc-section" data-anchor="ch10-h5"><a href="#ch10-h5">10.2 数据窥探偏差：量化计算</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch10-h6"><a href="#ch10-h6">10.2.1 回顾第5章的结论</a></li><li class="toc-subsection" data-anchor="ch10-h7"><a href="#ch10-h7">10.2.2 Deflated Sharpe Ratio…</a></li></ul><li class="toc-section" data-anchor="ch10-h8"><a href="#ch10-h8">10.3 幸存者偏差与前视偏差</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch10-h9"><a href="#ch10-h9">10.3.1 幸存者偏差的量化影响</a></li><li class="toc-subsection" data-anchor="ch10-h10"><a href="#ch10-h10">10.3.2 前视偏差的隐蔽形式</a></li></ul><li class="toc-section" data-anchor="ch10-h11"><a href="#ch10-h11">10.4 如何判断策略是否过拟合</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch10-h12"><a href="#ch10-h12">10.4.1 过拟合检测清单</a></li><li class="toc-subsection" data-anchor="ch10-h13"><a href="#ch10-h13">10.4.2 交叉验证方法</a></li></ul><li class="toc-section" data-anchor="ch10-h14"><a href="#ch10-h14">10.5 回测结果应该打多少折：实用估计方法</a></li><li class="toc-section" data-anchor="ch10-h15"><a href="#ch10-h15">10.6 防止过拟合的研究规范</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch10-h16"><a href="#ch10-h16">10.6.1 &quot;先假设再验证&quot;原则</a></li><li class="toc-subsection" data-anchor="ch10-h17"><a href="#ch10-h17">10.6.2 保持简单</a></li></ul><li class="toc-section" data-anchor="ch10-h18"><a href="#ch10-h18">10.7 本章小结</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch10-h19"><a href="#ch10-h19">10.7.1 内容回顾</a></li><li class="toc-subsection" data-anchor="ch10-h20"><a href="#ch10-h20">10.7.2 常见陷阱</a></li></ul><li class="toc-section" data-anchor="ch10-h21"><a href="#ch10-h21">10.8 附录</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch10-h22"><a href="#ch10-h22">10.8.1 参考文献</a></li><li class="toc-subsection" data-anchor="ch10-h23"><a href="#ch10-h23">10.8.2 验证代码</a></li></ul></ul>
 </li>
 <li class="toc-chapter" data-anchor="ch11-h0"><a href="#ch11-h0">第11章：从回测到实盘：现实世界的挑战</a>
-<ul class="toc-sections"><li class="toc-section" data-anchor="ch11-h1"><a href="#ch11-h1">11.1 回测与实盘的差距来源</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch11-h2"><a href="#ch11-h2">11.1.1 差距的分解</a></li><li class="toc-subsection" data-anchor="ch11-h3"><a href="#ch11-h3">11.1.2 为什么散户的折扣可能更小？</a></li></ul><li class="toc-section" data-anchor="ch11-h4"><a href="#ch11-h4">11.2 滑点与冲击成本建模</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch11-h5"><a href="#ch11-h5">11.2.1 滑点的定义</a></li><li class="toc-subsection" data-anchor="ch11-h6"><a href="#ch11-h6">11.2.2 市场冲击的平方根模型</a></li><li class="toc-subsection" data-anchor="ch11-h7"><a href="#ch11-h7">11.2.3 执行算法简介：TWAP与VWAP</a></li><li class="toc-subsection" data-anchor="ch11-h8"><a href="#ch11-h8">11.2.4 交易成本的完整清单（A股2024年现实）</a></li></ul><li class="toc-section" data-anchor="ch11-h9"><a href="#ch11-h9">11.3 流动性约束</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch11-h10"><a href="#ch11-h10">11.3.1 A股的流动性现实</a></li><li class="toc-subsection" data-anchor="ch11-h11"><a href="#ch11-h11">11.3.2 涨跌停对调仓的影响</a></li></ul><li class="toc-section" data-anchor="ch11-h12"><a href="#ch11-h12">11.4 实盘部署的渐进式流程</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch11-h13"><a href="#ch11-h13">11.4.1 推荐的五步流程</a></li></ul><li class="toc-section" data-anchor="ch11-h14"><a href="#ch11-h14">11.5 实盘中的行为纪律：最大的敌人是你自己</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch11-h15"><a href="#ch11-h15">11.5.1 为什么&quot;按规则执行&quot;如此困难？</a></li><li class="toc-subsection" data-anchor="ch11-h16"><a href="#ch11-h16">11.5.2 建立执行纪律的实操建议</a></li><li class="toc-subsection" data-anchor="ch11-h17"><a href="#ch11-h17">11.5.3 何时该停止一个策略？</a></li></ul><li class="toc-section" data-anchor="ch11-h18"><a href="#ch11-h18">11.6 本章小结</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch11-h19"><a href="#ch11-h19">11.6.1 内容回顾</a></li><li class="toc-subsection" data-anchor="ch11-h20"><a href="#ch11-h20">11.6.2 常见陷阱</a></li></ul><li class="toc-section" data-anchor="ch11-h21"><a href="#ch11-h21">11.7 附录</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch11-h22"><a href="#ch11-h22">11.7.1 参考文献</a></li><li class="toc-subsection" data-anchor="ch11-h23"><a href="#ch11-h23">11.7.2 验证代码</a></li></ul></ul>
+<ul class="toc-sections"><li class="toc-section" data-anchor="ch11-h1"><a href="#ch11-h1">11.1 回测与实盘的差距来源</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch11-h2"><a href="#ch11-h2">11.1.1 差距的分解</a></li><li class="toc-subsection" data-anchor="ch11-h3"><a href="#ch11-h3">11.1.2 为什么散户的折扣可能更小？</a></li></ul><li class="toc-section" data-anchor="ch11-h4"><a href="#ch11-h4">11.2 滑点与冲击成本建模</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch11-h5"><a href="#ch11-h5">11.2.1 滑点的定义</a></li><li class="toc-subsection" data-anchor="ch11-h6"><a href="#ch11-h6">11.2.2 市场冲击的平方根模型</a></li><li class="toc-subsection" data-anchor="ch11-h7"><a href="#ch11-h7">11.2.3 执行算法简介：TWAP与VWAP</a></li><li class="toc-subsection" data-anchor="ch11-h8"><a href="#ch11-h8">11.2.4 交易成本的完整清单（A股2024年现实）</a></li></ul><li class="toc-section" data-anchor="ch11-h9"><a href="#ch11-h9">11.3 流动性约束</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch11-h10"><a href="#ch11-h10">11.3.1 什么是流动性约束</a></li><li class="toc-subsection" data-anchor="ch11-h11"><a href="#ch11-h11">11.3.2 涨跌停对调仓的影响</a></li></ul><li class="toc-section" data-anchor="ch11-h12"><a href="#ch11-h12">11.4 月频策略的渐进式部署</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch11-h13"><a href="#ch11-h13">11.4.1 推荐的五步流程</a></li></ul><li class="toc-section" data-anchor="ch11-h14"><a href="#ch11-h14">11.5 日频交易：另一种节奏</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch11-h15"><a href="#ch11-h15">11.5.1 月频 vs 日频：五组核心差异</a></li><li class="toc-subsection" data-anchor="ch11-h16"><a href="#ch11-h16">11.5.2 日频策略的因子选择</a></li><li class="toc-subsection" data-anchor="ch11-h17"><a href="#ch11-h17">11.5.3 日频交易的工程实现</a></li><li class="toc-subsection" data-anchor="ch11-h18"><a href="#ch11-h18">11.5.4 日频回测的特别注意事项</a></li></ul><li class="toc-section" data-anchor="ch11-h19"><a href="#ch11-h19">11.6 实盘中的行为纪律：最大的敌人是你自己</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch11-h20"><a href="#ch11-h20">11.6.1 为什么&quot;按规则执行&quot;如此困难？</a></li><li class="toc-subsection" data-anchor="ch11-h21"><a href="#ch11-h21">11.6.2 建立执行纪律的实操建议</a></li><li class="toc-subsection" data-anchor="ch11-h22"><a href="#ch11-h22">11.6.3 何时该停止一个策略？</a></li></ul><li class="toc-section" data-anchor="ch11-h23"><a href="#ch11-h23">11.7 本章小结</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch11-h24"><a href="#ch11-h24">11.7.1 内容回顾</a></li><li class="toc-subsection" data-anchor="ch11-h25"><a href="#ch11-h25">11.7.2 常见陷阱</a></li></ul><li class="toc-section" data-anchor="ch11-h26"><a href="#ch11-h26">11.8 附录</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch11-h27"><a href="#ch11-h27">11.8.1 参考文献</a></li><li class="toc-subsection" data-anchor="ch11-h28"><a href="#ch11-h28">11.7.2 验证代码</a></li></ul></ul>
 </li>
 <li class="toc-chapter" data-anchor="ch12-h0"><a href="#ch12-h0">第12章：前沿方向：机器学习与量化投资的未来</a>
-<ul class="toc-sections"><li class="toc-section" data-anchor="ch12-h1"><a href="#ch12-h1">12.1 线性模型的天花板：为什么需要机器学习</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch12-h2"><a href="#ch12-h2">12.1.1 线性假设的三个局限</a></li><li class="toc-subsection" data-anchor="ch12-h3"><a href="#ch12-h3">12.1.2 机器学习能做什么：从&quot;特征工程&quot;到&quot;关系发…</a></li></ul><li class="toc-section" data-anchor="ch12-h4"><a href="#ch12-h4">12.2 决策树与集成方法：随机森林和XGBoo…</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch12-h5"><a href="#ch12-h5">12.2.1 决策树的直觉</a></li><li class="toc-subsection" data-anchor="ch12-h6"><a href="#ch12-h6">12.2.2 随机森林：用&quot;委员会投票&quot;降低过拟合</a></li><li class="toc-subsection" data-anchor="ch12-h7"><a href="#ch12-h7">12.2.3 XGBoost/LightGBM：梯度提升…</a></li></ul><li class="toc-section" data-anchor="ch12-h8"><a href="#ch12-h8">12.3 神经网络在因子投资中的应用</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch12-h9"><a href="#ch12-h9">12.3.1 为什么神经网络？</a></li><li class="toc-subsection" data-anchor="ch12-h10"><a href="#ch12-h10">12.3.2 前馈网络（MLP）在截面预测中的应用</a></li><li class="toc-subsection" data-anchor="ch12-h11"><a href="#ch12-h11">12.3.3 循环网络（LSTM）在时序预测中的应用</a></li><li class="toc-subsection" data-anchor="ch12-h12"><a href="#ch12-h12">12.3.4 Transformer与注意力机制：最新前…</a></li></ul><li class="toc-section" data-anchor="ch12-h13"><a href="#ch12-h13">12.4 机器学习在量化中的特殊挑战</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch12-h14"><a href="#ch12-h14">12.4.1 过拟合：ML的头号敌人</a></li><li class="toc-subsection" data-anchor="ch12-h15"><a href="#ch12-h15">12.4.2 非平稳性：过去不能代表未来</a></li><li class="toc-subsection" data-anchor="ch12-h16"><a href="#ch12-h16">12.4.3 可解释性：你信任一个你不理解的模型吗？</a></li></ul><li class="toc-section" data-anchor="ch12-h17"><a href="#ch12-h17">12.5 另类数据：超越财务报表</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch12-h18"><a href="#ch12-h18">12.5.1 什么是另类数据？</a></li><li class="toc-subsection" data-anchor="ch12-h19"><a href="#ch12-h19">12.5.2 另类数据的核心价值：时效性</a></li><li class="toc-subsection" data-anchor="ch12-h20"><a href="#ch12-h20">12.5.3 对A股散户投资者的现实建议</a></li></ul><li class="toc-section" data-anchor="ch12-h21"><a href="#ch12-h21">12.6 ML在量化中的正确定位</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch12-h22"><a href="#ch12-h22">12.6.1 ML不是&quot;银弹&quot;</a></li><li class="toc-subsection" data-anchor="ch12-h23"><a href="#ch12-h23">12.6.2 一个务实的&quot;分层&quot;方法论</a></li></ul><li class="toc-section" data-anchor="ch12-h24"><a href="#ch12-h24">12.7 本章小结</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch12-h25"><a href="#ch12-h25">12.7.1 内容回顾</a></li><li class="toc-subsection" data-anchor="ch12-h26"><a href="#ch12-h26">12.7.2 常见陷阱</a></li></ul><li class="toc-section" data-anchor="ch12-h27"><a href="#ch12-h27">12.8 附录</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch12-h28"><a href="#ch12-h28">12.8.1 参考文献</a></li><li class="toc-subsection" data-anchor="ch12-h29"><a href="#ch12-h29">12.8.2 验证代码</a></li></ul></ul>
+<ul class="toc-sections"><li class="toc-section" data-anchor="ch12-h1"><a href="#ch12-h1">12.1 线性模型的天花板：为什么需要机器学习</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch12-h2"><a href="#ch12-h2">12.1.1 线性假设的三个局限</a></li><li class="toc-subsection" data-anchor="ch12-h3"><a href="#ch12-h3">12.1.2 机器学习能做什么：从&quot;特征工程&quot;到&quot;关系发…</a></li></ul><li class="toc-section" data-anchor="ch12-h4"><a href="#ch12-h4">12.2 决策树与集成方法：随机森林和XGBoo…</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch12-h5"><a href="#ch12-h5">12.2.1 决策树的直觉</a></li><li class="toc-subsection" data-anchor="ch12-h6"><a href="#ch12-h6">12.2.2 随机森林：用&quot;委员会投票&quot;降低过拟合</a></li><li class="toc-subsection" data-anchor="ch12-h7"><a href="#ch12-h7">12.2.3 XGBoost/LightGBM：梯度提升…</a></li></ul><li class="toc-section" data-anchor="ch12-h8"><a href="#ch12-h8">12.3 神经网络在因子投资中的应用</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch12-h9"><a href="#ch12-h9">12.3.1 为什么用神经网络？</a></li><li class="toc-subsection" data-anchor="ch12-h10"><a href="#ch12-h10">12.3.2 前馈网络（MLP）在截面预测中的应用</a></li><li class="toc-subsection" data-anchor="ch12-h11"><a href="#ch12-h11">12.3.3 循环网络（LSTM）在时序预测中的应用</a></li><li class="toc-subsection" data-anchor="ch12-h12"><a href="#ch12-h12">12.3.4 Transformer与注意力机制：最新前…</a></li></ul><li class="toc-section" data-anchor="ch12-h13"><a href="#ch12-h13">12.4 机器学习在量化中的特殊挑战</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch12-h14"><a href="#ch12-h14">12.4.1 过拟合：ML的头号敌人</a></li><li class="toc-subsection" data-anchor="ch12-h15"><a href="#ch12-h15">12.4.2 非平稳性：过去不能代表未来</a></li><li class="toc-subsection" data-anchor="ch12-h16"><a href="#ch12-h16">12.4.3 可解释性：你信任一个你不理解的模型吗？</a></li></ul><li class="toc-section" data-anchor="ch12-h17"><a href="#ch12-h17">12.5 另类数据：超越财务报表</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch12-h18"><a href="#ch12-h18">12.5.1 什么是另类数据？</a></li><li class="toc-subsection" data-anchor="ch12-h19"><a href="#ch12-h19">12.5.2 另类数据的核心价值：时效性</a></li><li class="toc-subsection" data-anchor="ch12-h20"><a href="#ch12-h20">12.5.3 对A股散户投资者的现实建议</a></li></ul><li class="toc-section" data-anchor="ch12-h21"><a href="#ch12-h21">12.6 ML在量化中的正确定位</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch12-h22"><a href="#ch12-h22">12.6.1 ML不是&quot;银弹&quot;</a></li><li class="toc-subsection" data-anchor="ch12-h23"><a href="#ch12-h23">12.6.2 一个务实的&quot;分层&quot;方法论</a></li></ul><li class="toc-section" data-anchor="ch12-h24"><a href="#ch12-h24">12.7 本章小结</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch12-h25"><a href="#ch12-h25">12.7.1 内容回顾</a></li><li class="toc-subsection" data-anchor="ch12-h26"><a href="#ch12-h26">12.7.2 常见陷阱</a></li></ul><li class="toc-section" data-anchor="ch12-h27"><a href="#ch12-h27">12.8 附录</a></li><ul class="toc-subsections"><li class="toc-subsection" data-anchor="ch12-h28"><a href="#ch12-h28">12.8.1 参考文献</a></li><li class="toc-subsection" data-anchor="ch12-h29"><a href="#ch12-h29">12.8.2 验证代码</a></li></ul></ul>
 </li>
 <li class="toc-part">附录</li>
 <li class="toc-chapter" data-anchor="ch13-h0"><a href="#ch13-h0">附录A：量化系统设计蓝图</a>
@@ -928,7 +943,7 @@
 <p>如果读完之后，你在看到一只"PE 只有 5 倍"的银行股时，第一反应不再是"估值够低，该买了"，而是"它的 EP 高是因为风险补偿还是市场低估了增长？这个高 EP 能持续吗？"，那么这本书就达到了它的目的。</p>
 <p>投资是一场终身学习。愿这本书成为你路上的一个路标。</p>
 <hr />
-<p><strong>作者</strong>：Ellery ｜ <strong>版本</strong>：v1.0 ｜ <strong>时间</strong>：2026-06-25</p>
+<p><strong>作者</strong>：Ellery ｜ <strong>版本</strong>：v1.0 ｜ <strong>时间</strong>：2026-07-09</p>
             </section>
 <div class="part-divider"><span>第一篇 · 认知篇</span></div>
 
@@ -6962,7 +6977,7 @@ IC加权相对等权的提升: 2.7%
 </table>
 <p>如果你的策略夏普标准误约0.3（10年月频数据典型值），测试100种后选出最好的：</p>
 <p>实际夏普 ≈ 观测夏普 - $0.9 \times 0.3 = 0.27$</p>
-<p>观测夏普1.5 → 实际可能只有1.2。观测夏普0.8 → 实际可能只有0.5（勉强有效）。观测夏普0.4 → 实际可能接近0（无效）。</p>
+<p>观测夏普1.5 → 实际可能只有1.2；观测夏普0.8 → 实际可能只有0.5（勉强有效）；观测夏普0.4 → 实际可能接近0（无效）。</p>
 <h3 id="ch10-h7">10.2.2 Deflated Sharpe Ratio（DSR）</h3>
 
 <blockquote>
@@ -6971,14 +6986,20 @@ IC加权相对等权的提升: 2.7%
 <p><strong>得到的结论</strong>：DSR给出考虑多重检验后的真实显著性概率，若DSR低于0.95说明策略在多重检验意义上不显著</p>
 <p>以上是结论，以下为推导，读者可自行选择是否跳过该推导过程，继续阅读 10.3.1 节。</p>
 </blockquote>
-<p>Bailey &amp; Lopez de Prado (2014)[1] 提出了一个优雅的校正方法，直接计算"考虑了多重检验后的p值"：</p>
+<p>§10.2.1 给出了一个粗略的偏差修正（减去 $\sigma\sqrt{2\ln M}$），但它有两个不足：一是只用了正态分布假设，而真实策略收益往往有偏度和厚尾（暴涨暴跌）；二是它只告诉你"减多少"，但并不知道：扣除偏差后，这个策略到底还算不算"显著赚钱"？Deflated Sharpe Ratio（缩减夏普比，简称 DSR）就是来回答这个问题的。</p>
+<p>DSR 的输出不是一个夏普比数值，而是一个<strong>概率</strong>：在考虑了你测试过 $M$ 个策略、数据只有 $T$ 期、收益分布有偏度和峰度之后，你选出的这个"最优"策略真实夏普比大于零的概率有多大。</p>
 <p>$$\text{DSR} = P\left[SR^* > 0 \mid \hat{SR}, T, M, \text{skew}, \text{kurt}\right] \tag{10.4}$$</p>
-<p>计算步骤：</p>
-<ol>
-<li>估计"在$M$次试验中最大夏普比的期望值"：$E[\max SR] \approx \sqrt{V[\hat{SR}]} \cdot [(1-\gamma)\Phi^{-1}(1-1/M) + \gamma\Phi^{-1}(1-1/(Me))]$</li>
-<li>计算校正后的t统计量</li>
-<li>如果DSR &lt; 0.95，说明考虑了多重检验后策略不显著</li>
-</ol>
+<p>其中各符号的业务含义：</p>
+<ul>
+<li>$\hat{SR}$：你实际观测到的夏普比（回测跑出来的那个数字）。</li>
+<li>$T$：回测的样本期数（如 10 年月频数据就是 120）。$T$ 越大，估计越可靠。</li>
+<li>$M$：你总共测试了多少个策略或参数组合。$M$ 越大，"最优者纯属走运"的概率越高，DSR 会相应压低。</li>
+<li>$\text{skew}$（偏度）、$\text{kurt}$（峰度）：策略收益分布的形状。负偏度（偶尔暴跌）和高峰度（厚尾）都会让夏普比更不可靠，DSR 会进一步惩罚。</li>
+</ul>
+<p>计算分三步。第一步，估计"如果这 $M$ 个策略全都无效，纯靠运气，其中最好的那个夏普比大概会是多少"。这个期望最大值由极值理论给出：</p>
+<p>$$E[\max SR] \approx \sigma_{SR} \cdot \left[(1-\gamma)\,\Phi^{-1}\!\left(1-\tfrac{1}{M}\right) + \gamma\,\Phi^{-1}\!\left(1-\tfrac{1}{Me}\right)\right] \tag{10.5}$$</p>
+<p>这里 $\sigma_{SR}$ 是单个策略夏普比估计的标准误（衡量夏普比本身的波动），$\gamma \approx 0.577$ 是欧拉-马歇罗尼常数（一个固定的数学常数），$\Phi^{-1}$ 是标准正态分布的分位数函数（把概率反算回对应的分位点），$e$ 是自然常数。这个公式的直觉是：测试的策略越多（$M$ 越大），纯靠运气能达到的最高夏普就越高，所以"及格线"要相应提高。</p>
+<p>第二步，把你观测到的夏普比 $\hat{SR}$ 减去这条"运气及格线"，再除以标准误，得到一个校正后的 t 统计量，并把偏度峰度纳入标准误的计算。第三步，将这个 t 统计量转换为概率，就得到 DSR。判断标准：<strong>DSR 大于 0.95，才认为策略在考虑多重检验后仍然显著为正</strong>；否则说明你观测到的高夏普很可能只是 $M$ 次尝试中的幸运儿。</p>
 <p><strong>实操建议</strong>：记录你总共测试了多少种参数组合（$M$），在报告策略结果时同时报告DSR。</p>
 <hr />
 <h2 id="ch10-h8">10.3 幸存者偏差与前视偏差</h2>
@@ -6992,23 +7013,13 @@ IC加权相对等权的提升: 2.7%
 <p>以上是结论，以下为推导，读者可自行选择是否跳过该推导过程，继续阅读 10.3.2 节。</p>
 </blockquote>
 <p><strong>定义</strong>：幸存者偏差 = 你的回测数据中只包含"活到现在"的股票，而遗漏了中途退市（包括ST、暂停上市、重大违法退市等）的股票。</p>
-<p><strong>A股的退市规模</strong>：2019-2024年，A股共有超过150家公司退市或暂停上市。如果你的数据库在2024年回测2019年的策略时，不包含这些后来退市的公司，就产生了幸存者偏差。</p>
-<p><strong>偏差有多大？</strong> 一个数值估计：</p>
-<p>假设全A股5000只股票中，每年有约30只退市。这些退市股票在退市前1-2年的特征是：</p>
-<ul>
-<li>PE（市盈率，股价÷每股收益）极低或为负（看起来"极度低估值"→价值因子会选中它们）</li>
-<li>市值很小（小市值因子会选中它们）</li>
-<li>收益率为-80%到-100%（从被标注到最终退市的过程中持续暴跌）</li>
-</ul>
-<p>如果你的回测<strong>不包含</strong>这些股票：</p>
-<ul>
-<li>价值因子的"估值最低组"少了约30只"雷"，这些"雷"原本会亏80%+</li>
-<li>假设估值最低组有300只股票，其中30只"雷"被遗漏</li>
-<li>偏差 ≈ 30/300 × (-80%) ≈ -8%的损失被掩盖</li>
-<li>年化高估约 8%/300只 × 等权 ≈ 虽然单只影响不大，但累积效应约2-4%/年</li>
-</ul>
-<p><strong>如何避免</strong>：确保你的数据源是"全历史全样本"的，tushare等数据源通常包含已退市股票的历史数据（但需要特别设置参数来包含）。回测时，每个月的选股池应该是"当月实际存在的所有股票"，而非"现在还活着的股票"。</p>
-<p><strong>来源</strong>：退市的股票通常是最差的公司，如果它们不在你的回测数据中，你的"价值因子"看起来更有效（因为那些"极低估值但后来退市"的雷没被引爆）。</p>
+<p><strong>偏差从哪来？</strong> 退市股票在退市前1到2年通常有三个特征：PE（市盈率，股价÷每股收益）极低或为负，看起来"极度低估值"，价值因子会把它们选进估值最低组；市值很小，小市值因子会选中它们；股价在被标注到最终退市的过程中持续暴跌，累计跌幅可能达到 80% 甚至 100%。</p>
+<p>如果回测数据里没有这些股票，价值因子的"估值最低组"就少了一批注定要暴跌的"雷"。这些雷本该拖累该组的收益，缺席之后该组表现被凭空拔高，价值因子看起来比真实情况更有效。</p>
+<blockquote>
+<p>⚠️ <strong>示意性数据</strong>：以下数字为说明幸存者偏差量级而构造的算例，非精确实测。</p>
+</blockquote>
+<p>举一个数量级的算例。假设价值因子的估值最低组有 300 只股票，其中 10 只在未来一年内退市、退市前平均下跌 80%。如果这 10 只被遗漏，该组当年的平均收益就会被高估约 $10 \times 80\% / 300 \approx 2.7\%$。也就是说，仅仅因为漏掉了这些雷，你的价值因子每年就凭空多出约 2 到 3 个百分点的"虚假超额"。这个偏差看似不大，但在长期复利下足以让一个平庸因子显得优秀。</p>
+<p><strong>如何避免</strong>：确保你的数据源是"全历史全样本"的，tushare 等数据源通常包含已退市股票的历史数据（但需要特别设置参数来包含）。回测时，每个月的选股池应该是"当月实际存在的所有股票"，而非"现在还活着的股票"。</p>
 <h3 id="ch10-h10">10.3.2 前视偏差的隐蔽形式</h3>
 
 <p>明显的前视偏差容易避免（第7章讨论过）。但有些<strong>隐蔽</strong>的形式更难发现：</p>
@@ -7086,6 +7097,9 @@ IC加权相对等权的提升: 2.7%
 
 <p>这是每个量化投资者最关心的实操问题：<strong>我的回测年化18%，实盘能期望多少？</strong></p>
 <p><strong>经验法则（基于行业经验和学术研究）</strong>：</p>
+<blockquote>
+<p>⚠️ <strong>示意性数据</strong>：以下折扣数值为行业经验法则的汇总，非精确量化结果，具体数值因策略和市场环境而异。</p>
+</blockquote>
 <table>
 <thead>
 <tr>
@@ -7126,7 +7140,7 @@ IC加权相对等权的提升: 2.7%
 <p>即：回测年化18% × (1 - 50%折扣) = 实盘期望约9%。</p>
 <p><strong>一个更保守的拇指规则</strong>：实盘期望夏普 ≈ 回测夏普 ÷ 2。如果回测夏普=1.5，实盘期望约0.75，仍然不错，但远没有回测看起来那么好。</p>
 <blockquote>
-<p><strong>关键心态</strong>：如果你的策略在"打五折"后仍然有正收益，它大概率是真的。如果打五折后就接近零了，大概率是过拟合的产物。这就是为什么那些"回测夏普0.8"的策略实盘后经常亏钱，打折后就没了。</p>
+<p><strong>关键心态</strong>：如果你的策略在"打五折"后仍然有正收益，它大概率是真的。如果打五折后就接近零了，大概率是过拟合的产物。</p>
 </blockquote>
 <hr />
 <h2 id="ch10-h15">10.6 防止过拟合的研究规范</h2>
@@ -7256,7 +7270,7 @@ $$\text{滑点} = \frac{|P_{\text{实际}} - P_{\text{收盘}}|}{P_{\text{收盘
 <p>A股的典型隔夜滑点：约0.1-0.3%（取决于股票波动率）。</p>
 <h3 id="ch11-h6">11.2.2 市场冲击的平方根模型</h3>
 
-<p>当你的交易量相对于市场成交量较大时，你的买入行为本身会推高价格，这就是市场冲击。</p>
+<p>当你的交易量相对于市场成交量较大时，你的买入行为本身会推高价格，这就是市场冲击。这个概念在 §3.5.2 讨论因子"容量"时已经出现过：那里我们用同一个平方根模型说明了为什么策略规模越大、超额收益越薄，并算出价值因子在 100 亿管理规模下冲击成本会吃掉全部溢价。§7.5.3 也预告过，交易成本的完整建模会放在本节。现在我们把这个模型正式写出来，并算一算它对散户到底有多大影响。</p>
 <p><strong>Almgren-Chriss 平方根模型</strong>：</p>
 <p>$$\text{冲击成本} = \eta \cdot \sigma \cdot \sqrt{\frac{V_{\text{trade}}}{V_{\text{ADV}}}} \tag{11.3}$$</p>
 <p>其中：</p>
@@ -7266,6 +7280,7 @@ $$\text{滑点} = \frac{|P_{\text{实际}} - P_{\text{收盘}}|}{P_{\text{收盘
 <li>$V_{\text{trade}}$：你的交易金额</li>
 <li>$V_{\text{ADV}}$：股票日均成交额</li>
 </ul>
+<p>这个公式和 §3.5.2 中的 $c(v)=\eta\sqrt{v/\text{ADV}}$ 是同一个模型：核心都是"冲击成本正比于交易占比的平方根"。差别只在本节多乘了一个日波动率 $\sigma$，把冲击换算成了以收益率计量的形式，更便于和因子溢价直接比较。</p>
 <p><strong>散户的冲击成本</strong>：</p>
 <p>假设你总资金50万，持有30只股票，每月调仓（按策略规则定期调整持仓）1/3：</p>
 <ul>
@@ -7274,7 +7289,7 @@ $$\text{滑点} = \frac{|P_{\text{实际}} - P_{\text{收盘}}|}{P_{\text{收盘
 <li>$V_{\text{trade}}/V_{\text{ADV}}$ = 5556 / 50,000,000 ≈ 0.0001</li>
 </ul>
 <p>$$\text{冲击} = 0.2 \times 0.02 \times \sqrt{0.0001} = 0.00004 = 0.004\% \tag{11.4}$$</p>
-<p><strong>结论</strong>：散户资金量下的冲击成本几乎为零。</p>
+<p><strong>结论</strong>：散户资金量下的冲击成本几乎为零。这正是 §3.5.2 容量分析的另一面：容量约束对大机构是致命的天花板，对散户却几乎不存在。</p>
 <blockquote>
 <p>这是散户的巨大优势[1]！大机构管理100亿，冲击成本可能是散户的1000倍。</p>
 </blockquote>
@@ -7348,22 +7363,25 @@ $$\text{滑点} = \frac{|P_{\text{实际}} - P_{\text{收盘}}|}{P_{\text{收盘
 <hr />
 <h2 id="ch11-h9">11.3 流动性约束</h2>
 
-<h3 id="ch11-h10">11.3.1 A股的流动性现实</h3>
+<h3 id="ch11-h10">11.3.1 什么是流动性约束</h3>
 
+<p>流动性指的是"一只股票能以合理价格快速买卖的难易程度"。日均成交额越大，流动性越好，你的买卖单越容易在不明显推高或压低价格的情况下成交。流动性约束就是指：当你想买入或卖出的金额，相对于这只股票的日均成交额太大时，你要么买不到足够的量，要么会因为自己的大单推高价格（回顾 §11.2.2 的市场冲击），导致成交价格明显偏离预期。</p>
+<p>前面 §11.2.2 算过散户的市场冲击几乎为零，那是因为对沪深300这类大盘股，散户几万元的单子相对于几十亿的日均成交额微不足道。但如果你去买流动性差的微盘股，情况就变了。这一节讨论的就是：什么样的股票、什么样的资金规模，会撞上流动性的墙。</p>
+<p>先看一张 A 股不同类型股票的流动性对照表。为便于理解，我们约定一个可交易的经验标准：<strong>单只持仓金额不宜超过该股日均成交额的 1%</strong>（超过这个比例，你的单子就可能对价格产生可感知的冲击，或者根本吃不到足够的挂单）。</p>
 <table>
 <thead>
 <tr>
 <th>股票类型</th>
 <th>日均成交额</th>
-<th>5万元能否一手买入？</th>
-<th>50万组合是否可行？</th>
+<th>5万元单只持仓</th>
+<th>50万组合（约30只，每只1.7万）</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>沪深300成分股</td>
 <td>2-50亿</td>
-<td>轻松</td>
+<td>轻松（远低于成交额1%）</td>
 <td>无压力</td>
 </tr>
 <tr>
@@ -7386,6 +7404,7 @@ $$\text{滑点} = \frac{|P_{\text{实际}} - P_{\text{收盘}}|}{P_{\text{收盘
 </tr>
 </tbody>
 </table>
+<p>怎么读这张表？以微盘股为例：日均成交额只有 500 万，按 1% 的经验标准，单只持仓上限约 5 万元。如果你只买一只、恰好 5 万元，勉强踩在边界上，所以是"可能有困难"。但一个 50 万的组合要分散到约 30 只股票，如果这些股票都是微盘股，光是买入建仓时你的单子就会反复推高价格，卖出时又砸低价格，来回摩擦足以吞掉因子带来的那点超额收益，所以对微盘股是"不适合"。反观沪深300，单只成交额几十亿，你几万元的单子占比不到万分之一，怎么买都"无压力"。</p>
 <p><strong>散户策略建议</strong>：</p>
 <ul>
 <li>股票池限定在"日均成交额 &gt; 2000万"的范围内</li>
@@ -7403,50 +7422,138 @@ $$\text{滑点} = \frac{|P_{\text{实际}} - P_{\text{收盘}}|}{P_{\text{收盘
 </ol>
 <p>实证表明：涨跌停约束对月频策略的影响约<strong>0.3-0.8%/年</strong>（主要是错过了一些快速上涨的股票）。</p>
 <hr />
-<h2 id="ch11-h12">11.4 实盘部署的渐进式流程</h2>
+<h2 id="ch11-h12">11.4 月频策略的渐进式部署</h2>
 
 <h3 id="ch11-h13">11.4.1 推荐的五步流程</h3>
 
-<p><strong>Step 1：纸面交易（Paper Trading），1-3个月</strong></p>
-<p>不投入真金白银，但每月按规则记录"如果按策略操作"的结果：</p>
-<ul>
-<li>月底计算因子得分</li>
-<li>记录"应该买入的30只股票"</li>
-<li>下个月对照实际涨跌算出"模拟收益"</li>
-</ul>
-<p>目的：验证你的数据流程和计算是否正确，修复bug。</p>
-<p><strong>Step 2：小资金实盘，3-6个月</strong></p>
-<p>投入5万元（你能接受全部亏损的金额）执行策略：</p>
-<ul>
-<li>验证交易执行是否顺畅</li>
-<li>体验"真金白银亏钱"的心理压力</li>
-<li>对比"纸面收益"和"实际收益"的差距</li>
-</ul>
-<p><strong>Step 3：评估与修正，1个月</strong></p>
-<p>对比纸面、回测和实盘结果：</p>
-<ul>
-<li>实盘比纸面差多少？（估计真实滑点+冲击）</li>
-<li>有没有执行纪律问题？（某个月"没来得及调仓"）</li>
-<li>策略表现是否在回测的预期范围内？</li>
-</ul>
-<p><strong>Step 4：渐进放大，6-12个月</strong></p>
-<p>确认策略可行后，逐步增加资金。推荐节奏：</p>
-<ul>
-<li>5万 → 10万 → 20万 → 50万</li>
-<li>每次放大后观察1-2个月确认无异常</li>
-</ul>
-<p><strong>Step 5：稳态运行，持续</strong></p>
-<p>到达目标规模后进入稳态：</p>
-<ul>
-<li>每月执行调仓（1-2小时）</li>
-<li>每季度回顾策略绩效</li>
-<li>每半年检查因子IC是否仍在健康范围</li>
-<li>如果连续6个月超额为负且IC系统性下降→考虑修改或停止策略</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>时长</th>
+<th>核心任务</th>
+<th>通过标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Step 1 📝 纸面交易</td>
+<td>1-3 个月</td>
+<td>投资app上开个虚拟盘，每月按策略规则记录虚拟持仓和收益，验证数据流程和计算是否正确</td>
+<td>连续 3 期计算结果与预期一致，无逻辑错误</td>
+</tr>
+<tr>
+<td>Step 2 💰 小资金实盘</td>
+<td>3-6 个月</td>
+<td>投入 &lt;5 万元执行策略，验证交易执行是否顺畅，体验真金白银亏损的心理压力</td>
+<td>实际成交价与纸面模拟偏差在可接受范围内</td>
+</tr>
+<tr>
+<td>Step 3 🔍 评估与修正</td>
+<td>1 个月</td>
+<td>对比纸面、回测、实盘三方结果，检查是否有执行纪律问题（如某个月"没来得及调仓"）</td>
+<td>实盘结果在回测预期范围内，无系统性执行偏差</td>
+</tr>
+<tr>
+<td>Step 4 📈 渐进放大</td>
+<td>6-12 个月</td>
+<td>5万→10万→20万→50万，每次放大后观察 1-2 个月确认无异常再继续</td>
+<td>每次放大后策略表现无明显恶化</td>
+</tr>
+<tr>
+<td>Step 5 ⚙️ 稳态运行</td>
+<td>持续</td>
+<td>每月花 1-2 小时执行调仓，每季度回顾策略绩效，每半年检查因子 IC 是否仍在健康范围</td>
+<td>超额收益持续为正，因子 IC 未系统性衰减</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h2 id="ch11-h14">11.5 实盘中的行为纪律：最大的敌人是你自己</h2>
+<h2 id="ch11-h14">11.5 日频交易：另一种节奏</h2>
 
-<h3 id="ch11-h15">11.5.1 为什么&quot;按规则执行&quot;如此困难？</h3>
+<p>全书的方法论以月频多因子策略为主线展开，这是因为财报更新频率决定了价值和质量因子天然是月频的——一只股票的净利润数据三个月才更新一次，每天重算 PE 因子不会带来新信息。但如果你想把策略加速到 T+1 日频（每晚计算下一日的交易信号），甚至未来扩展到新闻驱动的实时调仓，方法论框架是一样的，只是参数变了。本节对比日频和月频的关键差异，给出一条可操作的日频部署路径。</p>
+<h3 id="ch11-h15">11.5.1 月频 vs 日频：五组核心差异</h3>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>月频</th>
+<th>日频</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>信号频率</strong></td>
+<td>每月最后一个交易日盘后计算</td>
+<td>每交易日晚数据出来之后（比如19:00）计算次日信号</td>
+</tr>
+<tr>
+<td><strong>因子可用性</strong></td>
+<td>财报因子（EP、ROE 等）可用，只需对齐公告日</td>
+<td>财报因子大部分时间不变，只有新公告日才更新，绝大部分交易日只有行情类因子在变化</td>
+</tr>
+<tr>
+<td><strong>典型因子池</strong></td>
+<td>EP、BP、CF/P、ROE、动量、低波动</td>
+<td>动量（5日/10日/20日）、反转（1日/3日）、波动率、换手率、资金流</td>
+</tr>
+<tr>
+<td><strong>年化换手率</strong></td>
+<td>100%-200%（不控制时）</td>
+<td>500%-2000%（同等不控制时），成本压力极大</td>
+</tr>
+<tr>
+<td><strong>单次调仓比例</strong></td>
+<td>每月约 20%-50% 股票替换</td>
+<td>每日可能仅 5%-15% 股票替换（信号变化缓慢，但也取决于你是具体使用了哪些因子）</td>
+</tr>
+<tr>
+<td><strong>噪音水平</strong></td>
+<td>月收益率信号相对清晰</td>
+<td>日收益率噪音极大（日波动 1% 常见，信号仅 0.01% 量级）</td>
+</tr>
+<tr>
+<td><strong>适合散户程度</strong></td>
+<td>高（月操作 1 次，1-2 小时）</td>
+<td>中（需自动化，每天跑批）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ch11-h16">11.5.2 日频策略的因子选择</h3>
+
+<p>日频交易不能照搬月频的因子池。价值因子（EP、BP）底层依赖财务报表，三个月才更新一次数据，每天重算只是把三个月前的数据除以当天的股价，信息增量极小。真正适合日频的是三类因子：</p>
+<p><strong>持续有效的行情类因子</strong>：短期动量（5日、10日、20日）和短期反转（1日、3日）在日频下有信号，但衰减比月频快得多。5 日动量的 IC 半衰期可能只有 3-5 个交易日，需要滚动重估权重。低波动和换手率因子在日频下保持稳定，因为它们不依赖财报。</p>
+<p><strong>事件类因子</strong>：公告日当天的超额收益是日频才抓得住的信号。业绩预告、分红公告、增发预案，这些事件在公告后 1-3 个交易日内有明显的超额收益窗口，月频调仓完全错过。</p>
+<p><strong>资金流和情绪类因子</strong>：主力资金净流入、北向资金净买入、融资融券余额变化等日频数据在多因子框架下能提供增量信息，但这些数据的 IC 通常较低，需要更严格的多重检验校正。</p>
+<h3 id="ch11-h17">11.5.3 日频交易的工程实现</h3>
+
+<p>日频交易的工程链路与月频一致（数据获取→数据处理→因子计算→策略引擎→通知），但有两个关键变化。</p>
+<p><strong>自动化跑批</strong>。每晚 19:00（A股收盘后、数据源已完成当日数据更新），定时任务自动触发以下流程：</p>
+<pre><code>19:00  数据更新（从 tushare 拉取当日行情和资金流数据）
+19:05  因子计算（行情类因子重算，财报类因子复用上期值）
+19:10  正交化 + 因子合成 + 组合构建
+19:15  生成次日交易指令（买入卖出清单）
+19:20  发送邮件给订阅者（含交易指令 + 昨日绩效 + 关键监控指标）
+</code></pre>
+<p>这 20 分钟的跑批窗口要求所有环节高度自动化，任何一个数据源卡住都不能拖累整体流程。因此需要为每个数据拉取设超时（如 60 秒）和重试（最多 3 次），失败后使用缓存数据继续，并在邮件中标注"今日使用缓存数据"。</p>
+<p><strong>邮件通知</strong>。日频投资者不需要每天打开系统，只需要在次日开盘前看一眼邮件。邮件内容建议包含：</p>
+<ul>
+<li>今日交易指令（买入 X 只、卖出 Y 只，清单附理由和对应股票的板块）</li>
+<li>昨日持仓收益（个股涨跌 vs 组合涨跌 vs 基准涨跌）</li>
+<li>本月累计超额收益</li>
+<li>关键风险指标（当前回撤、年化换手率、因子IC趋势）</li>
+</ul>
+<h3 id="ch11-h18">11.5.4 日频回测的特别注意事项</h3>
+
+<p>日频回测的数据量是月频的约 20 倍（250 个交易日 vs 12 个调仓日），对数据和计算的要求更高，但方法论不变。需要特别注意的是：</p>
+<p><strong>财报因子的时间对齐更精细</strong>。月频回测中，我们只需保证"月末使用的财报数据在公告日之前"。日频回测中，同一份财报可能在公告日当天上午才被纳入计算，因此需要把公告时间戳精确到"日"而非"月"。</p>
+<p><strong>成本估计需要更保守</strong>。日频的年化换手率天然更高，单边 0.15% 的假设在月频下可以接受，但在日频下如果每天换手 10%、年化换手 2500%，成本会吃掉所有信号。日频策略必须在回测中先"口含成本"做检验：扣除双边的佣金、印花税、滑点后还能赚钱，才值得实盘。</p>
+<p><strong>参数优化更容易过拟合</strong>。日频数据有大量样本点（如果做全量A股的预测，将会达到十万级以上），看似"数据很多"，但有效独立信息量并不比月频多多少——因为日收益率高度自相关，并不是每天都有独立的增量信号。不要因为日频数据量大就无节制地调参，Walk-Forward 样本外验证在日频下更为重要。</p>
+<hr />
+<h2 id="ch11-h19">11.6 实盘中的行为纪律：最大的敌人是你自己</h2>
+
+<h3 id="ch11-h20">11.6.1 为什么&quot;按规则执行&quot;如此困难？</h3>
 
 <p>量化策略的核心优势是"去除情绪干扰、机械执行规则"。但实盘中，你会发现自己不断面临以下诱惑：</p>
 <p><strong>场景1：策略说买入某只"暴雷股"</strong></p>
@@ -7459,32 +7566,49 @@ $$\text{滑点} = \frac{|P_{\text{实际}} - P_{\text{收盘}}|}{P_{\text{收盘
 <p><strong>场景3：某个月策略大赚8%，你想"落袋为安"</strong></p>
 <p>你想："这个月赚了这么多，万一下个月跌回去呢？不如先卖了，等回调了再买。"</p>
 <p><strong>理性分析</strong>：这就是"择时"，而择时是散户亏钱的头号原因。你的策略是月底系统性调仓，不是让你中间随意进出。如果你开始做主观择时，你不再是在执行量化策略，而是在用量化包装的主观交易。</p>
-<h3 id="ch11-h16">11.5.2 建立执行纪律的实操建议</h3>
+<h3 id="ch11-h21">11.6.2 建立执行纪律的实操建议</h3>
 
 <ol>
 <li><strong>写一份"策略章程"</strong>：明确写下规则（选股标准、调仓日期、仓位约束），并承诺"6个月内不做任何修改"</li>
 <li><strong>设定"自动驾驶日"</strong>：每月最后一个交易日就是调仓日，不管当天心情如何</li>
 <li><strong>记录每次"偏离"</strong>：如果某次你没有按规则执行（跳过了某只股票/提前卖了/推迟调仓），记录原因和结果。3个月后回顾，你的"人工判断"真的比策略更好吗？</li>
-<li><strong>设定心理止损线</strong>：如果策略回撤超过-20%（或你提前设定的阈值），允许自己减仓到50%，这是提前约定的规则，不是恐慌反应</li>
+<li><strong>设定心理止损线</strong>：如果策略回撤超过-20%（或你提前设定的阈值），允许自己减仓到50%，只要提前约定好止损规则，那就不算恐慌反应</li>
 <li><strong>限制查看频率</strong>：不要每天看组合收益。月频策略的评价周期应该是月，每天看只会增加焦虑和错误操作的概率</li>
 </ol>
-<h3 id="ch11-h17">11.5.3 何时该停止一个策略？</h3>
+<h3 id="ch11-h22">11.6.3 何时该停止一个策略？</h3>
 
-<p>并不是所有的坏表现都意味着策略失效。但有些信号确实表明你该认真考虑修改或停止：</p>
-<p><strong>应该继续坚持的信号</strong>：</p>
-<ul>
-<li>IC仍为正（虽然绝对值下降了）</li>
-<li>回撤在历史分布的正常范围内</li>
-<li>大盘也在跌（你的策略在"陪跑"而非"独自下跌"）</li>
-<li>其他使用类似因子的公募/ETF也在回撤</li>
-</ul>
-<p><strong>应该认真考虑停止的信号</strong>：</p>
-<ul>
-<li>IC连续6个月为负且没有恢复迹象</li>
-<li>回撤已创历史新高且超过预设阈值2倍</li>
-<li>因子的底层逻辑发生了结构性变化（如注册制改革→壳价值（A股IPO稀缺时期上市资格本身具有的价值）消失→小市值因子失效）</li>
-<li>你发现了回测中的bug（数据错误、前视偏差等）</li>
-</ul>
+<p>并不是所有的坏表现都意味着策略失效。区分"正常波动"和"真正失效"的关键在于看信号本身是否还在，而非看最近有没有亏钱。下表对比两类信号：</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>应该继续坚持</th>
+<th>应该认真考虑停止</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>因子 IC</strong></td>
+<td>仍为正（虽然绝对值下降）</td>
+<td>连续 6 个月为负且无恢复迹象</td>
+</tr>
+<tr>
+<td><strong>回撤</strong></td>
+<td>在历史分布的正常范围内</td>
+<td>创历史新高且超过预设阈值 2 倍</td>
+</tr>
+<tr>
+<td><strong>市场环境</strong></td>
+<td>大盘也在跌，策略是"陪跑"而非"独自下跌"</td>
+<td>因子底层逻辑结构性变化（如注册制改革导致壳价值消失、小市值因子失效）</td>
+</tr>
+<tr>
+<td><strong>同类对比</strong></td>
+<td>其他使用类似因子的公募/ETF也在回撤</td>
+<td>发现回测中的 bug（数据错误、前视偏差等）</td>
+</tr>
+</tbody>
+</table>
 <p><strong>决策框架</strong>：</p>
 <pre><code>连续3个月超额为负？
 ├── IC仍为正 → 正常波动，继续执行
@@ -7498,22 +7622,23 @@ $$\text{滑点} = \frac{|P_{\text{实际}} - P_{\text{收盘}}|}{P_{\text{收盘
 <p>核心原则：<strong>停止策略的决定应该基于"信号是否消失"而非"最近有没有亏钱"</strong>。短期亏钱是正常的；信号消失才是危险的。</p>
 </blockquote>
 <hr />
-<h2 id="ch11-h18">11.6 本章小结</h2>
+<h2 id="ch11-h23">11.7 本章小结</h2>
 
-<h3 id="ch11-h19">11.6.1 内容回顾</h3>
+<h3 id="ch11-h24">11.7.1 内容回顾</h3>
 
 <ol>
 <li>回测与实盘有系统性差距，散户约打7-8折，机构约打6-7折</li>
 <li>散户的冲击成本几乎为零，这是相对于机构的核心优势</li>
 <li>A股流动性约束主要体现在涨跌停和微盘股，沪深300选股基本无障碍</li>
-<li>五步渐进部署：纸面→小资金→评估→放大→稳态</li>
-<li>实盘最大的敌人不是市场而是自己，执行纪律是关键</li>
+<li>月频部署五步流程：纸面→小资金→评估→放大→稳态；日频部署核心在自动化跑批和成本控制</li>
+<li>日频交易的因子池、成本结构、过拟合风险与月频有本质差异，需独立评估</li>
+<li>实盘中执行纪律是关键</li>
 </ol>
-<h3 id="ch11-h20">11.6.2 常见陷阱</h3>
+<h3 id="ch11-h25">11.7.2 常见陷阱</h3>
 
 <ol>
 <li>
-<p><strong>回测好就直接满仓</strong>：跳过纸面交易和小资金验证→发现bug时已经亏了真金白银。渐进式部署是必要的。</p>
+<p><strong>回测好就直接满仓</strong>：跳过纸面交易和小资金验证→发现bug时已经造成了实际资损。渐进式部署是必要的。</p>
 </li>
 <li>
 <p><strong>一个月不好就放弃</strong>：因子策略的月度胜率只有55-65%，意味着每10个月有3-4个月是负收益。至少观察6-12个月才能初步判断。</p>
@@ -7526,12 +7651,12 @@ $$\text{滑点} = \frac{|P_{\text{实际}} - P_{\text{收盘}}|}{P_{\text{收盘
 </li>
 </ol>
 <hr />
-<h2 id="ch11-h21">11.7 附录</h2>
+<h2 id="ch11-h26">11.8 附录</h2>
 
-<h3 id="ch11-h22">11.7.1 参考文献</h3>
+<h3 id="ch11-h27">11.8.1 参考文献</h3>
 
 <p>[1] Almgren, R. &amp; Chriss, N., "Optimal Execution of Portfolio Transactions," <em>Journal of Risk</em>, Vol.3, No.2, 2000, pp.5-39.</p>
-<h3 id="ch11-h23">11.7.2 验证代码</h3>
+<h3 id="ch11-h28">11.7.2 验证代码</h3>
 
 <p>本章无验证代码。</p>
             </section>
@@ -7571,13 +7696,7 @@ $$\text{滑点} = \frac{|P_{\text{实际}} - P_{\text{收盘}}|}{P_{\text{收盘
 </ul>
 <p>这种<strong>交互效应</strong>线性模型完全捕捉不到。你需要加入交叉项 $f_1 \times f_2$，或者使用天然能建模交互的非线性方法（如决策树）。</p>
 <p><strong>假设3：因子效果不随市场环境变化</strong></p>
-<p>线性模型用一个固定的 $\beta$ 描述因子效果。但A股经验告诉我们：</p>
-<ul>
-<li>2016-2017年"漂亮50"行情：价值因子 $\beta$ 很大（月均IC ~0.08）</li>
-<li>2020-2021年"赛道股"行情：价值因子 $\beta$ 转负（月均IC ~-0.03）</li>
-<li>2022-2024年熊市回归：价值因子 $\beta$ 再次转正（月均IC ~0.05）</li>
-</ul>
-<p>线性模型只能给你一个"全期平均"的 $\beta$，无法适应这种环境切换。你需要一个能"看环境下菜碟"的模型，这正是条件模型（如随机森林、LSTM）的强项。</p>
+<p>线性模型用一个固定的 $\beta$ 描述因子效果，但现实是因子效果会随市场环境剧烈切换。2016-2017 年大盘股价值风格占优，价值因子的预测力很强；2020-2021 年赛道股和成长风格主导，价值因子几乎失灵；2022 年之后随着市场风险偏好下降，价值因子又开始恢复预测力。线性模型只能给你一个"全期平均"的 $\beta$，它无法判断当前处于哪种环境，也就无法在这三种环境下给价值因子不同的权重。你需要一个能"看环境下菜碟"的模型，这正是条件模型（如随机森林、LSTM）的强项。</p>
 <h3 id="ch12-h3">12.1.2 机器学习能做什么：从&quot;特征工程&quot;到&quot;关系发现&quot;</h3>
 
 <p>在传统线性框架中，所有的"非线性建模"负担都落在<strong>特征工程</strong>上，你需要人工构造交叉项（$EP \times MOM$）、分段变量（$\mathbb{1}[EP > 0.1]$）、滞后变量等。这要求研究者有极强的领域直觉，且工作量巨大。</p>
@@ -7619,7 +7738,44 @@ $$\text{滑点} = \frac{|P_{\text{实际}} - P_{\text{收盘}}|}{P_{\text{收盘
 <li>自动发现"低EP+高动量"的协同效应</li>
 <li>袋外误差（OOB Error）提供免费的样本外验证</li>
 </ul>
-<p><strong>A股实证经验</strong>：随机森林相比线性IC加权，通常能带来IC提升10-30%（如从0.04提升到0.05）。但提升幅度不是无限的，因为A股3000只股票×120个月的数据量仍然有限，模型容易过拟合。</p>
+<p><strong>一个具体例子：三棵树给同一只股票打分</strong></p>
+<blockquote>
+<p>⚠️ <strong>示意性数据</strong>：以下数字为说明随机森林投票机制而构造，非真实数据。</p>
+</blockquote>
+<p>假设我们要预测股票 A 的下月收益排名，森林里有 3 棵树（真实场景是几百上千棵，这里简化）。股票 A 的因子值是：<strong>EP 排名前 10%、动量排名前 30%、市值排名后 20%（小盘）</strong>。三棵树因为训练数据子集和随机特征子集不同，各自看到的因子和判断路径也不同。下表汇总了三棵树的输入、决策结构和结果，树中的 <code>★</code> 标出了股票 A 实际走的分支和最终落入的叶子。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">输入</th>
+<th>决策结构</th>
+<th>落入的叶子</th>
+<th style="text-align: center;">决策结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">EP + 市值</td>
+<td><pre>  [EP&lt;20%?]<br>   /     \<br> 是★      否<br>  │        │<br>[市值      叶子:<br>&gt;80%?]   +0.5%<br> /  \<br>是    否★<br>│      │<br>叶子   叶子<br>-1%   +3%★</pre></td>
+<td>低估值小盘</td>
+<td style="text-align: center;"><strong>+3%</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">动量 + EP</td>
+<td><pre> [动量&lt;50%?]<br>   /     \<br> 是★      否<br>  │        │<br>[EP       叶子:<br>&lt;30%?]   -0.5%<br> /  \<br>是★   否<br>│      │<br>叶子   叶子<br>+1.5%★ 0%</pre></td>
+<td>估值动量兼具</td>
+<td style="text-align: center;"><strong>+1.5%</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">市值 + 动量</td>
+<td><pre>[市值&gt;70%?]<br>   /     \<br> 是★      否<br>  │        │<br>[动量      叶子:<br>&lt;60%?]   -0.5%<br> /  \<br>是★   否<br>│      │<br>叶子   叶子<br>+2%★  +0.5%</pre></td>
+<td>小盘趋势</td>
+<td style="text-align: center;"><strong>+2%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>森林的最终预测就是三者平均：$(3\% + 1.5\% + 2\%) / 3 = 2.17\%$。</p>
+<p>这个例子揭示了随机森林的核心：<strong>没有任何一棵树看到全部因子，但集体平均后反而更稳健</strong>。如果只用树 1，你会过度依赖"小盘"这个信号（万一这个月小盘暴跌就惨了）；但三棵树里只有两棵重视小盘，平均之后小盘的影响被稀释了。这就是"委员会投票"降低方差的直观含义。</p>
+<p><strong>实践经验</strong>：随机森林相比线性 IC 加权，在因子间存在非线性关系或交互效应时能带来一定的 IC 提升。但提升幅度不是无限的，因为 A 股约 3000 只股票乘以有限的月份数，有效数据量并不大，模型容易过拟合。是否真能带来稳定提升，必须在你自己的数据上用 Walk-Forward 样本外验证来确认。</p>
 <h3 id="ch12-h7">12.2.3 XGBoost/LightGBM：梯度提升的力量</h3>
 
 <blockquote>
@@ -7636,7 +7792,76 @@ $$\text{滑点} = \frac{|P_{\text{实际}} - P_{\text{收盘}}|}{P_{\text{收盘
 <li>用第3棵树拟合 $e_2$...</li>
 <li>最终预测 = $T_1 + \eta T_2 + \eta T_3 + ...$</li>
 </ol>
-<p>每棵树只做"一小步"改进（$\eta$通常取0.01-0.1），逐步逼近真实关系。这种"慢慢来"的策略有效防止了过拟合。</p>
+<p><strong>先理解"学习率"是什么</strong>。学习率 $\eta$ 是一个 0 到 1 之间的小数，它控制"每棵新树的修正意见，我们采纳多少"。打个比方：你在射箭，第一箭偏左了 2 环，教练说"往右调 3 环"。如果你完全照做（学习率=1），可能一下子又偏到右边去了，因为教练的判断本身也有误差。稳妥的做法是每次只按教练意见的一半来调（学习率=0.5），多调几次慢慢逼近靶心。学习率越小，每一步越谨慎，需要的树越多，但最终越不容易被单棵树的"过度自信"带偏。这就是为什么金融数据（噪声大）要用小学习率。</p>
+<p><strong>一个具体例子：三棵树逐步修正误差</strong></p>
+<blockquote>
+<p>⚠️ <strong>示意性数据</strong>：以下数字为说明梯度提升的残差修正机制而构造，非真实数据。</p>
+</blockquote>
+<p>假设股票 B 的真实次月收益是 <strong>+5%</strong>，学习率 $\eta = 0.5$（为看得清楚而特意设大，实际中更小）。股票 B 的特征：EP 排名前 15%、动量排名前 40%、市值中等。三棵树<strong>串行</strong>训练，注意每棵树预测的目标不同：第 1 棵预测收益本身，第 2、3 棵预测"上一步还差多少"（残差）。<code>★</code> 标出股票 B 走的分支。</p>
+<p>第 1 棵树（预测收益 $r$，目标 +5%）：</p>
+<pre><code>        [EP 排名 &lt; 20%？]
+         /          \
+       是★            否
+        │              │
+   叶子: +2% ★      叶子: -1%
+   ← 股票B落这里
+</code></pre>
+<p>第 1 棵树给出 +2%，离真实的 +5% 还差 <strong>3%</strong>。这个 3% 就是"残差 $e_1$"，交给第 2 棵树去补。</p>
+<p>第 2 棵树（预测残差 $e_1$，目标 +3%）：</p>
+<pre><code>       [动量排名 &lt; 50%？]
+         /          \
+       是★            否
+        │              │
+   叶子: +2.8% ★    叶子: -0.5%
+   ← 股票B落这里
+</code></pre>
+<p>第 2 棵树认为该补 +2.8%，但我们乘以学习率的系数：$0.5 \times 2.8\% = 1.4\%$。累计预测变成 $2\% + 1.4\% = 3.4\%$，离 +5% 还差 <strong>1.6%</strong>（新残差 $e_2$）。</p>
+<p>第 3 棵树（预测残差 $e_2$，目标 +1.6%）：</p>
+<pre><code>       [市值排名 中等？]
+         /          \
+       是★            否
+        │              │
+   叶子: +1.5% ★    叶子: +0.3%
+   ← 股票B落这里
+</code></pre>
+<p>第 3 棵树认为该补 +1.5%，乘以学习率：$0.5 \times 1.5\% = 0.75\%$。累计预测变成 $3.4\% + 0.75\% = 4.15\%$。</p>
+<p>把这个过程列成表，一眼看清"逐步逼近"：</p>
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>该树预测</th>
+<th>采纳量（×η）</th>
+<th>累计预测</th>
+<th>离真实 +5% 还差</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第 1 棵树</td>
+<td>+2%</td>
+<td>+2%（首棵全额）</td>
+<td>2%</td>
+<td>3%</td>
+</tr>
+<tr>
+<td>第 2 棵树</td>
+<td>+2.8%</td>
+<td>+1.4%</td>
+<td>3.4%</td>
+<td>1.6%</td>
+</tr>
+<tr>
+<td>第 3 棵树</td>
+<td>+1.5%</td>
+<td>+0.75%</td>
+<td>4.15%</td>
+<td>0.85%</td>
+</tr>
+</tbody>
+</table>
+<p>累计预测 2% → 3.4% → 4.15% 一步步逼近真实的 5%。这就是梯度提升的核心：<strong>每棵新树不是重新预测收益，而是专门修正前面所有树加起来还没说对的那部分</strong>。对比随机森林（大家独立投票、结果取平均），梯度提升是"接力赛"，后一棵树站在前面所有树的肩膀上补漏。</p>
+<p>回到学习率：如果 $\eta = 1$（每次全额采纳），第 2 棵树会一步跳到 $2\% + 2.8\% = 4.8\%$，看似更快，但树的预测本身有噪声，全额采纳容易把噪声也学进去、来回震荡。$\eta$ 小则每步谨慎，需要更多树，但泛化更好，这正是"浅树 + 低学习率 + 大量树"配置的由来。</p>
 <p><strong>XGBoost的核心创新</strong>（Chen &amp; Guestrin, 2016）：</p>
 <p>在传统梯度提升基础上加入了<strong>正则化项</strong>，惩罚树的复杂度（叶节点数和叶节点权重）。目标函数变成：</p>
 <p>$$\text{Obj} = \sum_{i=1}^N L(y_i, \hat{y}_i) + \sum_{b=1}^B \Omega(T_b) \tag{12.1}$$</p>
@@ -7644,6 +7869,44 @@ $$\text{滑点} = \frac{|P_{\text{实际}} - P_{\text{收盘}}|}{P_{\text{收盘
 <p>$$\Omega(T) = \gamma \cdot |\text{叶节点数}| + \frac{\lambda}{2}\sum_j w_j^2 \tag{12.2}$$</p>
 <p>这个正则项的作用是：<strong>即使某个复杂的树能进一步降低训练误差，如果它的复杂度太高（叶节点太多或权重太大），也会被惩罚掉</strong>，用可控的训练误差换取更好的泛化能力。</p>
 <p><strong>LightGBM</strong>（Microsoft, 2017）是XGBoost的加速版本，用直方图近似和叶子优先生长策略，训练速度快5-10倍，特别适合大规模因子数据（3000只股票×100+因子）。</p>
+<p><strong>XGBoost 和 LightGBM 的关系</strong> 不是同一个软件，但是同一类算法。两者都实现了"带正则化的梯度提升树"这个核心思想（就是上面例子里那套"逐步修正残差 + 惩罚树复杂度"的逻辑），区别在工程实现上：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>XGBoost</th>
+<th>LightGBM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>开发者</td>
+<td>陈天奇等（2016）</td>
+<td>微软（2017）</td>
+</tr>
+<tr>
+<td>树生长方式</td>
+<td>按层生长（level-wise），每层所有节点一起分裂</td>
+<td>按叶生长（leaf-wise），优先分裂收益最大的叶子</td>
+</tr>
+<tr>
+<td>训练速度</td>
+<td>较慢</td>
+<td>快 5-10 倍（直方图优化）</td>
+</tr>
+<tr>
+<td>内存占用</td>
+<td>较高</td>
+<td>较低</td>
+</tr>
+<tr>
+<td>小数据表现</td>
+<td>稳健</td>
+<td>叶子优先在小数据上略易过拟合</td>
+</tr>
+</tbody>
+</table>
+<p>对本书读者来说，可以这样理解：<strong>它们像同一道菜的两个菜谱，味道几乎一样，LightGBM 做得更快更省料</strong>。实践中先用哪个都行，数据量大（几十万行以上）优先选 LightGBM，追求稳健和成熟生态选 XGBoost。两者的超参数含义高度一致，调参经验可以互相迁移。</p>
 <p><strong>在因子投资中的最佳实践</strong>：</p>
 <table>
 <thead>
@@ -7685,7 +7948,7 @@ $$\text{滑点} = \frac{|P_{\text{实际}} - P_{\text{收盘}}|}{P_{\text{收盘
 <hr />
 <h2 id="ch12-h8">12.3 神经网络在因子投资中的应用</h2>
 
-<h3 id="ch12-h9">12.3.1 为什么神经网络？</h3>
+<h3 id="ch12-h9">12.3.1 为什么用神经网络？</h3>
 
 <p>决策树系列方法擅长捕捉"阈值效应"（如EP&gt;0.1时有效）和"低阶交互"（如EP×动量），但对高阶非线性关系的建模能力有限。神经网络通过多层非线性变换，理论上可以逼近任意复杂的函数，这是<strong>万能逼近定理</strong>（Universal Approximation Theorem）的结论。</p>
 <p>但"理论上能逼近任意函数"和"实际中能学到有用的东西"之间隔着一道鸿沟。在因子投资的应用中，神经网络面临几个独特的挑战：</p>
@@ -7758,21 +8021,22 @@ $$\text{滑点} = \frac{|P_{\text{实际}} - P_{\text{收盘}}|}{P_{\text{收盘
 <li>有效独立样本可能只有几百个</li>
 </ul>
 <p><strong>经验法则</strong>：如果你的模型在训练集上的IC=0.10，但在Walk-Forward样本外只有0.03，<strong>你过拟合了</strong>。ML模型在训练集上的表现通常会"虚高"2-5倍。</p>
-<p><strong>防御方法</strong>（按重要性排序）：</p>
+<p><strong>防御方法</strong>：</p>
 <ol>
 <li><strong>时间序列交叉验证</strong>：绝不在时间上前后打乱数据。训练集必须严格在验证集之前</li>
 <li><strong>限制模型复杂度</strong>：浅树、少参数、强正则化</li>
 <li><strong>特征筛选</strong>：不要把能找到的所有指标都扔进模型。先用第5章的IC检验筛选掉无效因子</li>
-<li><strong>多数据集验证</strong>：A股训练的模型，在港股或美股能work吗？（如果不能，可能是过拟合了A股特有的噪声）</li>
+<li><strong>跨市场周期验证</strong>：你的回测覆盖了完整的牛熊周期吗？如果只用 2019-2020 的牛市数据训练，模型学到的是"追涨就能赚钱"，在 2022 年熊市中会暴露全部问题。更务实的方法是：把回测数据按市场状态拆分（牛市期、熊市期、振荡期），检查策略在三个状态下是否都有正超额。如果只在牛市中赚钱，那不是一个多因子策略，只是一个加了杠杆的指数基金。</li>
+<li><strong>考虑多策略配置</strong>：同一个策略很难在所有市场状态下通吃。一个更鲁棒的方案是为不同市场状态准备不同的策略配置：牛市期重配动量和成长因子，熊市期重配低波动和价值因子，振荡期用等权或均值回归策略。然后用 §5.6 讨论过的因子拥挤度和 IC 趋势来判断当前市场处于什么状态，自动切换策略权重。这不是因子择时（择时的难度很高），而是用多个独立策略的组合来平抑周期波动。</li>
 </ol>
 <h3 id="ch12-h15">12.4.2 非平稳性：过去不能代表未来</h3>
 
 <p>金融数据最恶心的特性：<strong>规则会变</strong>。</p>
 <ul>
-<li>2010-2016年：小市值因子是"印钞机"（年化超额15%+）</li>
-<li>2017年后：小市值因子几乎失效（注册制改革消灭了壳价值，壳价值即A股IPO稀缺时期上市资格本身具有的价值）</li>
+<li>2017 年之前：小市值因子长期有效，是 A 股最强的因子之一</li>
+<li>2017 年后：小市值因子大幅弱化（注册制改革消灭了壳价值，壳价值即A股IPO稀缺时期上市资格本身具有的价值）</li>
 </ul>
-<p>如果你在2010-2016年数据上训练了一个高度依赖小市值信号的ML模型，它在2017年之后会彻底崩溃。而线性模型因为参数少、模式简单，受非平稳性的影响反而更小。</p>
+<p>如果你在 2017 年之前的数据上训练了一个高度依赖小市值信号的 ML 模型，它在 2017 年之后会彻底崩溃。而线性模型因为参数少、模式简单，受非平稳性的影响反而更小。</p>
 <p><strong>应对策略</strong>：</p>
 <ul>
 <li><strong>滚动重训练</strong>：每月用最近60个月的数据重新训练模型，"忘掉"太久远的模式</li>
@@ -7826,7 +8090,7 @@ $$\text{滑点} = \frac{|P_{\text{实际}} - P_{\text{收盘}}|}{P_{\text{收盘
 </tr>
 <tr>
 <td>搜索/浏览</td>
-<td>百度搜索指数、电商浏览量</td>
+<td>搜索引擎指数、电商浏览量</td>
 <td>需求前瞻因子</td>
 </tr>
 <tr>
@@ -7849,14 +8113,14 @@ $$\text{滑点} = \frac{|P_{\text{实际}} - P_{\text{收盘}}|}{P_{\text{收盘
 
 <p>坦率地说，大部分另类数据对散户是<strong>不可及的</strong>：</p>
 <ul>
-<li>卫星图像：数据订阅费用数十万/年</li>
+<li>卫星图像：国家安全限制</li>
 <li>信用卡数据：只有与银行有合作的机构才能获取</li>
 <li>企业级NLP模型：需要大量算力和工程资源</li>
 </ul>
 <p>散户能合理利用的另类数据主要是：</p>
 <ul>
 <li><strong>公开文本数据</strong>：研报评级变化、公告关键词（"业绩预增"vs"业绩预减"）</li>
-<li><strong>搜索指数</strong>：百度指数（免费）反映的公众关注度</li>
+<li><strong>搜索指数</strong>：搜索引擎（传统的如谷歌百度，现阶段或许还应加上小红书抖音等短社交平台，以及豆包等AI平台）反映的公众关注度</li>
 <li><strong>公开的宏观数据</strong>：PMI、社融等（免费，但所有人都能看到）</li>
 </ul>
 <p>我们的建议是：<strong>先把传统因子做好（理论篇的内容），再考虑另类数据</strong>。如果你的EP+动量+质量三因子组合都还没跑通，追求另类数据就是本末倒置。</p>
@@ -7869,29 +8133,41 @@ $$\text{滑点} = \frac{|P_{\text{实际}} - P_{\text{收盘}}|}{P_{\text{收盘
 <ol>
 <li><strong>ML不创造信息，只是更好地提取信息</strong>。如果你的输入因子本身不含预测信号，再复杂的ML模型也提取不出有效预测</li>
 <li><strong>ML对数据质量极其敏感</strong>。"Garbage in, garbage out"在ML中比在线性模型中更严重，ML会把数据中的错误也当作"模式"学习</li>
-<li><strong>最大的边际收益在"最后一公里"</strong>。如果线性模型IC=0.04，ML可能提升到0.05-0.06，提升了25-50%，年化可能只多2-3个百分点。这有意义，但不是"颠覆性的"</li>
+<li><strong>最大的边际收益在"最后一公里"</strong>。线性模型已经提取了因子的主要信息，ML 的额外提升通常来自非线性关系和交互效应的捕捉，边际增量是有限的。这有意义，但不是"颠覆性的"</li>
 </ol>
 <h3 id="ch12-h23">12.6.2 一个务实的&quot;分层&quot;方法论</h3>
 
-<p>对于本书读者（有理工科背景的A股散户投资者），我们建议的ML使用路径：</p>
-<p><strong>第一层（基础）</strong>：先用纯线性方法把策略跑通</p>
-<ul>
-<li>EP + 动量 + 质量三因子，IC加权合成，月度调仓（按策略规则定期调整持仓）</li>
-<li>用第5章的方法严格检验，确保样本外仍然有效</li>
-<li>这一步就足以跑赢大部分散户</li>
-</ul>
-<p><strong>第二层（增强）</strong>：用随机森林/XGBoost替代线性合成</p>
-<ul>
-<li>把三因子值作为输入，下月收益（或排名）作为输出</li>
-<li>Walk-Forward训练（第5章§5.5.5），严格样本外验证</li>
-<li>如果IC比线性方法高20%以上且稳定→采用</li>
-</ul>
-<p><strong>第三层（探索）</strong>：加入非线性因子和交互</p>
-<ul>
-<li>用SHAP分析哪些因子交互最重要</li>
-<li>尝试加入时序特征（过去3个月IC的变化趋势）</li>
-<li>监控模型的行为是否可解释</li>
-</ul>
+<p>对于本书读者（有理工科背景的A股散户投资者），我们建议的ML使用路径分为三层，逐层递进：</p>
+<table>
+<thead>
+<tr>
+<th>层级</th>
+<th>做什么</th>
+<th>关键动作</th>
+<th>判断标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>第一层（基础）</strong></td>
+<td>先用纯线性方法把策略跑通</td>
+<td>① 选定 EP + 动量 + 质量三因子<br>② 用 IC 加权合成综合得分<br>③ 按月度调仓（定期调整持仓）<br>④ 用第5章方法做 IC 检验和分层回测</td>
+<td>样本外仍然有效，这一步就足以跑赢大部分散户</td>
+</tr>
+<tr>
+<td><strong>第二层（增强）</strong></td>
+<td>用随机森林/XGBoost 补充线性合成</td>
+<td>① 保留线性合成作为主力<br>② 三因子值为输入、下月收益（或排名）为输出，训练树模型<br>③ 用 Walk-Forward 严格样本外验证（§5.5.5）<br>④ 树模型仅用于捕捉线性漏掉的非线性和交互效应</td>
+<td>树模型样本外 IC 稳定优于线性方法时，才与线性预测做加权平均纳入，而非推翻线性框架</td>
+</tr>
+<tr>
+<td><strong>第三层（探索）</strong></td>
+<td>加入非线性因子和交互</td>
+<td>① 用 SHAP 分析哪些因子交互最重要<br>② 尝试加入时序特征（如过去3个月 IC 的变化趋势）<br>③ 持续监控模型行为是否可解释</td>
+<td>模型行为是否可解释，不可解释则不采用</td>
+</tr>
+</tbody>
+</table>
 <p><strong>不建议</strong>：</p>
 <ul>
 <li>上来就用LSTM/Transformer（数据量不够、可解释性差）</li>
@@ -8932,7 +9208,7 @@ if __name__ == &quot;__main__&quot;:
             <!-- 页脚 -->
             <footer class="page-footer">
                 <p><strong>量化之路：多因子的语言</strong></p>
-                <p>生成日期：2026年07月08日</p>
+                <p>生成日期：2026年07月09日</p>
                 <p>源文件：README.md, ch01-什么是量化投资.md, ch02-多因子模型的前世今生.md, ch03-因子的本质.md, ch04-常见因子详解.md...</p>
                 <p>本书内容基于 A 股（沪深 300）真实数据案例，以 Python 作为唯一编程语言</p>
             </footer>
@@ -8990,7 +9266,7 @@ if __name__ == &quot;__main__&quot;:
         // ============================================================
         // 目录高亮：滚动时自动高亮当前所在章节
         // ============================================================
-        var allAnchors = ['ch0-h0', 'ch0-h1', 'ch0-h2', 'ch0-h3', 'ch0-h4', 'ch0-h5', 'ch0-h6', 'ch1-h0', 'ch1-h1', 'ch1-h2', 'ch1-h3', 'ch1-h4', 'ch1-h5', 'ch1-h6', 'ch1-h7', 'ch1-h8', 'ch1-h9', 'ch1-h10', 'ch1-h11', 'ch1-h12', 'ch1-h13', 'ch1-h14', 'ch1-h15', 'ch1-h16', 'ch1-h17', 'ch1-h18', 'ch1-h19', 'ch1-h20', 'ch2-h0', 'ch2-h1', 'ch2-h2', 'ch2-h3', 'ch2-h4', 'ch2-h5', 'ch2-h6', 'ch2-h7', 'ch2-h8', 'ch2-h9', 'ch2-h10', 'ch2-h11', 'ch2-h12', 'ch2-h13', 'ch2-h14', 'ch2-h15', 'ch2-h16', 'ch2-h17', 'ch2-h18', 'ch2-h19', 'ch2-h20', 'ch2-h21', 'ch3-h0', 'ch3-h1', 'ch3-h2', 'ch3-h3', 'ch3-h4', 'ch3-h5', 'ch3-h6', 'ch3-h7', 'ch3-h8', 'ch3-h9', 'ch3-h10', 'ch3-h11', 'ch3-h12', 'ch3-h13', 'ch3-h14', 'ch3-h15', 'ch3-h16', 'ch3-h17', 'ch3-h18', 'ch3-h19', 'ch3-h20', 'ch3-h21', 'ch3-h22', 'ch3-h23', 'ch3-h24', 'ch3-h25', 'ch3-h26', 'ch3-h27', 'ch4-h0', 'ch4-h1', 'ch4-h2', 'ch4-h3', 'ch4-h4', 'ch4-h5', 'ch4-h6', 'ch4-h7', 'ch4-h8', 'ch4-h9', 'ch4-h10', 'ch4-h11', 'ch4-h12', 'ch4-h13', 'ch4-h14', 'ch4-h15', 'ch4-h16', 'ch4-h17', 'ch4-h18', 'ch4-h19', 'ch4-h20', 'ch4-h21', 'ch4-h22', 'ch4-h23', 'ch4-h24', 'ch4-h25', 'ch4-h26', 'ch4-h27', 'ch4-h28', 'ch4-h29', 'ch4-h30', 'ch4-h31', 'ch4-h32', 'ch5-h0', 'ch5-h1', 'ch5-h2', 'ch5-h3', 'ch5-h4', 'ch5-h5', 'ch5-h6', 'ch5-h7', 'ch5-h8', 'ch5-h9', 'ch5-h10', 'ch5-h11', 'ch5-h12', 'ch5-h13', 'ch5-h14', 'ch5-h15', 'ch5-h16', 'ch5-h17', 'ch5-h18', 'ch5-h19', 'ch5-h20', 'ch5-h21', 'ch5-h22', 'ch5-h23', 'ch5-h24', 'ch5-h25', 'ch5-h26', 'ch5-h27', 'ch5-h28', 'ch5-h29', 'ch5-h30', 'ch5-h31', 'ch5-h32', 'ch5-h33', 'ch5-h34', 'ch5-h35', 'ch5-h36', 'ch6-h0', 'ch6-h1', 'ch6-h2', 'ch6-h3', 'ch6-h4', 'ch6-h5', 'ch6-h6', 'ch6-h7', 'ch6-h8', 'ch6-h9', 'ch6-h10', 'ch6-h11', 'ch6-h12', 'ch6-h13', 'ch6-h14', 'ch6-h15', 'ch6-h16', 'ch6-h17', 'ch6-h18', 'ch6-h19', 'ch6-h20', 'ch6-h21', 'ch6-h22', 'ch6-h23', 'ch6-h24', 'ch6-h25', 'ch6-h26', 'ch6-h27', 'ch6-h28', 'ch6-h29', 'ch6-h30', 'ch6-h31', 'ch7-h0', 'ch7-h1', 'ch7-h2', 'ch7-h3', 'ch7-h4', 'ch7-h5', 'ch7-h6', 'ch7-h7', 'ch7-h8', 'ch7-h9', 'ch7-h10', 'ch7-h11', 'ch7-h12', 'ch7-h13', 'ch7-h14', 'ch7-h15', 'ch7-h16', 'ch7-h17', 'ch7-h18', 'ch7-h19', 'ch7-h20', 'ch7-h21', 'ch7-h22', 'ch7-h23', 'ch7-h24', 'ch8-h0', 'ch8-h1', 'ch8-h2', 'ch8-h3', 'ch8-h4', 'ch8-h5', 'ch8-h6', 'ch8-h7', 'ch8-h8', 'ch8-h9', 'ch8-h10', 'ch8-h11', 'ch8-h12', 'ch8-h13', 'ch8-h14', 'ch8-h15', 'ch8-h16', 'ch8-h17', 'ch8-h18', 'ch8-h19', 'ch8-h20', 'ch8-h21', 'ch8-h22', 'ch8-h23', 'ch8-h24', 'ch8-h25', 'ch8-h26', 'ch8-h27', 'ch8-h28', 'ch8-h29', 'ch9-h0', 'ch9-h1', 'ch9-h2', 'ch9-h3', 'ch9-h4', 'ch9-h5', 'ch9-h6', 'ch9-h7', 'ch9-h8', 'ch9-h9', 'ch9-h10', 'ch9-h11', 'ch9-h12', 'ch9-h13', 'ch9-h14', 'ch9-h15', 'ch9-h16', 'ch9-h17', 'ch9-h18', 'ch9-h19', 'ch9-h20', 'ch10-h0', 'ch10-h1', 'ch10-h2', 'ch10-h3', 'ch10-h4', 'ch10-h5', 'ch10-h6', 'ch10-h7', 'ch10-h8', 'ch10-h9', 'ch10-h10', 'ch10-h11', 'ch10-h12', 'ch10-h13', 'ch10-h14', 'ch10-h15', 'ch10-h16', 'ch10-h17', 'ch10-h18', 'ch10-h19', 'ch10-h20', 'ch10-h21', 'ch10-h22', 'ch10-h23', 'ch11-h0', 'ch11-h1', 'ch11-h2', 'ch11-h3', 'ch11-h4', 'ch11-h5', 'ch11-h6', 'ch11-h7', 'ch11-h8', 'ch11-h9', 'ch11-h10', 'ch11-h11', 'ch11-h12', 'ch11-h13', 'ch11-h14', 'ch11-h15', 'ch11-h16', 'ch11-h17', 'ch11-h18', 'ch11-h19', 'ch11-h20', 'ch11-h21', 'ch11-h22', 'ch11-h23', 'ch12-h0', 'ch12-h1', 'ch12-h2', 'ch12-h3', 'ch12-h4', 'ch12-h5', 'ch12-h6', 'ch12-h7', 'ch12-h8', 'ch12-h9', 'ch12-h10', 'ch12-h11', 'ch12-h12', 'ch12-h13', 'ch12-h14', 'ch12-h15', 'ch12-h16', 'ch12-h17', 'ch12-h18', 'ch12-h19', 'ch12-h20', 'ch12-h21', 'ch12-h22', 'ch12-h23', 'ch12-h24', 'ch12-h25', 'ch12-h26', 'ch12-h27', 'ch12-h28', 'ch12-h29', 'ch13-h0', 'ch13-h1', 'ch13-h2', 'ch13-h3', 'ch13-h4', 'ch13-h5', 'ch13-h6', 'ch13-h7', 'ch13-h8', 'ch13-h9', 'ch13-h10', 'ch13-h11', 'ch13-h12', 'ch13-h13', 'ch13-h14', 'ch13-h15', 'ch13-h16', 'ch13-h17', 'ch13-h18', 'ch13-h19', 'ch13-h20', 'ch13-h21', 'ch13-h22'];
+        var allAnchors = ['ch0-h0', 'ch0-h1', 'ch0-h2', 'ch0-h3', 'ch0-h4', 'ch0-h5', 'ch0-h6', 'ch1-h0', 'ch1-h1', 'ch1-h2', 'ch1-h3', 'ch1-h4', 'ch1-h5', 'ch1-h6', 'ch1-h7', 'ch1-h8', 'ch1-h9', 'ch1-h10', 'ch1-h11', 'ch1-h12', 'ch1-h13', 'ch1-h14', 'ch1-h15', 'ch1-h16', 'ch1-h17', 'ch1-h18', 'ch1-h19', 'ch1-h20', 'ch2-h0', 'ch2-h1', 'ch2-h2', 'ch2-h3', 'ch2-h4', 'ch2-h5', 'ch2-h6', 'ch2-h7', 'ch2-h8', 'ch2-h9', 'ch2-h10', 'ch2-h11', 'ch2-h12', 'ch2-h13', 'ch2-h14', 'ch2-h15', 'ch2-h16', 'ch2-h17', 'ch2-h18', 'ch2-h19', 'ch2-h20', 'ch2-h21', 'ch3-h0', 'ch3-h1', 'ch3-h2', 'ch3-h3', 'ch3-h4', 'ch3-h5', 'ch3-h6', 'ch3-h7', 'ch3-h8', 'ch3-h9', 'ch3-h10', 'ch3-h11', 'ch3-h12', 'ch3-h13', 'ch3-h14', 'ch3-h15', 'ch3-h16', 'ch3-h17', 'ch3-h18', 'ch3-h19', 'ch3-h20', 'ch3-h21', 'ch3-h22', 'ch3-h23', 'ch3-h24', 'ch3-h25', 'ch3-h26', 'ch3-h27', 'ch4-h0', 'ch4-h1', 'ch4-h2', 'ch4-h3', 'ch4-h4', 'ch4-h5', 'ch4-h6', 'ch4-h7', 'ch4-h8', 'ch4-h9', 'ch4-h10', 'ch4-h11', 'ch4-h12', 'ch4-h13', 'ch4-h14', 'ch4-h15', 'ch4-h16', 'ch4-h17', 'ch4-h18', 'ch4-h19', 'ch4-h20', 'ch4-h21', 'ch4-h22', 'ch4-h23', 'ch4-h24', 'ch4-h25', 'ch4-h26', 'ch4-h27', 'ch4-h28', 'ch4-h29', 'ch4-h30', 'ch4-h31', 'ch4-h32', 'ch5-h0', 'ch5-h1', 'ch5-h2', 'ch5-h3', 'ch5-h4', 'ch5-h5', 'ch5-h6', 'ch5-h7', 'ch5-h8', 'ch5-h9', 'ch5-h10', 'ch5-h11', 'ch5-h12', 'ch5-h13', 'ch5-h14', 'ch5-h15', 'ch5-h16', 'ch5-h17', 'ch5-h18', 'ch5-h19', 'ch5-h20', 'ch5-h21', 'ch5-h22', 'ch5-h23', 'ch5-h24', 'ch5-h25', 'ch5-h26', 'ch5-h27', 'ch5-h28', 'ch5-h29', 'ch5-h30', 'ch5-h31', 'ch5-h32', 'ch5-h33', 'ch5-h34', 'ch5-h35', 'ch5-h36', 'ch6-h0', 'ch6-h1', 'ch6-h2', 'ch6-h3', 'ch6-h4', 'ch6-h5', 'ch6-h6', 'ch6-h7', 'ch6-h8', 'ch6-h9', 'ch6-h10', 'ch6-h11', 'ch6-h12', 'ch6-h13', 'ch6-h14', 'ch6-h15', 'ch6-h16', 'ch6-h17', 'ch6-h18', 'ch6-h19', 'ch6-h20', 'ch6-h21', 'ch6-h22', 'ch6-h23', 'ch6-h24', 'ch6-h25', 'ch6-h26', 'ch6-h27', 'ch6-h28', 'ch6-h29', 'ch6-h30', 'ch6-h31', 'ch7-h0', 'ch7-h1', 'ch7-h2', 'ch7-h3', 'ch7-h4', 'ch7-h5', 'ch7-h6', 'ch7-h7', 'ch7-h8', 'ch7-h9', 'ch7-h10', 'ch7-h11', 'ch7-h12', 'ch7-h13', 'ch7-h14', 'ch7-h15', 'ch7-h16', 'ch7-h17', 'ch7-h18', 'ch7-h19', 'ch7-h20', 'ch7-h21', 'ch7-h22', 'ch7-h23', 'ch7-h24', 'ch8-h0', 'ch8-h1', 'ch8-h2', 'ch8-h3', 'ch8-h4', 'ch8-h5', 'ch8-h6', 'ch8-h7', 'ch8-h8', 'ch8-h9', 'ch8-h10', 'ch8-h11', 'ch8-h12', 'ch8-h13', 'ch8-h14', 'ch8-h15', 'ch8-h16', 'ch8-h17', 'ch8-h18', 'ch8-h19', 'ch8-h20', 'ch8-h21', 'ch8-h22', 'ch8-h23', 'ch8-h24', 'ch8-h25', 'ch8-h26', 'ch8-h27', 'ch8-h28', 'ch8-h29', 'ch9-h0', 'ch9-h1', 'ch9-h2', 'ch9-h3', 'ch9-h4', 'ch9-h5', 'ch9-h6', 'ch9-h7', 'ch9-h8', 'ch9-h9', 'ch9-h10', 'ch9-h11', 'ch9-h12', 'ch9-h13', 'ch9-h14', 'ch9-h15', 'ch9-h16', 'ch9-h17', 'ch9-h18', 'ch9-h19', 'ch9-h20', 'ch10-h0', 'ch10-h1', 'ch10-h2', 'ch10-h3', 'ch10-h4', 'ch10-h5', 'ch10-h6', 'ch10-h7', 'ch10-h8', 'ch10-h9', 'ch10-h10', 'ch10-h11', 'ch10-h12', 'ch10-h13', 'ch10-h14', 'ch10-h15', 'ch10-h16', 'ch10-h17', 'ch10-h18', 'ch10-h19', 'ch10-h20', 'ch10-h21', 'ch10-h22', 'ch10-h23', 'ch11-h0', 'ch11-h1', 'ch11-h2', 'ch11-h3', 'ch11-h4', 'ch11-h5', 'ch11-h6', 'ch11-h7', 'ch11-h8', 'ch11-h9', 'ch11-h10', 'ch11-h11', 'ch11-h12', 'ch11-h13', 'ch11-h14', 'ch11-h15', 'ch11-h16', 'ch11-h17', 'ch11-h18', 'ch11-h19', 'ch11-h20', 'ch11-h21', 'ch11-h22', 'ch11-h23', 'ch11-h24', 'ch11-h25', 'ch11-h26', 'ch11-h27', 'ch11-h28', 'ch12-h0', 'ch12-h1', 'ch12-h2', 'ch12-h3', 'ch12-h4', 'ch12-h5', 'ch12-h6', 'ch12-h7', 'ch12-h8', 'ch12-h9', 'ch12-h10', 'ch12-h11', 'ch12-h12', 'ch12-h13', 'ch12-h14', 'ch12-h15', 'ch12-h16', 'ch12-h17', 'ch12-h18', 'ch12-h19', 'ch12-h20', 'ch12-h21', 'ch12-h22', 'ch12-h23', 'ch12-h24', 'ch12-h25', 'ch12-h26', 'ch12-h27', 'ch12-h28', 'ch12-h29', 'ch13-h0', 'ch13-h1', 'ch13-h2', 'ch13-h3', 'ch13-h4', 'ch13-h5', 'ch13-h6', 'ch13-h7', 'ch13-h8', 'ch13-h9', 'ch13-h10', 'ch13-h11', 'ch13-h12', 'ch13-h13', 'ch13-h14', 'ch13-h15', 'ch13-h16', 'ch13-h17', 'ch13-h18', 'ch13-h19', 'ch13-h20', 'ch13-h21', 'ch13-h22'];
         var anchorElements = allAnchors.map(function(id) {
             return document.getElementById(id);
         }).filter(function(el) { return el !== null; });

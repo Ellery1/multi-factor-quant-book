@@ -950,6 +950,21 @@ def generate_html():
             border-radius: 0;
         }}
 
+        /* 表格单元格内嵌的树形图/ASCII 图：浅底深字、窄宽度 */
+        .chapter-card td pre {{
+            display: inline-block;
+            background: var(--bg-code-inline);
+            color: var(--color-text);
+            border: 1px solid var(--color-border);
+            border-radius: 6px;
+            padding: 8px 10px;
+            margin: 4px 0;
+            font-size: 0.78em;
+            line-height: 1.35;
+            white-space: pre;
+            width: auto;
+        }}
+
         /* 数学公式 */
         mjx-container {{
             font-size: 1.0em !important;
